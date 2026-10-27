@@ -1,11 +1,17 @@
 """Build the public display; never export local host controls or credentials."""
-import json,shutil,time
+import json,shutil,time,os
+from urllib.parse import urlsplit
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from store import Engine
 import config
 
 def build():
+ live_url=os.environ.get('ELECTION_PUBLIC_STATE_URL','').strip()
+ if live_url:
+  parsed=urlsplit(live_url)
+  if parsed.scheme!='https' or not parsed.hostname or parsed.username or parsed.password or parsed.query or parsed.fragment:
+   raise ValueError('Public live-data URL must be HTTPS without credentials, query, or fragment')
  out=config.ROOT/'public';out.mkdir(exist_ok=True)
  engine=Engine(config.ROOT/'.pages-cache')
  try:
@@ -27,12 +33,16 @@ def build():
  app=(out/'static/js/app.js').read_text(encoding='utf-8')
  start=app.index('async function post(');end=app.index('\n',start)
  app=app[:start]+'''async function post(path,body){if(path!=='/api/v1/settings')throw Error('Public display only');const prefs=JSON.parse(localStorage.getItem('election-watch-prefs')||'{}');Object.assign(prefs,body);localStorage.setItem('election-watch-prefs',JSON.stringify(prefs));return {ok:true};}'''+app[end:]
- app=app.replace("fetch('/api/v1/state'","fetch('./state.json?t='+Date.now()")
+ endpoint=json.dumps(live_url or './state.json')
+ app=app.replace("fetch('/api/v1/state'",'fetch('+endpoint+"+'?t='+Date.now()")
  app=app.replace('state=incoming;online=true;',"state=incoming;Object.assign(state.settings,JSON.parse(localStorage.getItem('election-watch-prefs')||'{}'));online=true;")
- app=app.replace('setInterval(load,5000)','setInterval(load,30000)')
+ app=app.replace('setInterval(load,5000)','setInterval(load,60000)')
  (out/'static/js/app.js').write_text(app,encoding='utf-8')
  profile=out/'static/js/candidate-profiles.js'
  profile.write_text(profile.read_text(encoding='utf-8').replace('${esc(path)}','${esc("."+path)}'),encoding='utf-8')
  (out/'static/js/pages-status.js').write_text('''function pagesStatus(){if(!state)return;const age=Math.max(0,(Date.now()-Date.parse(state.server_time))/60000);const stale=age>15;const b=document.getElementById('mode-banner');b.className=stale?'error':'';b.textContent=(stale?'DELAYED SNAPSHOT':'AUTOMATIC SNAPSHOT')+' · '+Math.floor(age)+' minutes old · Scheduled checks about every 5 minutes; publishing may be delayed. Source times in Source health.';document.getElementById('connection').textContent=online?'Public snapshot connected':'Disconnected · saved snapshot';document.getElementById('checked').textContent='Snapshot generated '+time(state.server_time);}setInterval(pagesStatus,1000);''',encoding='utf-8')
+ if live_url:
+  status_file=out/'static/js/pages-status.js'
+  status_file.write_text(status_file.read_text(encoding='utf-8').replace('age>15','age>3').replace('Scheduled checks about every 5 minutes; publishing may be delayed.','Live-data checks every 60 seconds; source publishing may be delayed.'),encoding='utf-8')
  print('Public display built:',out)
 if __name__=='__main__':build()

@@ -119,3 +119,7 @@ Added 15 source-identified local portraits (12 November candidates and three ear
 ### GitHub Pages publishing — 2026-10-27
 Dedicated public build includes relative assets and local candidate portraits. Free Actions checks roughly every five minutes through November 10, 2026, respecting each source's interval/backoff using a cached database. Scheduled jobs and Pages publishing may be delayed. Public display polls published snapshots every 30 seconds; snapshot age is always shown and turns delayed after 15 minutes. Local browser watchlist settings only; no host controls, imports, credentials or local runtime database are published. Review fixed unnecessary source refetching. Validate export tests, JS syntax and deployed display before declaring complete.
 
+
+### One-minute update request — 2026-10-27
+Prepared a 60-second public display poll and configurable HTTPS ELECTION_PUBLIC_STATE_URL repository variable. Credential-bearing endpoints are rejected; live-data snapshots warn after three minutes. Three publishing tests and generated JS syntax pass. Not yet activated or pushed: GitHub's scheduled-job floor remains five minutes. Awaiting live-data hosting choice/account access; the current public website still uses the original scheduled snapshot pipeline. Do not describe this as minute-fresh data until an independent service is deployed and verified.
+

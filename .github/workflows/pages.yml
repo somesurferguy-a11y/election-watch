@@ -39,6 +39,8 @@ jobs:
           restore-keys: election-sources-
       - name: Retrieve sources and build display
         if: steps.active.outputs.yes == 'true'
+        env:
+          ELECTION_PUBLIC_STATE_URL: ${{ vars.ELECTION_PUBLIC_STATE_URL }}
         run: python export_pages.py
       - uses: actions/configure-pages@v5
         if: steps.active.outputs.yes == 'true'
