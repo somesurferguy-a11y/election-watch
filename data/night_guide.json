@@ -1,0 +1,157 @@
+{
+  "verified_at": "2026-10-27T02:12:20.324437+00:00",
+  "closings": [
+    {
+      "closes_at": "2026-11-03T18:00:00-05:00",
+      "areas": [
+        "Indiana (Eastern)",
+        "Kentucky (Eastern)"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-03T19:00:00-05:00",
+      "areas": [
+        "Florida (Eastern)",
+        "Georgia",
+        "South Carolina",
+        "Vermont",
+        "Virginia",
+        "Indiana (Central)",
+        "Kentucky (Central)",
+        "New Hampshire (many towns; local hours vary)"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-03T19:30:00-05:00",
+      "areas": [
+        "North Carolina",
+        "Ohio",
+        "West Virginia"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-03T20:00:00-05:00",
+      "areas": [
+        "Connecticut",
+        "Delaware",
+        "District of Columbia",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan (Eastern)",
+        "New Hampshire (latest listed; local hours vary)",
+        "New Jersey",
+        "Pennsylvania",
+        "Rhode Island",
+        "Tennessee (both zones)",
+        "Alabama",
+        "Florida (Central)",
+        "Illinois",
+        "Kansas (Central)",
+        "Mississippi",
+        "Missouri",
+        "Oklahoma",
+        "South Dakota (Central)",
+        "Texas (Central)"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-03T20:30:00-05:00",
+      "areas": [
+        "Arkansas"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-03T21:00:00-05:00",
+      "areas": [
+        "New York",
+        "Iowa",
+        "Louisiana",
+        "Michigan (Central)",
+        "Minnesota",
+        "Nebraska (both zones)",
+        "Wisconsin",
+        "Arizona",
+        "Colorado",
+        "Kansas (Mountain)",
+        "New Mexico",
+        "South Dakota (Mountain)",
+        "Texas (Mountain)",
+        "Wyoming"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-03T22:00:00-05:00",
+      "areas": [
+        "North Dakota (Central; latest listed, local hours vary)",
+        "Idaho (Mountain)",
+        "Montana",
+        "Oregon (Mountain ballot drop-off)",
+        "Utah",
+        "Nevada"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-03T23:00:00-05:00",
+      "areas": [
+        "North Dakota (Mountain; latest listed, local hours vary)",
+        "California",
+        "Idaho (Pacific)",
+        "Oregon (Pacific ballot drop-off)",
+        "Washington (ballot drop-off)"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-04T00:00:00-05:00",
+      "areas": [
+        "Alaska (Alaska time)",
+        "Hawaii"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    },
+    {
+      "closes_at": "2026-11-04T01:00:00-05:00",
+      "areas": [
+        "Alaska (Hawaii–Aleutian time)"
+      ],
+      "source_url": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc"
+    }
+  ],
+  "amendments": [
+    {
+      "number": 1,
+      "title": "Budget Stabilization Fund",
+      "yes": "Raise the reserve cap from 10% to 25%, change required deposits, and allow specified withdrawals for critical state needs.",
+      "no": "Keep the existing constitutional reserve rules.",
+      "source_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+      "threshold": 60
+    },
+    {
+      "number": 2,
+      "title": "Agricultural tangible personal property exemption",
+      "yes": "Exempt qualifying agricultural tangible personal property from property tax starting in 2027.",
+      "no": "Keep existing taxation rules for that property.",
+      "source_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+      "threshold": 60
+    },
+    {
+      "number": 3,
+      "title": "Homestead exemptions and property assessment limits",
+      "yes": "Increase homestead exemptions, reduce the non-homestead assessment cap, and adopt related property-tax rules starting in 2027.",
+      "no": "Keep the existing constitutional exemptions, assessment cap, and related rules.",
+      "source_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+      "threshold": 60
+    }
+  ],
+  "closing_note": "Scheduled election-night guide, not a polling-place lookup or confirmation voting ended. New Hampshire and North Dakota hours vary locally. Extensions and voters already in line can delay actual closure. Mail-ballot receipt and postmark rules differ. All displayed times are Eastern Standard Time; Alaska/Hawaii close after midnight Eastern.",
+  "closing_source": "https://www.thegreenpapers.com/G26/closing.phtml?format=gc",
+  "florida_source": "https://dos.fl.gov/elections/contacts/frequently-asked-questions/faq-voting/"
+}

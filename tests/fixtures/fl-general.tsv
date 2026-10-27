@@ -1,0 +1,41 @@
+ElectionDate	PartyCode	PartyName	RaceCode	RaceName	CountyCode	CountyName	Juris1num	Juris2num	Precincts	PrecinctsReporting	CanNameLast	CanNameFirst	CanNameMiddle	CanVotes
+11/03/2026	REP	Republican Party	USS	United States Senator	ALA	Alachua	   	 	63	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	IND	Indian River	   	 	35	0	Moody	Ashley		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	ALA	Alachua	   	 	63	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	IND	Indian River	   	 	35	0	Nixon	Angie		0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	ALA	Alachua	   	 	63	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	IND	Indian River	   	 	35	0	Gillespie	Neil	J.	0
+11/03/2026	REP	Republican Party	GOV	Governor	ALA	Alachua	   	 	63	0	Avila	Donalds	/	0
+11/03/2026	REP	Republican Party	GOV	Governor	IND	Indian River	   	 	35	0	Avila	Donalds	/	0
+11/03/2026	DEM	Democratic Party	GOV	Governor	ALA	Alachua	   	 	63	0	Graham	Jolly	/	0
+11/03/2026	DEM	Democratic Party	GOV	Governor	IND	Indian River	   	 	35	0	Graham	Jolly	/	0
+11/03/2026	LPF	Libertarian Party	GOV	Governor	ALA	Alachua	   	 	63	0	Skelly	Jewett	/	0
+11/03/2026	LPF	Libertarian Party	GOV	Governor	IND	Indian River	   	 	35	0	Skelly	Jewett	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	ALA	Alachua	   	 	63	0	Coto	Burkett	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	IND	Indian River	   	 	35	0	Coto	Burkett	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	ALA	Alachua	   	 	63	0	Rodriguez	Russo	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	IND	Indian River	   	 	35	0	Rodriguez	Russo	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	ALA	Alachua	   	 	63	0	Rojas	Dimanche	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	IND	Indian River	   	 	35	0	Rojas	Dimanche	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	ALA	Alachua	   	 	63	0	Van Vactor	Abrams	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	IND	Indian River	   	 	35	0	Van Vactor	Abrams	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	ALA	Alachua	   	 	63	0	Santana	Datto	/	0
+11/03/2026	NPA	No Party Affiliation	GOV	Governor	IND	Indian River	   	 	35	0	Santana	Datto	/	0
+11/03/2026	WRI	Write-in	GOV	Governor	ALA	Alachua	   	 	63	0	Nokovich	Anderson	/	0
+11/03/2026	WRI	Write-in	GOV	Governor	IND	Indian River	   	 	35	0	Nokovich	Anderson	/	0
+11/03/2026	WRI	Write-in	GOV	Governor	ALA	Alachua	   	 	63	0	Alaways	Morris	/	0
+11/03/2026	WRI	Write-in	GOV	Governor	IND	Indian River	   	 	35	0	Alaways	Morris	/	0
+11/03/2026	NOP	Non-Partisan	SEB	Sebastian Inlet Tax District, District 5	IND	Indian River	   	005	35	0	Holton	Calvin		0
+11/03/2026	NOP	Non-Partisan	SEB	Sebastian Inlet Tax District, District 5	IND	Indian River	   	005	35	0	Leger Frazier	Lisa		0
+11/03/2026	NOP	Non-Partisan	AMD	Budget Stabilization Fund	ALA	Alachua			63	0	Yes for Approval	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	Budget Stabilization Fund	IND	Indian River			35	0	Yes for Approval	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	Budget Stabilization Fund	ALA	Alachua			63	0	No for Rejection	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	Budget Stabilization Fund	IND	Indian River			35	0	No for Rejection	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	Exemption of Tangible Personal Property on Agricultural Land From Taxation	ALA	Alachua			63	0	Yes for Approval	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	Exemption of Tangible Personal Property on Agricultural Land From Taxation	IND	Indian River			35	0	Yes for Approval	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	Exemption of Tangible Personal Property on Agricultural Land From Taxation	ALA	Alachua			63	0	No for Rejection	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	Exemption of Tangible Personal Property on Agricultural Land From Taxation	IND	Indian River			35	0	No for Rejection	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	 Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments	ALA	Alachua			63	0	Yes for Approval	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	 Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments	IND	Indian River			35	0	Yes for Approval	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	 Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments	ALA	Alachua			63	0	No for Rejection	 	 	0
+11/03/2026	NOP	Non-Partisan	AMD	 Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments	IND	Indian River			35	0	No for Rejection	 	 	0

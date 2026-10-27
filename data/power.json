@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-27T01:30:05.842204+00:00",
+  "chambers": [
+    {
+      "chamber": "senate",
+      "DEM": 45,
+      "REP": 53,
+      "IND": 2,
+      "vacancies": 0,
+      "total": 100,
+      "threshold": 51,
+      "source_name": "U.S. Senate",
+      "source_url": "https://www.senate.gov/senators/",
+      "published_date": null
+    },
+    {
+      "chamber": "house",
+      "DEM": 214,
+      "REP": 218,
+      "IND": 1,
+      "vacancies": 2,
+      "total": 435,
+      "threshold": 218,
+      "source_name": "House Radio-Television Gallery",
+      "source_url": "https://radiotv.house.gov/house-data/party-breakdown",
+      "published_date": "2026-09-02"
+    }
+  ]
+}

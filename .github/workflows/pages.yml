@@ -1,0 +1,51 @@
+name: Election watch website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '2/5 * * 10,11 *'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Limit scheduled checks to the 2026 election period
+        id: active
+        run: |
+          if [ '${{ github.event_name }}' != schedule ] || { [ "$(date -u +%Y)" = 2026 ] && [ "$(date -u +%Y%m%d)" -le 20261110 ]; }; then
+            echo 'yes=true' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.active.outputs.yes == 'true'
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        if: steps.active.outputs.yes == 'true'
+        with:
+          path: .pages-cache
+          key: election-sources-${{ github.run_id }}
+          restore-keys: election-sources-
+      - name: Retrieve sources and build display
+        if: steps.active.outputs.yes == 'true'
+        run: python export_pages.py
+      - uses: actions/configure-pages@v5
+        if: steps.active.outputs.yes == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.active.outputs.yes == 'true'
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
+        if: steps.active.outputs.yes == 'true'
+        id: deploy

@@ -1,0 +1,413 @@
+{
+  "demo": true,
+  "election_date": "2026-11-03",
+  "description": "Entirely fictional candidates, polls, prices and counts. No historical results are reused.",
+  "races": [
+    {
+      "id": "demo:fl-governor",
+      "name": "Florida governor \u2014 sample contest",
+      "scope": "florida",
+      "jurisdiction": "Fictional demonstration",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Fictional demo fixture",
+      "source_url": "",
+      "source_updated_at": null,
+      "demo": true,
+      "precincts_reporting": 32,
+      "precincts_total": 50,
+      "candidates": [
+        {
+          "id": "demo:fl-governor:0",
+          "name": "Jordan Ellis",
+          "party": "DEM",
+          "votes": 4238117,
+          "percentage": 50.41248358487335
+        },
+        {
+          "id": "demo:fl-governor:1",
+          "name": "Casey Monroe",
+          "party": "REP",
+          "votes": 4027441,
+          "percentage": 47.90648849513732
+        },
+        {
+          "id": "demo:fl-governor:2",
+          "name": "Taylor Brooks",
+          "party": "NPA",
+          "votes": 141322,
+          "percentage": 1.6810279199893423
+        }
+      ]
+    },
+    {
+      "id": "demo:us-senate",
+      "name": "U.S. Senate \u2014 sample state",
+      "scope": "national",
+      "jurisdiction": "Fictional demonstration",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Fictional demo fixture",
+      "source_url": "",
+      "source_updated_at": null,
+      "demo": true,
+      "precincts_reporting": 32,
+      "precincts_total": 50,
+      "candidates": [
+        {
+          "id": "demo:us-senate:0",
+          "name": "Morgan Lee",
+          "party": "REP",
+          "votes": 1502118,
+          "percentage": 51.20455909758884
+        },
+        {
+          "id": "demo:us-senate:1",
+          "name": "Alex Ramirez",
+          "party": "DEM",
+          "votes": 1339004,
+          "percentage": 45.644289895938826
+        },
+        {
+          "id": "demo:us-senate:2",
+          "name": "Riley Cross",
+          "party": "NPA",
+          "votes": 92441,
+          "percentage": 3.1511510064723343
+        }
+      ],
+      "chamber": "senate"
+    },
+    {
+      "id": "demo:us-house",
+      "name": "U.S. House \u2014 sample district",
+      "scope": "national",
+      "jurisdiction": "Fictional demonstration",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Fictional demo fixture",
+      "source_url": "",
+      "source_updated_at": null,
+      "demo": true,
+      "precincts_reporting": 32,
+      "precincts_total": 50,
+      "candidates": [
+        {
+          "id": "demo:us-house:0",
+          "name": "Drew Whitaker",
+          "party": "REP",
+          "votes": 198442,
+          "percentage": 52.91292812670817
+        },
+        {
+          "id": "demo:us-house:1",
+          "name": "Jamie Rivers",
+          "party": "DEM",
+          "votes": 176593,
+          "percentage": 47.087071873291826
+        }
+      ],
+      "chamber": "house"
+    },
+    {
+      "id": "demo:fl-ag",
+      "name": "Florida attorney general \u2014 sample",
+      "scope": "florida",
+      "jurisdiction": "Fictional demonstration",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Fictional demo fixture",
+      "source_url": "",
+      "source_updated_at": null,
+      "demo": true,
+      "precincts_reporting": 32,
+      "precincts_total": 50,
+      "candidates": [
+        {
+          "id": "demo:fl-ag:0",
+          "name": "Sam Rivera",
+          "party": "DEM",
+          "votes": 3942000,
+          "percentage": 48.96894409937888
+        },
+        {
+          "id": "demo:fl-ag:1",
+          "name": "Avery Lane",
+          "party": "REP",
+          "votes": 4108000,
+          "percentage": 51.03105590062111
+        }
+      ]
+    },
+    {
+      "id": "demo:irc-school",
+      "name": "School board \u2014 sample district",
+      "scope": "indian_river",
+      "jurisdiction": "Fictional demonstration",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Fictional demo fixture",
+      "source_url": "",
+      "source_updated_at": null,
+      "demo": true,
+      "precincts_reporting": 32,
+      "precincts_total": 50,
+      "candidates": [
+        {
+          "id": "demo:irc-school:0",
+          "name": "Quinn Harper",
+          "party": "NON",
+          "votes": 15910,
+          "percentage": 51.60055784386858
+        },
+        {
+          "id": "demo:irc-school:1",
+          "name": "Robin Wells",
+          "party": "NON",
+          "votes": 14923,
+          "percentage": 48.399442156131414
+        }
+      ]
+    },
+    {
+      "id": "demo:irc-city",
+      "name": "City council \u2014 sample seat",
+      "scope": "indian_river",
+      "jurisdiction": "Fictional demonstration",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Fictional demo fixture",
+      "source_url": "",
+      "source_updated_at": null,
+      "demo": true,
+      "precincts_reporting": 32,
+      "precincts_total": 50,
+      "candidates": [
+        {
+          "id": "demo:irc-city:0",
+          "name": "Cameron Reed",
+          "party": "NON",
+          "votes": 4200,
+          "percentage": 50.69402534701267
+        },
+        {
+          "id": "demo:irc-city:1",
+          "name": "Dakota Hayes",
+          "party": "NON",
+          "votes": 4085,
+          "percentage": 49.30597465298733
+        }
+      ]
+    },
+    {
+      "id": "demo:irc-measure",
+      "name": "Local referendum \u2014 sample measure",
+      "scope": "indian_river",
+      "jurisdiction": "Fictional demonstration",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Fictional demo fixture",
+      "source_url": "",
+      "source_updated_at": null,
+      "demo": true,
+      "precincts_reporting": 32,
+      "precincts_total": 50,
+      "candidates": [
+        {
+          "id": "demo:irc-measure:0",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 21400,
+          "percentage": 52.51533742331288
+        },
+        {
+          "id": "demo:irc-measure:1",
+          "name": "No",
+          "party": "NON",
+          "votes": 19350,
+          "percentage": 47.484662576687114
+        }
+      ]
+    }
+  ],
+  "markets": [
+    {
+      "id": "demo:Polymarkethouse",
+      "provider": "Polymarket \u00b7 DEMO",
+      "contract_id": "fictional",
+      "question": "Fictional Democratic house control contract",
+      "outcome": "Yes \u2014 Democratic control",
+      "probability": 72.5,
+      "bid": 0.63,
+      "ask": 0.66,
+      "spread_pp": 3,
+      "price_convention": "fictional midpoint",
+      "metadata_updated_at": null,
+      "quote_updated_at": null,
+      "volume": null,
+      "liquidity": null,
+      "source_url": "",
+      "rules": "Demonstration contract; not an actual market.",
+      "status": "sample",
+      "comparison_group": "control-house",
+      "flags": [
+        "Fictional sample, not actual odds"
+      ],
+      "demo": true
+    },
+    {
+      "id": "demo:Polymarketsenate",
+      "provider": "Polymarket \u00b7 DEMO",
+      "contract_id": "fictional",
+      "question": "Fictional Democratic senate control contract",
+      "outcome": "Yes \u2014 Democratic control",
+      "probability": 64.5,
+      "bid": 0.63,
+      "ask": 0.66,
+      "spread_pp": 3,
+      "price_convention": "fictional midpoint",
+      "metadata_updated_at": null,
+      "quote_updated_at": null,
+      "volume": null,
+      "liquidity": null,
+      "source_url": "",
+      "rules": "Demonstration contract; not an actual market.",
+      "status": "sample",
+      "comparison_group": "control-senate",
+      "flags": [
+        "Fictional sample, not actual odds"
+      ],
+      "demo": true
+    },
+    {
+      "id": "demo:Kalshihouse",
+      "provider": "Kalshi \u00b7 DEMO",
+      "contract_id": "fictional",
+      "question": "Fictional Democratic house control contract",
+      "outcome": "Yes \u2014 Democratic control",
+      "probability": 71.5,
+      "bid": 0.63,
+      "ask": 0.66,
+      "spread_pp": 3,
+      "price_convention": "fictional midpoint",
+      "metadata_updated_at": null,
+      "quote_updated_at": null,
+      "volume": null,
+      "liquidity": null,
+      "source_url": "",
+      "rules": "Demonstration contract; not an actual market.",
+      "status": "sample",
+      "comparison_group": "control-house",
+      "flags": [
+        "Fictional sample, not actual odds"
+      ],
+      "demo": true
+    },
+    {
+      "id": "demo:Kalshisenate",
+      "provider": "Kalshi \u00b7 DEMO",
+      "contract_id": "fictional",
+      "question": "Fictional Democratic senate control contract",
+      "outcome": "Yes \u2014 Democratic control",
+      "probability": 63.5,
+      "bid": 0.63,
+      "ask": 0.66,
+      "spread_pp": 3,
+      "price_convention": "fictional midpoint",
+      "metadata_updated_at": null,
+      "quote_updated_at": null,
+      "volume": null,
+      "liquidity": null,
+      "source_url": "",
+      "rules": "Demonstration contract; not an actual market.",
+      "status": "sample",
+      "comparison_group": "control-senate",
+      "flags": [
+        "Fictional sample, not actual odds"
+      ],
+      "demo": true
+    }
+  ],
+  "polls": [
+    {
+      "id": "demo:poll",
+      "race_id": "demo:fl-governor",
+      "pollster": "Fictional Research Co.",
+      "sponsor": "Demo fixture",
+      "field_start": "2026-10-15",
+      "field_end": "2026-10-18",
+      "sample_size": 1000,
+      "population": "Fictional likely voters",
+      "method": "Sample fixture",
+      "shares": [
+        {
+          "candidate_id": "demo:fl-governor:0",
+          "share": 49
+        },
+        {
+          "candidate_id": "demo:fl-governor:1",
+          "share": 48
+        },
+        {
+          "candidate_id": "demo:fl-governor:2",
+          "share": 3
+        }
+      ],
+      "source_url": "",
+      "retrieved_at": null,
+      "demo": true
+    }
+  ],
+  "chambers": [
+    {
+      "chamber": "house",
+      "total": 435,
+      "threshold": 218,
+      "seats": {
+        "DEM": 205,
+        "REP": 201,
+        "OTHER": 0
+      },
+      "unresolved_or_unprovided": 29,
+      "note": "Fictional seat totals for layout demonstration."
+    },
+    {
+      "chamber": "senate",
+      "total": 100,
+      "threshold": 51,
+      "seats": {
+        "DEM": 47,
+        "REP": 47,
+        "OTHER": 0
+      },
+      "unresolved_or_unprovided": 6,
+      "note": "Fictional totals. A 50\u201350 Senate also depends on the vice president."
+    }
+  ],
+  "ticker_events": [
+    {
+      "id": "demo:ticker1",
+      "text": "DEMO: Fictional Florida governor contest remains close. These are not real votes.",
+      "source": "Fictional demo fixture",
+      "demo": true,
+      "scope": "florida",
+      "at": null
+    },
+    {
+      "id": "demo:ticker2",
+      "text": "DEMO: Sample Indian River school board totals illustrate the local-race view.",
+      "source": "Fictional demo fixture",
+      "demo": true,
+      "scope": "indian_river",
+      "at": null
+    },
+    {
+      "id": "demo:ticker3",
+      "text": "DEMO: Poll vote share and market win probability measure different things.",
+      "source": "Display guide",
+      "demo": true,
+      "scope": "national",
+      "at": null
+    }
+  ]
+}

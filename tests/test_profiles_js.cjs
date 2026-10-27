@@ -1,0 +1,15 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const context={document:{addEventListener(){}},state:{demo:false},esc:s=>String(s??''),view:'indian_river',pages:{},pageCount:0};vm.createContext(context);
+vm.runInContext(fs.readFileSync('static/js/candidate-profiles.js','utf8'),context);
+const app=fs.readFileSync('static/js/app.js','utf8');vm.runInContext(app.slice(app.indexOf('function candidateWindow('),app.indexOf('function candidatesHtml(')),context);
+context.candidates=[{id:'a',name:'Challenger',votes:90,service:{incumbent:false}},{id:'b',name:'Incumbent',votes:10,service:{incumbent:true}}];
+assert.equal(vm.runInContext('orderedCandidates(candidates)[0].id',context),'b');
+context.race={candidates:context.candidates,seats_to_elect:3,has_results:true};assert.equal(vm.runInContext('candidateWindow(race).selected.length',context),2);
+context.race.candidates=Array.from({length:8},(_,i)=>({id:String(i),name:'Candidate '+i,votes:0}));assert.equal(vm.runInContext('candidateWindow(race).selected.length',context),8);
+context.race.candidates=[{name:'A',votes:40},{name:'B',votes:30},{name:'C',votes:15},{name:'D',votes:15}];assert.match(vm.runInContext('seatRank(race.candidates[2],race)',context),/Tied at cutoff/);
+assert.doesNotMatch(vm.runInContext('seatRank(race.candidates[2],race)',context),/elected|winner/);
+context.race.has_results=false;assert.equal(vm.runInContext('seatRank(race.candidates[0],race)',context),'');
+context.races=[{id:'a'},{id:'b'},{id:'vero',seats_to_elect:3},{id:'c'}];vm.runInContext('racePage(races)',context);assert.equal(context.pageCount,3);context.pages.indian_river=1;assert.equal(vm.runInContext('racePage(races)[0].id',context),'vero');
+context.candidate={name:'Test Person',photo:{path:'https://external.example/photo.jpg'}};assert.doesNotMatch(vm.runInContext('portraitHtml(candidate)',context),/<img/);
+assert.equal(vm.runInContext('isPerson({name:"Yes for Approval"})',context),false);
+console.log('9 candidate display checks passed: incumbent-first order, all multi-seat candidates, cutoff ties, pending ranks, whole-contest pagination, safe photo paths and ballot choices.');

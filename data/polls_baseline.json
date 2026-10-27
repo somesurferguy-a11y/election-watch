@@ -1,0 +1,55 @@
+{
+  "demo": false,
+  "election_date": "2026-11-03",
+  "source_updated_at": null,
+  "publication_date": "2026-10-13",
+  "verification_sha256": "6f59792845b52561dc92ea62fc26a1a5484001d18c5c3a429013db7c383d4858",
+  "polls": [
+    {
+      "id": "stetson-2026-10-13-gov",
+      "race_id": "fl:6850a80c5262d72ad1ce",
+      "pollster": "Stetson University Center for Public Opinion Research",
+      "sponsor": "Stetson CPOR publication; outside sponsor not stated",
+      "field_start": "2026-10-01",
+      "field_end": "2026-10-09",
+      "sample_size": 716,
+      "population": "Registered voters, weighted by modeled likelihood of voting (826 adults interviewed)",
+      "method": "Qualtrics opt-in online panel; demographic weights and 2024 vote calibration. Includes leaners; precision estimate is not a random-sample margin of error.",
+      "source_url": "https://www.stetson.edu/artsci/cpor/media/cpor-october-2026-pr.docx",
+      "shares": [
+        {
+          "candidate_id": "f97a4f47ebffed91eba0",
+          "share": 52
+        },
+        {
+          "candidate_id": "157e384917d34a6d1f26",
+          "share": 41
+        }
+      ],
+      "retrieved_at": "2026-10-27T00:25:03.799099Z"
+    },
+    {
+      "id": "stetson-2026-10-13-uss",
+      "race_id": "fl:7ff76bb071a5a28b06ed",
+      "pollster": "Stetson University Center for Public Opinion Research",
+      "sponsor": "Stetson CPOR publication; outside sponsor not stated",
+      "field_start": "2026-10-01",
+      "field_end": "2026-10-09",
+      "sample_size": 716,
+      "population": "Registered voters, weighted by modeled likelihood of voting (826 adults interviewed)",
+      "method": "Qualtrics opt-in online panel; demographic weights and 2024 vote calibration. Includes leaners; precision estimate is not a random-sample margin of error.",
+      "source_url": "https://www.stetson.edu/artsci/cpor/media/cpor-october-2026-pr.docx",
+      "shares": [
+        {
+          "candidate_id": "1e0c37d0d5abf2bf18e5",
+          "share": 52
+        },
+        {
+          "candidate_id": "9ae8beece705e9645f84",
+          "share": 41
+        }
+      ],
+      "retrieved_at": "2026-10-27T00:25:03.799099Z"
+    }
+  ]
+}

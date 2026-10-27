@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election Watch — TV Dashboard</title>
+  <link rel="stylesheet" href="/static/css/tv.css">
+  <style>
+    /* Inlined base styles — see tv.css for full TV theme */
+    body { background: #0a0f14; color: #e8edf3; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; overflow: hidden; }
+    html, body { background: #0a0f14; color: #e8edf3; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; overflow: hidden; }
+    #tv-root { position: fixed; inset: 0; display: flex; flex-direction: column; background: #0a0f14; }
+    #status-bar { position: relative; z-index: 10; background: #11161d; border-bottom: 2px solid #2a3441; padding: 10px 28px; display: flex; justify-content: space-between; align-items: center; min-height: 64px; }
+    #status-bar .title { font-size: 30px; font-weight: 700; color: #e8edf3; letter-spacing: 0.5px; }
+    #status-bar .election-date { font-size: 22px; color: #9aa7b4; font-weight: 600; }
+    #status-bar .source-outage { font-size: 22px; color: #ef4444; font-weight: 700; }
+    #tv-main { flex: 1; position: relative; overflow: hidden; padding: 18px 28px; }
+    .view-layer { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 14px; }
+    .panel { background: #11161d; border: 1px solid #2a3441; border-radius: 10px; padding: 16px 20px; }
+    .panel-header { font-size: 20px; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .panel-header .badge { font-size: 14px; font-weight: 600; color: #9aa7b4; text-transform: none; letter-spacing: 0; }
+    .chamber-control-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .chamber-card { background: #1a212b; border: 1px solid #2a3441; border-radius: 10px; padding: 14px 18px; }
+    .chamber-card .chamber-name { font-size: 22px; font-weight: 700; color: #e8edf3; }
+    .chamber-card .control-status { font-size: 26px; font-weight: 700; margin-top: 4px; }
+    .chamber-card .control-status.democrats { color: #60a5fa; }
+    .chamber-card .control-status.republicans { color: #f87171; }
+    .chamber-card .control-status.tied { color: #9aa7b4; }
+    .chamber-card .meta { font-size: 17px; color: #9aa7b4; margin-top: 4px; }
+    .race-row { display: flex; align-items: center; gap: 16px; padding: 12px 14px; background: #1a212b; border: 1px solid #2a3441; border-radius: 8px; margin-bottom: 10px; }
+    .race-row .race-title { font-size: 24px; font-weight: 700; color: #e8edf3; }
+    .race-row .race-meta { font-size: 17px; color: #9aa7b4; margin-top: 2px; }
+    .race-row .race-leader { margin-left: auto; text-align: right; }
+    .race-row .race-leader .cand { font-size: 24px; font-weight: 700; color: #e8edf3; }
+    .race-row .race-leader .pct { font-size: 20px; color: #9aa7b4; }
+    .featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 14px; }
+    .poll-table { display: grid; grid-template-columns: 2fr 1.5fr 1fr; gap: 12px; align-items: center; font-size: 20px; }
+    .source-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-bottom: 1px solid #2a3441; font-size: 19px; }
+    .source-item:last-child { border-bottom: none; }
+    .source-item .name { color: #e8edf3; font-weight: 600; }
+    .source-item .status { margin-left: auto; font-weight: 700; }
+    #tv-ticker { position: relative; z-index: 20; background: #11161d; border-top: 2px solid #f59e0b; padding: 10px 0; display: flex; align-items: center; height: 72px; overflow: hidden; }
+    #ticker-track { display: flex; white-space: nowrap; animation: ticker-scroll 60s linear infinite; }
+    #ticker-track.paused { animation-play-state: paused; }
+    @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker-item { display: inline-flex; align-items: center; gap: 14px; padding: 0 40px; font-size: 24px; font-weight: 600; color: #e8edf3; }
+    .ticker-item .ticker-time { color: #9aa7b4; font-weight: 400; font-size: 19px; }
+    .ticker-item .ticker-source { color: #f59e0b; font-weight: 700; font-size: 18px; }
+    #host-panel { position: fixed; inset: 0; background: #0a0f14; z-index: 50; display: none; flex-direction: column; overflow-y: auto; padding: 24px; }
+    #host-panel.open { display: flex; }
+    .hidden { display: none !important; }
+    .tv-text-lg { font-size: 36px; }
+    .tv-text-xl { font-size: 48px; }
+    .tv-text-2xl { font-size: 60px; }
+    .tv-button { background: #1a212b; color: #e8edf3; border: 1px solid #2a3441; padding: 12px 24px; border-radius: 8px; font-size: 22px; font-weight: 700; cursor: pointer; }
+    .tv-button.active { background: #f59e0b; color: #0a0f14; border-color: #f59e0b; }
+    .tv-button:hover { background: #2a3441; }
+    .tv-button.active:hover { background: #fbbf24; }
+  </style>
+</head>
+<body>
+  <div id="tv-root">
+    <header id="status-bar">
+      <div class="title">🏛️ ELECTION WATCH</div>
+      <div class="election-date">Nov 3, 2026 · General Election</div>
+      <div id="source-outage-indicator" class="source-outage" style="display:none;">● FEED OFFLINE</div>
+    </header>
+
+    <main id="tv-main">
+      <div id="view-national" class="view-layer">
+        <div class="panel">
+          <div class="panel-header">National Overview <span class="badge">House &amp; Senate Control</span></div>
+          <div class="chamber-control-grid" id="chamber-cards"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-header">Competitive Races <span class="badge">Leading not called</span></div>
+          <div id="national-races"></div>
+        </div>
+      </div>
+
+      <div id="view-florida" class="view-layer hidden">
+        <div class="panel">
+          <div class="panel-header">Florida — Statewide Contests</div>
+          <div id="florida-races"></div>
+        </div>
+      </div>
+
+      <div id="view-indian-river" class="view-layer hidden">
+        <div class="panel">
+          <div class="panel-header">Indian River County — Local Contests</div>
+          <div id="irc-races"></div>
+        </div>
+      </div>
+
+      <div id="view-featured" class="view-layer hidden">
+        <div class="panel">
+          <div class="panel-header">Featured Races — Watchlist</div>
+          <div id="featured-races"></div>
+        </div>
+      </div>
+
+      <div id="view-polls-markets" class="view-layer hidden">
+        <div class="panel">
+          <div class="panel-header">Polls &amp; Markets</div>
+          <div id="poll-market-data"></div>
+        </div>
+      </div>
+
+      <div id="view-source-health" class="view-layer hidden">
+        <div class="panel">
+          <div class="panel-header">Source Health</div>
+          <div id="source-health-list"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="tv-ticker">
+      <div id="ticker-track"></div>
+    </footer>
+  </div>
+
+  <div id="host-panel">
+    <div class="panel">
+      <div class="panel-header">Host Control Panel</div>
+      <button id="host-close" class="tv-button">Close Host Panel</button>
+    </div>
+    <div class="panel">
+      <div class="panel-header">Host Controls</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
+        <button id="host-enter-fullscreen" class="tv-button">Enter Fullscreen</button>
+        <button id="host-exit-fullscreen" class="tv-button">Exit Fullscreen</button>
+        <button id="host-toggle-ticker" class="tv-button">Toggle Ticker</button>
+        <button id="host-check-now" class="tv-button">Check Now</button>
+        <button id="host-rotate" class="tv-button">Auto-Rotate</button>
+        <button id="host-manual-next" class="tv-button">Next View</button>
+        <button id="host-manual-prev" class="tv-button">Previous View</button>
+      </div>
+      <div class="panel-header">Text Size</div>
+      <div style="display:flex; gap:12px; margin-bottom:16px;">
+        <button id="host-text-decrease" class="tv-button">A−</button>
+        <button id="host-text-increase" class="tv-button">A+</button>
+      </div>
+      <div class="panel-header">Current View</div>
+      <div id="host-current-view" style="font-size:28px; font-weight:600;">National</div>
+    </div>
+    <div class="panel">
+      <div class="panel-header">Diagnostics &amp; Detailed Status</div>
+      <div id="host-diagnostics"></div>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
