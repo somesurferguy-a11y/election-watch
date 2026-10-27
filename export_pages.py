@@ -17,7 +17,7 @@ def build():
   snapshot['settings']['pins']=[]
   (out/'state.json').write_text(json.dumps(snapshot,ensure_ascii=False,allow_nan=False),encoding='utf-8')
  finally:engine.close()
- shutil.copytree(config.ROOT/'static',out/'static',dirs_exist_ok=True)
+ shutil.copytree(config.ROOT/'static',out/'static',dirs_exist_ok=True,ignore=shutil.ignore_patterns('templates','host.js'))
  for extra in ['host.js']:
   (out/'static/js'/extra).unlink(missing_ok=True)
  html=(config.ROOT/'templates/index.html').read_text(encoding='utf-8').replace('href="/static/','href="./static/').replace('src="/static/','src="./static/')
