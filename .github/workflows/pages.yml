@@ -3,8 +3,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: '2/5 * * 10,11 *'
 permissions:
   contents: read
   pages: write
