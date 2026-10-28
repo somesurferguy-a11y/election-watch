@@ -28,6 +28,7 @@ assert.equal((await call('/checkpoint','POST','a',body,{'Content-Encoding':'gzip
 assert.deepEqual(new Uint8Array(await (await call('/checkpoint','POST')).arrayBuffer()),new Uint8Array(body));
 assert.equal((await call('/checkpoint','POST','a',null,{Authorization:'wrong'})).status,401);
 const result=await call('/state.json');assert.equal(result.status,200);assert.equal(result.headers.get('Cache-Control'),'no-store');assert.equal(result.headers.get('Access-Control-Allow-Origin'),'https://somesurferguy-a11y.github.io');
+assert.equal((await result.json()).server_time,stamp);
 assert.equal((await call('/release','POST')).status,200);
 assert.equal((await call('/lease','POST','b')).status,200);
 console.log('14 live Worker checks passed');

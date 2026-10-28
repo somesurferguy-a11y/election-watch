@@ -22,7 +22,7 @@ export class SnapshotStore {
   const path=new URL(request.url).pathname,now=Date.now();
   if(path==='/state.json'){
    const row=[...this.sql.exec('SELECT body,stamp FROM snapshot WHERE id=1')][0];
-   return row?new Response(row.body,{headers:{'Content-Type':'application/json','Content-Encoding':'gzip','X-Snapshot-Time':row.stamp}}):Response.json({error:'First live snapshot pending'},{status:503});
+   return row?new Response(new Response(row.body).body.pipeThrough(new DecompressionStream('gzip')),{headers:{'Content-Type':'application/json','X-Snapshot-Time':row.stamp}}):Response.json({error:'First live snapshot pending'},{status:503});
   }
   const owner=request.headers.get('X-Collector-ID');if(!owner||owner.length>100)return new Response('Collector ID required',{status:400});
   const lease=[...this.sql.exec('SELECT owner,expires FROM lease WHERE id=1')][0];
