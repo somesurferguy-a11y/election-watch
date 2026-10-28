@@ -5662,12 +5662,13 @@
         "as_of": "2026-10-27"
       },
       "photo": {
-        "path": "/static/portraits/97dc8bc083ebc7640959.png",
+        "path": "/static/portraits/91524321b2e129aec162.jpg",
         "subject": "Deborah Shellenberger",
-        "source_url": "https://secure.actblue.com/donate/deborah-shellenberger-fundraiser",
-        "image_url": "https://secure.actblue.com/uploads/list-editor/8e5079b8-91b5-4c39-be4f-6cde2dd2df5e-brandings/transient/header/image_url/Untitleddesign62.png",
-        "credit": "Deborah Shellenberger campaign public portrait",
-        "verified_at": "2026-10-27"
+        "source_url": "https://www.politicalcandidatedirectory.com/fl/deborah-shellenberger",
+        "image_url": "https://candidatedirectory.blob.core.windows.net/images/candidate-d015db37-b5da-45a6-bf56-e530710bda6d.jpg",
+        "credit": "Deborah Shellenberger campaign portrait, reproduced by Political Candidate Directory",
+        "verified_at": "2026-10-27",
+        "image_note": "Portrait visually verified against the identical photograph on the candidate campaign website, https://www.debshellenberger.com/. Replaces a campaign-logo graphic incorrectly labeled as a portrait."
       }
     },
     "irc:ballot:fellsmere-council|d4cd7c7beb6cc633b749": {
@@ -5681,6 +5682,15 @@
         "since": null,
         "term_note": "Current council membership verified; lifetime term count not verified.",
         "incumbent": true
+      },
+      "photo": {
+        "path": "/static/portraits/081e6042872c5eed79ed.webp",
+        "subject": "Fernando R. Herrera",
+        "source_url": "https://www.cityoffellsmere.org/citycouncil/directory-listing/fernando-herrera",
+        "image_url": "https://www.cityoffellsmere.org/sites/g/files/vyhlif15486/files/styles/convert_image_to_webp/public/styles/directory_listings_body_with_photo/public/media/citycouncil/image/1756/herrera.jpg.jpeg.webp?itok=VE1f1IxR",
+        "credit": "City of Fellsmere official vice mayor portrait",
+        "verified_at": "2026-10-27",
+        "caption": "Fernando Herrera, Vice Mayor"
       }
     },
     "irc:ballot:fellsmere-council|1457006a5e8516b4faca": {

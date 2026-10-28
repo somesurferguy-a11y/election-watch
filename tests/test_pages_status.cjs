@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const context={setInterval:()=>{}};vm.createContext(context);
+vm.runInContext(fs.readFileSync('static/js/pages-status.js','utf8'),context);
+const now=Date.parse('2026-11-04T01:00:00Z');
+const status=(stamp,online=true)=>context.snapshotStatus(stamp,online,now,3);
+assert.equal(status('2026-11-04T00:59:00Z').ageText,'1 minute old');
+assert.equal(status('2026-11-04T00:58:00Z').ageText,'2 minutes old');
+assert.equal(status('2026-11-04T00:59:00Z').error,false);
+assert.equal(status('2026-11-04T00:56:59Z').label,'DELAYED SNAPSHOT');
+assert.equal(status('2026-11-04T00:59:00Z',false).label,'DISCONNECTED');
+assert.equal(status('2026-11-04T00:59:00Z',false).error,true);
+assert.equal(status('invalid').error,true);
+assert.equal(status('2026-11-04T01:02:00Z').label,'SNAPSHOT TIME UNAVAILABLE');
+assert.equal(status('2026-11-04T00:59:00Z').label,'AUTOMATIC SNAPSHOT');
+console.log('9 public freshness checks passed');

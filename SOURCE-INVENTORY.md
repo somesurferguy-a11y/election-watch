@@ -79,3 +79,7 @@ Vero council term histories completed: Kramer 3 completed; Heady 1; Tracey Lockw
 ### Additional Indian River portraits — 2026-10-27
 Individual candidate profiles at https://www.voterfocus.com/CampaignFinance/; named TCPalm questionnaires republished on AOL (County Commission Districts 2 and 4, Sebastian and Fellsmere); Deborah Shellenberger public campaign portrait at https://secure.actblue.com/donate/deborah-shellenberger-fundraiser. Each image has its own source URL, identity caption and verification date in data/candidate_profiles.json. Local November coverage: 21/24; missing Craig MacCoy, Fernando Herrera and Jose Zamarripa.
 
+
+### Readiness corrections — 2026-10-27
+HD13 current official status: https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ALL&OfficeCode=ALL&OfficeGroup=LEG&StatusCode=ALL&elecid=20261103-GEN . SD21 special: https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-S01 . Herrera portrait: https://www.cityoffellsmere.org/citycouncil/directory-listing/fernando-herrera . Shellenberger face matched to https://www.debshellenberger.com/ and sourced from her candidate-directory profile (individual image provenance retained in candidate_profiles.json). November county ENR not linked yet. Final named Sebastian/Fellsmere official municipal ballot verification and full Sebastian referendum wording remain source gaps.
+

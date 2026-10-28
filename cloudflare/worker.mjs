@@ -41,7 +41,13 @@ export class SnapshotStore {
   }
   if(request.headers.get('Content-Encoding')!=='gzip')return new Response('Compressed snapshot required',{status:415});
   const body=await request.arrayBuffer();if(body.byteLength>1800000)return new Response('Snapshot too large',{status:413});
-  const stamp=request.headers.get('X-Snapshot-Time');if(!stamp||!Number.isFinite(Date.parse(stamp))||Math.abs(Date.parse(stamp)-now)>180000)return new Response('Snapshot timestamp invalid',{status:400});
-  this.sql.exec('INSERT OR REPLACE INTO snapshot VALUES (?, ?, ?)',path==='/checkpoint'?2:1,body,stamp);return Response.json({published:true,at:stamp});
+  // Body reads can yield to another request: fence the write with the current lease.
+  const current=[...this.sql.exec('SELECT owner,expires FROM lease WHERE id=1')][0];
+  if(!current||current.owner!==owner||current.expires<=Date.now())return new Response('Lease expired',{status:409});
+  const stamp=request.headers.get('X-Snapshot-Time');if(!stamp||!Number.isFinite(Date.parse(stamp))||Math.abs(Date.parse(stamp)-Date.now())>180000)return new Response('Snapshot timestamp invalid',{status:400});
+  const id=path==='/checkpoint'?2:1;
+  const previous=[...this.sql.exec('SELECT body,stamp FROM snapshot WHERE id='+id)][0];
+  if(previous&&Date.parse(stamp)<Date.parse(previous.stamp))return new Response('Older snapshot rejected',{status:409});
+  this.sql.exec('INSERT OR REPLACE INTO snapshot VALUES (?, ?, ?)',id,body,stamp);return Response.json({published:true,at:stamp});
  }
 }

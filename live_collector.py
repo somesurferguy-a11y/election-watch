@@ -3,6 +3,24 @@ import os,time,json,gzip,uuid,urllib.request,urllib.error,logging,copy
 from datetime import datetime,timezone
 from store import Engine
 
+def start_engine(send):
+ """Publish only after a complete restore and successful scheduler startup."""
+ engine=Engine()
+ try:
+  try:
+   checkpoint=json.loads(gzip.decompress(send('/checkpoint')))
+   for key,source in checkpoint['sources'].items():
+    if key in engine.sources:engine.sources[key].update(source);engine.sources[key]['busy']=False
+   engine.events=checkpoint.get('events',[])
+   for key,value in checkpoint.get('baselines',{}).items():engine.db.put(key,value)
+  except urllib.error.HTTPError as exc:
+   if exc.code!=404:raise
+  engine.start()
+  return engine
+ except BaseException:
+  engine.close()
+  raise
+
 def run(minutes=125):
  endpoint=os.environ['ELECTION_PUBLIC_STATE_URL'].removesuffix('/state.json')
  if not endpoint.startswith('https://'):raise ValueError('HTTPS endpoint required')
@@ -17,16 +35,7 @@ def run(minutes=125):
    try:
     send('/lease')
     if engine is None:
-     engine=Engine()
-     try:
-      checkpoint=json.loads(gzip.decompress(send('/checkpoint')))
-      for key,source in checkpoint['sources'].items():
-       if key in engine.sources:engine.sources[key].update(source);engine.sources[key]['busy']=False
-      engine.events=checkpoint.get('events',[])
-      for key,value in checkpoint.get('baselines',{}).items():engine.db.put(key,value)
-     except urllib.error.HTTPError as exc:
-      if exc.code!=404:raise
-     engine.start()
+     engine=start_engine(send)
     state=engine.state();state['settings'].update(view='indian_river',pins=[]);state['settings_revision']=0
     with engine.lock:
      checkpoint={'sources':copy.deepcopy(engine.sources),'events':copy.deepcopy(engine.events),'baselines':{key:engine.db.get(key,{}) for key in ['market_baseline','poll_baseline']}}

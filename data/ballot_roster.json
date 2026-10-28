@@ -2,7 +2,7 @@
   "schema_version": 1,
   "election_date": "2026-11-03",
   "demo": false,
-  "verified_at": "2026-10-27T01:02:07.461497Z",
+  "verified_at": "2026-10-28T00:44:15.692264Z",
   "description": "Verified ballot roster, separate from election-night returns. Sources and verification scope retained per race.",
   "sources": [
     {
@@ -4084,58 +4084,6 @@
       "has_results": false,
       "result_names": [
         "State Representative, District 12"
-      ],
-      "display_order": 100
-    },
-    {
-      "id": "fl:5e41c7543a8d92f93f80",
-      "name": "State Representative, District 13",
-      "scope": "florida",
-      "jurisdiction": "Florida",
-      "office_code": "STR",
-      "chamber": null,
-      "source_name": "Florida Division of Elections",
-      "source_url": "https://flelectionfiles.floridados.gov/enightfilespublic/20261103_ElecResultsFL.txt",
-      "source_updated_at": null,
-      "candidates": [
-        {
-          "id": "b953798348fdc08162ed",
-          "name": "Audrey Gibson",
-          "party": "DEM",
-          "votes": 0,
-          "percentage": 0,
-          "result_names": [
-            "Audrey Gibson"
-          ],
-          "votes_available": false
-        },
-        {
-          "id": "f7409f0989c1120b006a",
-          "name": "Brice Gaillard",
-          "party": "WRI",
-          "votes": 0,
-          "percentage": 0,
-          "result_names": [
-            "Brice Gaillard"
-          ],
-          "votes_available": false
-        }
-      ],
-      "status": "awaiting",
-      "is_complete": false,
-      "coverage_note": "Totals across counties present in the official state file.",
-      "passage_threshold": null,
-      "threshold_source": null,
-      "precincts_total": 35,
-      "precincts_reporting": 0,
-      "on_ballot": true,
-      "roster_verified_at": "2026-10-27T01:02:07.461497Z",
-      "roster_source_name": "Florida Division of Elections",
-      "roster_source_url": "https://flelectionfiles.floridados.gov/enightfilespublic/20261103_ElecResultsFL.txt",
-      "results_pending": true,
-      "has_results": false,
-      "result_names": [
-        "State Representative, District 13"
       ],
       "display_order": 100
     },
@@ -11920,6 +11868,64 @@
         {
           "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?c=indianriver",
           "verified_at": "2026-10-27T01:02:07.461497Z"
+        }
+      ]
+    },
+    {
+      "id": "fl:5e41c7543a8d92f93f80",
+      "name": "State Representative, District 13",
+      "scope": "florida",
+      "jurisdiction": "Florida",
+      "office_code": "STR",
+      "chamber": null,
+      "source_name": "Florida Division of Elections candidate status",
+      "source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ALL&OfficeCode=ALL&OfficeGroup=LEG&StatusCode=ALL&elecid=20261103-GEN",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "b953798348fdc08162ed",
+          "name": "Audrey Gibson",
+          "party": "DEM",
+          "votes": 0,
+          "percentage": 0,
+          "result_names": [
+            "Audrey Gibson"
+          ],
+          "votes_available": false
+        }
+      ],
+      "status": "unopposed",
+      "is_complete": false,
+      "coverage_note": "Audrey Gibson is recorded as unopposed in the current official candidate listing after write-in Brice Gaillard withdrew. The older October 19 results-file contest shell is excluded from active races.",
+      "passage_threshold": null,
+      "threshold_source": null,
+      "precincts_total": 35,
+      "precincts_reporting": 0,
+      "on_ballot": false,
+      "roster_verified_at": "2026-10-28T00:44:15.692264Z",
+      "roster_source_name": "Florida Division of Elections candidate status",
+      "roster_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ALL&OfficeCode=ALL&OfficeGroup=LEG&StatusCode=ALL&elecid=20261103-GEN",
+      "results_pending": false,
+      "has_results": false,
+      "result_names": [
+        "State Representative, District 13"
+      ],
+      "display_order": 100,
+      "withdrawn_candidates": [
+        {
+          "id": "f7409f0989c1120b006a",
+          "name": "Brice Gaillard",
+          "party": "WRI",
+          "status": "withdrawn",
+          "source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ALL&OfficeCode=ALL&OfficeGroup=LEG&StatusCode=ALL&elecid=20261103-GEN",
+          "verified_at": "2026-10-28T00:44:15.692264Z"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ALL&OfficeCode=ALL&OfficeGroup=LEG&StatusCode=ALL&elecid=20261103-GEN",
+          "supports": "Brice Gaillard: Withdrew; Audrey Gibson: Unopposed / Won / Unopposed",
+          "verified_at": "2026-10-28T00:44:15.692264Z"
         }
       ]
     }

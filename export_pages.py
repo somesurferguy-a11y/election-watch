@@ -44,12 +44,12 @@ def build():
  app=app.replace("fetch('/api/v1/state'",'fetch('+endpoint+"+'?t='+Date.now()")
  app=app.replace('state=incoming;online=true;',"state=incoming;Object.assign(state.settings,JSON.parse(localStorage.getItem('election-watch-prefs')||'{}'));online=true;")
  app=app.replace('setInterval(load,5000)','setInterval(load,60000)')
+ app=app.replace('updateFreshness();updateCountdowns();}',"updateFreshness();updateCountdowns();if(typeof pagesStatus==='function')pagesStatus();}")
  (out/'static/js/app.js').write_text(app,encoding='utf-8')
  profile=out/'static/js/candidate-profiles.js'
  profile.write_text(profile.read_text(encoding='utf-8').replace('${esc(path)}','${esc("."+path)}'),encoding='utf-8')
- (out/'static/js/pages-status.js').write_text('''function pagesStatus(){if(!state)return;const age=Math.max(0,(Date.now()-Date.parse(state.server_time))/60000);const stale=age>15;const b=document.getElementById('mode-banner');b.className=stale?'error':'';b.textContent=(stale?'DELAYED SNAPSHOT':'AUTOMATIC SNAPSHOT')+' · '+Math.floor(age)+' minutes old · Scheduled checks about every 5 minutes; publishing may be delayed. Source times in Source health.';document.getElementById('connection').textContent=online?'Public snapshot connected':'Disconnected · saved snapshot';document.getElementById('checked').textContent='Snapshot generated '+time(state.server_time);}setInterval(pagesStatus,1000);''',encoding='utf-8')
- if live_url:
-  status_file=out/'static/js/pages-status.js'
-  status_file.write_text(status_file.read_text(encoding='utf-8').replace('age>15','age>3').replace('Scheduled checks about every 5 minutes; publishing may be delayed.','Live-data checks every 60 seconds; source publishing may be delayed.'),encoding='utf-8')
+ note='Live-data checks every 60 seconds; source publishing may be delayed.' if live_url else 'Scheduled snapshots; publishing may be delayed.'
+ status=(config.ROOT/'static/js/pages-status.js').read_text(encoding='utf-8')
+ (out/'static/js/pages-status.js').write_text('const PAGE_SNAPSHOT_LIMIT='+str(3 if live_url else 15)+';\nconst PAGE_REFRESH_NOTE='+json.dumps(note)+';\n'+status,encoding='utf-8')
  print('Public display built:',out)
 if __name__=='__main__':build()

@@ -8,7 +8,7 @@ class BallotRosterTests(unittest.TestCase):
     def find(self,suffix):return next(r for r in self.roster['races'] if r['id'].endswith(suffix))
     def test_all_known_races_available_without_any_results_feed(self):
         races=compose_roster(self.roster,[])
-        self.assertEqual(len([r for r in races if r['scope']=='florida']),177)
+        self.assertEqual(len([r for r in races if r['scope']=='florida']),176)
         self.assertEqual(len([r for r in races if r['scope']=='indian_river']),26)
         self.assertTrue(all(r['results_pending'] for r in races))
     def test_actual_commission_candidates_and_write_in(self):
@@ -35,7 +35,7 @@ class BallotRosterTests(unittest.TestCase):
         r=next(r for r in races if r['id']==govpoll['race_id'])
         self.assertTrue(all(s['candidate_id'] in {c['id'] for c in r['candidates']} for s in govpoll['shares']))
     def test_settled_offices_not_mixed_into_november_ballot(self):
-        settled=self.roster['settled_races'];self.assertEqual(len(settled),8)
+        settled=self.roster['settled_races'];self.assertEqual(len(settled),9)
         self.assertTrue(all(r['on_ballot'] is False for r in settled))
         rosario=next(r for r in settled if 'Jacqueline Rosario' in [c['name'] for c in r['candidates']])
         self.assertEqual(rosario['status'],'elected_earlier')
@@ -44,6 +44,22 @@ class BallotRosterTests(unittest.TestCase):
         questions=[r for r in self.roster['races'] if 'Sebastian Referendum' in r['name']]
         self.assertEqual(len(questions),3)
         self.assertTrue(all('Full question wording is not transcribed' in r['coverage_note'] for r in questions))
+    def test_house_13_is_unopposed_after_verified_write_in_withdrawal(self):
+        settled=next(r for r in self.roster['settled_races'] if r['id']=='fl:5e41c7543a8d92f93f80')
+        self.assertFalse(settled['on_ballot']);self.assertEqual(settled['status'],'unopposed')
+        self.assertEqual([(c['id'],c['name']) for c in settled['candidates']],[('b953798348fdc08162ed','Audrey Gibson')])
+        self.assertEqual(settled['withdrawn_candidates'][0]['name'],'Brice Gaillard')
+        self.assertFalse(any(r['id']==settled['id'] for r in self.roster['races']))
+    def test_stale_state_file_cannot_restore_settled_house_13(self):
+        settled=next(r for r in self.roster['settled_races'] if r['id']=='fl:5e41c7543a8d92f93f80')
+        stale=copy.deepcopy(settled);stale.update(on_ballot=True,status='awaiting')
+        stale['candidates'].append({'id':'f7409f0989c1120b006a','name':'Brice Gaillard','party':'WRI','votes':0,'percentage':0})
+        by_alias=copy.deepcopy(stale);by_alias['id']='old-provider-shell'
+        unrelated=copy.deepcopy(stale);unrelated.update(id='another-contest',name='State Representative, District 14')
+        races=compose_roster(self.roster,[stale,by_alias,unrelated])
+        self.assertFalse(any(r['id'] in [stale['id'],by_alias['id']] for r in races))
+        self.assertTrue(any(r['id']==unrelated['id'] for r in races))
+        self.assertTrue(all(c['name']!='Brice Gaillard' for r in races for c in r['candidates'] if r['name']==settled['name']))
     def test_results_attach_using_reviewed_race_and_candidate_aliases(self):
         base=self.find('commission-4')
         result=copy.deepcopy(base);result.update(id='irc:enr:123',name='Board of County Commissioners, District 4',status='unofficial',source_name='County ENR')
@@ -55,7 +71,7 @@ class BallotRosterTests(unittest.TestCase):
         self.assertEqual(merged[0]['candidates'][1]['votes'],200)
     def test_partial_county_feed_does_not_remove_other_roster_contests(self):
         base=self.find('commission-2');result=copy.deepcopy(base);result['candidates'][0]['votes']=20
-        races=compose_roster(self.roster,[result]);self.assertEqual(len(races),203)
+        races=compose_roster(self.roster,[result]);self.assertEqual(len(races),202)
         self.assertTrue(any(r['id'].endswith('vero-council') for r in races))
     def test_repeated_providers_do_not_add_votes(self):
         base=self.find('commission-4');a=copy.deepcopy(base);a['candidates'][0]['votes']=100
@@ -77,7 +93,7 @@ class BallotRosterTests(unittest.TestCase):
             engine=Engine(temp)
             try:
                 engine.update_settings({'mode':'live'});state=engine.state()
-                self.assertEqual(len(state['races']),203);self.assertEqual(len(state['settled_races']),8)
+                self.assertEqual(len(state['races']),202);self.assertEqual(len(state['settled_races']),9)
                 self.assertTrue(all(c['votes']==0 for r in state['races'] for c in r['candidates']))
             finally:engine.close();engine.db.conn.close()
 

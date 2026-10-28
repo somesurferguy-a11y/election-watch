@@ -67,7 +67,12 @@ def merge_race(base,result):
 
 def compose_roster(roster,results):
     """Map stable IDs and reviewed aliases only; never fuzzy-match or sum providers."""
-    used=set();out=[]
+    # Current official candidate status can supersede an older results-file shell.
+    # Suppress only reviewed settled offices by stable ID or exact reviewed alias.
+    settled=[r for r in roster.get('settled_races',[]) if r.get('on_ballot') is False]
+    used={i for i,r in enumerate(results) if any(r.get('scope')==s['scope'] and
+        (r['id']==s['id'] or normalized(r['name']) in names_for(s)) for s in settled)}
+    out=[]
     for base in roster['races']:
         aliases=names_for(base)
         matches=[(i,r) for i,r in enumerate(results) if r.get('scope')==base['scope'] and (r['id']==base['id'] or normalized(r['name']) in aliases)]

@@ -13,7 +13,7 @@ class SQL {
   return [];
  }
 }
-const store=new SnapshotStore({storage:{sql:new SQL()}}),env={PUBLISH_TOKEN:'test-token',SNAPSHOTS:{idFromName:()=>1,get:()=>store}};
+const sql=new SQL(),store=new SnapshotStore({storage:{sql}}),env={PUBLISH_TOKEN:'test-token',SNAPSHOTS:{idFromName:()=>1,get:()=>store}};
 const call=(path,method='GET',owner='a',body=null,extra={})=>worker.fetch(new Request('https://live.example'+path,{method,headers:{Authorization:'Bearer test-token','X-Collector-ID':owner,...extra},body}),env);
 assert.equal((await call('/state.json')).status,503);
 assert.equal((await call('/publish','POST','a','bad',{Authorization:'Bearer wrong'})).status,401);
@@ -31,4 +31,20 @@ const result=await call('/state.json');assert.equal(result.status,200);assert.eq
 assert.equal((await result.json()).server_time,stamp);
 assert.equal((await call('/release','POST')).status,200);
 assert.equal((await call('/lease','POST','b')).status,200);
-console.log('14 live Worker checks passed');
+// An obsolete write must not replace the last known public snapshot.
+assert.equal((await call('/publish','POST','b',body,{'Content-Encoding':'gzip','X-Snapshot-Time':new Date(Date.parse(stamp)-1000).toISOString()})).status,409);
+assert.equal((await (await call('/state.json')).json()).server_time,stamp);
+// Simulate lease takeover while an old publisher's request body is in flight.
+let finishBody;
+const delayed=store.fetch({url:'https://live.example/publish',headers:new Headers({'X-Collector-ID':'b','Content-Encoding':'gzip','X-Snapshot-Time':stamp}),arrayBuffer:()=>new Promise(resolve=>{finishBody=resolve;})});
+sql.lease={owner:'c',expires:Date.now()+180000};finishBody(body);
+assert.equal((await delayed).status,409);
+assert.equal((await (await call('/state.json')).json()).server_time,stamp);
+// An expired collector cannot renew implicitly by uploading.
+sql.lease={owner:'c',expires:Date.now()-1};
+assert.equal((await call('/publish','POST','c',body,{'Content-Encoding':'gzip','X-Snapshot-Time':stamp})).status,409);
+assert.equal((await call('/lease','POST','d')).status,200);
+assert.equal((await call('/checkpoint','POST','d')).status,200);
+assert.equal((await call('/release','POST','c')).status,409);
+assert.equal(sql.lease.owner,'d');
+console.log('Live Worker authentication, snapshot preservation, checkpoint and handoff checks passed');
