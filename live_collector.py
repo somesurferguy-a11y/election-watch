@@ -9,7 +9,7 @@ def run(minutes=125):
  token=os.environ['ELECTION_PUBLISH_TOKEN'];owner=uuid.uuid4().hex;engine=None
  deadline=time.monotonic()+minutes*60
  def send(path,body=b'',extra=None):
-  req=urllib.request.Request(endpoint+path,data=body,method='POST',headers={'Authorization':'Bearer '+token,'X-Collector-ID':owner,**(extra or {})})
+  req=urllib.request.Request(endpoint+path,data=body,method='POST',headers={'User-Agent':'ElectionWatch/2.0','Authorization':'Bearer '+token,'X-Collector-ID':owner,**(extra or {})})
   with urllib.request.urlopen(req,timeout=25) as response:return response.read()
  try:
   while time.monotonic()<deadline and datetime.now(timezone.utc).date().isoformat()<='2026-11-10':

@@ -14,7 +14,7 @@ def build():
    raise ValueError('Public live-data URL must be HTTPS without credentials, query, or fragment')
  out=config.ROOT/'public';out.mkdir(exist_ok=True)
  if live_url:
-  with urllib.request.urlopen(live_url,timeout=25) as response:
+  with urllib.request.urlopen(urllib.request.Request(live_url,headers={'User-Agent':'ElectionWatch/2.0'}),timeout=25) as response:
    raw=response.read(12000001)
    if response.headers.get('Content-Encoding')=='gzip':raw=gzip.decompress(raw)
   snapshot=json.loads(raw)
