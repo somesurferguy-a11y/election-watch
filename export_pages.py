@@ -1,5 +1,5 @@
 """Build the public display; never export local host controls or credentials."""
-import json,shutil,time,os
+import json,shutil,time,os,gzip,urllib.request
 from urllib.parse import urlsplit
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
@@ -13,16 +13,23 @@ def build():
   if parsed.scheme!='https' or not parsed.hostname or parsed.username or parsed.password or parsed.query or parsed.fragment:
    raise ValueError('Public live-data URL must be HTTPS without credentials, query, or fragment')
  out=config.ROOT/'public';out.mkdir(exist_ok=True)
- engine=Engine(config.ROOT/'.pages-cache')
- try:
-  due=[key for key,source in engine.sources.items() if time.time()>=source['next_due']]
-  with ThreadPoolExecutor(max_workers=7) as pool:list(pool.map(engine.refresh_one,due))
-  snapshot=engine.state()
-  snapshot['settings']['view']='indian_river'
-  snapshot['settings_revision']=0
-  snapshot['settings']['pins']=[]
-  (out/'state.json').write_text(json.dumps(snapshot,ensure_ascii=False,allow_nan=False),encoding='utf-8')
- finally:engine.close()
+ if live_url:
+  with urllib.request.urlopen(live_url,timeout=25) as response:
+   raw=response.read(12000001)
+   if response.headers.get('Content-Encoding')=='gzip':raw=gzip.decompress(raw)
+  snapshot=json.loads(raw)
+  if snapshot.get('demo') is not False or not isinstance(snapshot.get('races'),list):raise ValueError('Live service did not provide an election snapshot')
+ else:
+  engine=Engine(config.ROOT/'.pages-cache')
+  try:
+   due=[key for key,source in engine.sources.items() if time.time()>=source['next_due']]
+   with ThreadPoolExecutor(max_workers=7) as pool:list(pool.map(engine.refresh_one,due))
+   snapshot=engine.state()
+  finally:engine.close()
+ snapshot['settings']['view']='indian_river'
+ snapshot['settings_revision']=0
+ snapshot['settings']['pins']=[]
+ (out/'state.json').write_text(json.dumps(snapshot,ensure_ascii=False,allow_nan=False),encoding='utf-8')
  shutil.copytree(config.ROOT/'static',out/'static',dirs_exist_ok=True,ignore=shutil.ignore_patterns('templates','host.js'))
  for extra in ['host.js']:
   (out/'static/js'/extra).unlink(missing_ok=True)

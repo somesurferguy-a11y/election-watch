@@ -7,3 +7,10 @@ tests/runtime/
 
 .pages-cache/
 public/
+
+node_modules/
+.wrangler/
+.live-token
+
+
+.collector-test/

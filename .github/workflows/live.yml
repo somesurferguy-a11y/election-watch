@@ -1,0 +1,22 @@
+name: Minute live collector
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * 10,11 *'
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 135
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publish fresh snapshots every minute
+        env:
+          ELECTION_PUBLIC_STATE_URL: ${{ vars.ELECTION_PUBLIC_STATE_URL }}
+          ELECTION_PUBLISH_TOKEN: ${{ secrets.ELECTION_PUBLISH_TOKEN }}
+          ELECTION_DATA_DIR: ${{ runner.temp }}/election-live
+        run: python live_collector.py

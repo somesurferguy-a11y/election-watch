@@ -1,0 +1,9 @@
+{
+  "name": "election-watch-live",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-27",
+  "account_id": "25aa3c9d892b118275f883247b653cf6",
+  "workers_dev": true,
+  "durable_objects": {"bindings": [{"name": "SNAPSHOTS", "class_name": "SnapshotStore"}]},
+  "migrations": [{"tag": "v1", "new_sqlite_classes": ["SnapshotStore"]}]
+}
