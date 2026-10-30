@@ -2,7 +2,7 @@
   "schema_version": 1,
   "election_date": "2026-11-03",
   "demo": false,
-  "verified_at": "2026-10-28T00:44:15.692264Z",
+  "verified_at": "2026-10-30T10:46:35.465101Z",
   "description": "Verified ballot roster, separate from election-night returns. Sources and verification scope retained per race.",
   "sources": [
     {
@@ -10842,7 +10842,7 @@
       "source_updated_at": null,
       "roster_source_name": "Indian River County candidate filings",
       "roster_source_url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?c=indianriver",
-      "roster_verified_at": "2026-10-27T01:02:07.461497Z",
+      "roster_verified_at": "2026-10-30T10:46:35.465101Z",
       "candidates": [
         {
           "id": "766ef8d5e75d206e7bb8",
@@ -10855,7 +10855,8 @@
             "Robert (Robbie) D. Hardingham",
             "Robert D. Hardingham",
             "Robert Hardingham",
-            "Robbie Hardingham"
+            "Robbie Hardingham",
+            "Robbie Hardingham III"
           ]
         },
         {
@@ -10891,6 +10892,11 @@
         {
           "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?c=indianriver",
           "verified_at": "2026-10-27T01:02:07.461497Z"
+        },
+        {
+          "url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+          "supports": "Final November 3 ballot, page 1: candidate names and reviewed ballot-name aliases",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
         }
       ]
     },
@@ -11163,12 +11169,12 @@
         "City of Sebastian Council Member",
         "City Council - Sebastian"
       ],
-      "source_name": "Sebastian Daily candidate forum report",
-      "source_url": "https://www.sebastiandaily.com/business/sebastian-city-council-candidates-to-meet-voters-at-friday-forum-95660/",
+      "source_name": "Indian River County official sample ballot",
+      "source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
       "source_updated_at": null,
-      "roster_source_name": "Sebastian Daily candidate forum report",
-      "roster_source_url": "https://www.sebastiandaily.com/business/sebastian-city-council-candidates-to-meet-voters-at-friday-forum-95660/",
-      "roster_verified_at": "2026-10-27T01:02:07.461497Z",
+      "roster_source_name": "Indian River County official sample ballot",
+      "roster_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+      "roster_verified_at": "2026-10-30T10:46:35.465101Z",
       "candidates": [
         {
           "id": "379132679a8fd94fbb55",
@@ -11178,7 +11184,8 @@
           "percentage": 0,
           "votes_available": false,
           "result_names": [
-            "Robert Gable"
+            "Robert Gable",
+            "Rob Gable"
           ]
         },
         {
@@ -11189,7 +11196,8 @@
           "percentage": 0,
           "votes_available": false,
           "result_names": [
-            "Damien Gilliams"
+            "Damien Gilliams",
+            "Damien H. Gilliams"
           ]
         },
         {
@@ -11223,7 +11231,9 @@
           "percentage": 0,
           "votes_available": false,
           "result_names": [
-            "Deborah Shellenberger"
+            "Deborah Shellenberger",
+            "Deborah “Deb” Shellenberger",
+            "Deborah \"Deb\" Shellenberger"
           ]
         }
       ],
@@ -11241,6 +11251,11 @@
         {
           "url": "https://bluewaterhealthyliving.com/news/national-news/florida/2-seats-up-for-nov-3-election-on-sebastian-city-council/",
           "supports": "TCPalm syndication documents Todd Clifton withdrawal"
+        },
+        {
+          "url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+          "supports": "Final November 3 ballot, page 1: candidate names and reviewed ballot-name aliases",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
         }
       ]
     },
@@ -11339,7 +11354,7 @@
     },
     {
       "id": "irc:ballot:sebastian-referendum-1",
-      "name": "Sebastian Referendum — Question 1",
+      "name": "Sebastian Referendum 1: Council Eligibility",
       "scope": "indian_river",
       "jurisdiction": "Indian River County",
       "office_code": "LOCAL",
@@ -11356,12 +11371,12 @@
         "City of Sebastian Referendum 1",
         "City of Sebastian Charter Amendment 1"
       ],
-      "source_name": "Indian River County ballot release",
-      "source_url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
+      "source_name": "Indian River County official sample ballot",
+      "source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
       "source_updated_at": null,
-      "roster_source_name": "Indian River County ballot release",
-      "roster_source_url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
-      "roster_verified_at": "2026-10-27T01:02:07.461497Z",
+      "roster_source_name": "Indian River County official sample ballot",
+      "roster_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+      "roster_verified_at": "2026-10-30T10:46:35.465101Z",
       "candidates": [
         {
           "id": "23cebd2dae54f2dde235",
@@ -11388,18 +11403,34 @@
           ]
         }
       ],
-      "coverage_note": "Sebastian city voters only. Number and presence verified in the county ballot release. Full question wording is not transcribed here; consult your official sample ballot.",
-      "eligibility": "Sebastian city voters only. Number and presence verified in the county ballot release. Full question wording is not transcribed here; consult your official sample ballot.",
+      "coverage_note": "Sebastian city voters only. Would require two years of domicile before qualifying, continued domicile while serving, and at least 270 days of physical presence in each twelve-month period.",
+      "eligibility": "Only voters within the City of Sebastian vote on this question.",
       "evidence": [
         {
           "url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
           "verified_at": "2026-10-27T01:02:07.461497Z"
+        },
+        {
+          "url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+          "supports": "Final November 3, 2026 ballot: Referendum Question 1, page 2",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
+        },
+        {
+          "url": "https://cityofsebastian.granicus.com/services/legistar/download/pdf/4209956/Charter_Amendment__Ordinance__June_2026.pdf",
+          "supports": "Ordinance O-26-19 ballot wording, pages 4-5",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
         }
-      ]
+      ],
+      "ballot_text": "Shall the Charter of the City of Sebastian be amended to provide that a person must be domiciled in the City for 2 years immediately prior to qualifying to run for City Council and maintain that domicile while serving on Council, and that domicile is defined as physical presence within the city limits for no less than 270 days in a twelve month period?",
+      "ballot_summary": "Would require two years of domicile before qualifying, continued domicile while serving, and at least 270 days of physical presence in each twelve-month period.",
+      "yes_meaning": "Adopt the proposed two-year domicile requirement and 270-day physical-presence definition.",
+      "no_meaning": "Keep the current charter eligibility provisions.",
+      "ballot_text_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+      "ballot_text_page": 2
     },
     {
       "id": "irc:ballot:sebastian-referendum-2",
-      "name": "Sebastian Referendum — Question 2",
+      "name": "Sebastian Referendum 2: Council Compensation",
       "scope": "indian_river",
       "jurisdiction": "Indian River County",
       "office_code": "LOCAL",
@@ -11416,12 +11447,12 @@
         "City of Sebastian Referendum 2",
         "City of Sebastian Charter Amendment 2"
       ],
-      "source_name": "Indian River County ballot release",
-      "source_url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
+      "source_name": "Indian River County official sample ballot",
+      "source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
       "source_updated_at": null,
-      "roster_source_name": "Indian River County ballot release",
-      "roster_source_url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
-      "roster_verified_at": "2026-10-27T01:02:07.461497Z",
+      "roster_source_name": "Indian River County official sample ballot",
+      "roster_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+      "roster_verified_at": "2026-10-30T10:46:35.465101Z",
       "candidates": [
         {
           "id": "9706f968f1c9b2cb611f",
@@ -11448,18 +11479,34 @@
           ]
         }
       ],
-      "coverage_note": "Sebastian city voters only. Number and presence verified in the county ballot release. Full question wording is not transcribed here; consult your official sample ballot.",
-      "eligibility": "Sebastian city voters only. Number and presence verified in the county ballot release. Full question wording is not transcribed here; consult your official sample ballot.",
+      "coverage_note": "Sebastian city voters only. Would set monthly compensation at $750 for the mayor and $600 for the vice mayor and other council members, with annual cost-of-living increases matching the percentage for general employees.",
+      "eligibility": "Only voters within the City of Sebastian vote on this question.",
       "evidence": [
         {
           "url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
           "verified_at": "2026-10-27T01:02:07.461497Z"
+        },
+        {
+          "url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+          "supports": "Final November 3, 2026 ballot: Referendum Question 2, page 2",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
+        },
+        {
+          "url": "https://cityofsebastian.granicus.com/services/legistar/download/pdf/4209956/Charter_Amendment__Ordinance__June_2026.pdf",
+          "supports": "Ordinance O-26-19 ballot wording, pages 4-5",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
         }
-      ]
+      ],
+      "ballot_text": "Shall the Charter of the City of Sebastian be amended to provide an increase in compensation for the Mayor to $750/month, and Vice-Mayor to $600/month, and Council member to $600/month, and provide for cost-of-living increases in an equal percentage to that of general employees each year?",
+      "ballot_summary": "Would set monthly compensation at $750 for the mayor and $600 for the vice mayor and other council members, with annual cost-of-living increases matching the percentage for general employees.",
+      "yes_meaning": "Adopt the proposed monthly compensation and employee-linked annual cost-of-living increases.",
+      "no_meaning": "Keep the current charter compensation provisions.",
+      "ballot_text_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+      "ballot_text_page": 2
     },
     {
       "id": "irc:ballot:sebastian-referendum-3",
-      "name": "Sebastian Referendum — Question 3",
+      "name": "Sebastian Referendum 3: Council Suspension, Removal & Reinstatement",
       "scope": "indian_river",
       "jurisdiction": "Indian River County",
       "office_code": "LOCAL",
@@ -11476,12 +11523,12 @@
         "City of Sebastian Referendum 3",
         "City of Sebastian Charter Amendment 3"
       ],
-      "source_name": "Indian River County ballot release",
-      "source_url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
+      "source_name": "Indian River County official sample ballot",
+      "source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
       "source_updated_at": null,
-      "roster_source_name": "Indian River County ballot release",
-      "roster_source_url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
-      "roster_verified_at": "2026-10-27T01:02:07.461497Z",
+      "roster_source_name": "Indian River County official sample ballot",
+      "roster_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+      "roster_verified_at": "2026-10-30T10:46:35.465101Z",
       "candidates": [
         {
           "id": "461a5813d1b7e79c6697",
@@ -11508,14 +11555,30 @@
           ]
         }
       ],
-      "coverage_note": "Sebastian city voters only. Number and presence verified in the county ballot release. Full question wording is not transcribed here; consult your official sample ballot.",
-      "eligibility": "Sebastian city voters only. Number and presence verified in the county ballot release. Full question wording is not transcribed here; consult your official sample ballot.",
+      "coverage_note": "Sebastian city voters only. Would require a public council meeting before requesting governor suspension or removal, and require a reinstatement request if the disqualifying condition is favorably resolved.",
+      "eligibility": "Only voters within the City of Sebastian vote on this question.",
       "evidence": [
         {
           "url": "https://www.voteindianriver.gov/Documents/Press%20Releases/2026%20GE%20Sample%20Ballots%20Going%20Out%20In%20The%20Mail.docx?t=202610141553430",
           "verified_at": "2026-10-27T01:02:07.461497Z"
+        },
+        {
+          "url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+          "supports": "Final November 3, 2026 ballot: Referendum Question 3, page 2",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
+        },
+        {
+          "url": "https://cityofsebastian.granicus.com/services/legistar/download/pdf/4209956/Charter_Amendment__Ordinance__June_2026.pdf",
+          "supports": "Ordinance O-26-19 ballot wording, pages 4-5",
+          "verified_at": "2026-10-30T10:46:35.465101Z"
         }
-      ]
+      ],
+      "ballot_text": "Shall the Charter of the City of Sebastian be amended to provide that the City Council will meet publicly before requesting the Governor to suspend or remove a member of Council, and shall request the Governor to reinstate the Council member if the disqualifying condition is favorably resolved?",
+      "ballot_summary": "Would require a public council meeting before requesting governor suspension or removal, and require a reinstatement request if the disqualifying condition is favorably resolved.",
+      "yes_meaning": "Require the public-meeting and governor-request process, including a reinstatement request after favorable resolution.",
+      "no_meaning": "Keep the current charter suspension, removal and reinstatement provisions.",
+      "ballot_text_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
+      "ballot_text_page": 2
     }
   ],
   "settled_races": [

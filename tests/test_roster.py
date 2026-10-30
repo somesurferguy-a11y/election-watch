@@ -43,7 +43,33 @@ class BallotRosterTests(unittest.TestCase):
     def test_three_sebastian_questions_present(self):
         questions=[r for r in self.roster['races'] if 'Sebastian Referendum' in r['name']]
         self.assertEqual(len(questions),3)
-        self.assertTrue(all('Full question wording is not transcribed' in r['coverage_note'] for r in questions))
+        self.assertTrue(all(r['ballot_text'].startswith('Shall the Charter of the City of Sebastian') for r in questions))
+        self.assertTrue(all('https://www.voterfocus.com/SampleBallots/' in r['ballot_text_source_url'] for r in questions))
+        self.assertTrue(all(r['yes_meaning'] and r['no_meaning'] and r['ballot_summary'] for r in questions))
+        self.assertIn('Eligibility',questions[0]['name']);self.assertIn('270 days',questions[0]['ballot_text'])
+        self.assertIn('Compensation',questions[1]['name']);self.assertIn('$750/month',questions[1]['ballot_text'])
+        self.assertIn('Reinstatement',questions[2]['name']);self.assertIn('favorably resolved',questions[2]['ballot_text'])
+    def test_reviewed_final_ballot_names_preserve_five_sebastian_identities(self):
+        base=self.find('sebastian-council');result=copy.deepcopy(base)
+        names=['Rob Gable','Damien H. Gilliams','Richard H. Gillmor','Sherrie Matthews','Deborah \u201cDeb\u201d Shellenberger']
+        for i,(candidate,name) in enumerate(zip(result['candidates'],names)):
+            candidate.update(id='county-ballot-'+str(i),name=name)
+        merged=merge_race(base,result)
+        self.assertEqual(len(merged['candidates']),5)
+        self.assertEqual([c['id'] for c in merged['candidates']],[c['id'] for c in base['candidates']])
+        self.assertNotIn('roster_warning',merged)
+    def test_hardingham_ballot_alias_does_not_replace_canonical_profile_identity(self):
+        base=self.find('commission-2');result=copy.deepcopy(base)
+        result['candidates'][0].update(id='county-ballot-hardingham',name='Robbie Hardingham III')
+        merged=merge_race(base,result)
+        self.assertEqual(len(merged['candidates']),3)
+        self.assertEqual(merged['candidates'][0]['id'],base['candidates'][0]['id'])
+        self.assertEqual(merged['candidates'][0]['name'],'Robert (Robbie) D. Hardingham')
+    def test_topic_titles_still_match_generic_county_question_names(self):
+        base=self.find('sebastian-referendum-1');result=copy.deepcopy(base)
+        result.update(id='county-question-1',name='City of Sebastian Referendum Question 1')
+        merged=compose_roster({'races':[base]},[result])
+        self.assertEqual(len(merged),1);self.assertEqual(merged[0]['id'],base['id'])
     def test_house_13_is_unopposed_after_verified_write_in_withdrawal(self):
         settled=next(r for r in self.roster['settled_races'] if r['id']=='fl:5e41c7543a8d92f93f80')
         self.assertFalse(settled['on_ballot']);self.assertEqual(settled['status'],'unopposed')

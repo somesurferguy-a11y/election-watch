@@ -31,3 +31,5 @@ body.host{font-size:16px;line-height:1.5}.host-wrap{max-width:1150px;margin:auto
 @media(max-width:900px){.candidate{grid-template-columns:2.4em minmax(0,1fr) 3.4em}.multi-seat .candidate-list{gap:.4rem .8rem}.multi-seat .candidate{grid-template-columns:2em minmax(0,1fr) 2.8em}.multi-seat .portrait{width:1.8em;height:2.2em}.multi-seat .candidate-name{font-size:.8em}.multi-seat .vote-number{font-size:.8em}}@media(max-width:600px){.multi-seat .candidate-list{grid-template-columns:1fr}.multi-seat{overflow:visible}.candidate-name{white-space:normal}.multi-seat .candidate{min-height:3.8em}}
 
 .race-list>.race-card:only-child{grid-column:1/-1}
+
+.ballot-details{display:grid;gap:.7rem;margin:1rem 0;padding:1rem 0;border-top:1px solid var(--line)}.ballot-details p{white-space:pre-line}

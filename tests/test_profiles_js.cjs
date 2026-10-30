@@ -12,4 +12,5 @@ context.race.has_results=false;assert.equal(vm.runInContext('seatRank(race.candi
 context.races=[{id:'a'},{id:'b'},{id:'vero',seats_to_elect:3},{id:'c'}];vm.runInContext('racePage(races)',context);assert.equal(context.pageCount,3);context.pages.indian_river=1;assert.equal(vm.runInContext('racePage(races)[0].id',context),'vero');
 context.candidate={name:'Test Person',photo:{path:'https://external.example/photo.jpg'}};assert.doesNotMatch(vm.runInContext('portraitHtml(candidate)',context),/<img/);
 assert.equal(vm.runInContext('isPerson({name:"Yes for Approval"})',context),false);
+assert.equal(vm.runInContext('serviceDetails({candidates:[{name:"Yes"},{name:"No"}]})',context),'');
 console.log('9 candidate display checks passed: incumbent-first order, all multi-seat candidates, cutoff ties, pending ranks, whole-contest pagination, safe photo paths and ballot choices.');
