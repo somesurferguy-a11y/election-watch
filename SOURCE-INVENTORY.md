@@ -84,6 +84,10 @@ Individual candidate profiles at https://www.voterfocus.com/CampaignFinance/; na
 HD13 current official status: https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ALL&OfficeCode=ALL&OfficeGroup=LEG&StatusCode=ALL&elecid=20261103-GEN . SD21 special: https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-S01 . Herrera portrait: https://www.cityoffellsmere.org/citycouncil/directory-listing/fernando-herrera . Shellenberger face matched to https://www.debshellenberger.com/ and sourced from her candidate-directory profile (individual image provenance retained in candidate_profiles.json). November county ENR not linked yet. Final named Sebastian/Fellsmere official municipal ballot verification and full Sebastian referendum wording remain source gaps.
 
 
-### Official Sebastian final ballot verified October30
-https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3 (candidatespage1,referendapage2). MatchingofficialOrdinanceO-26-19: https://cityofsebastian.granicus.com/services/legistar/download/pdf/4209956/Charter_Amendment__Ordinance__June_2026.pdf pages4–5. SupersedesthepreviousunverifiedSebastianwordinggap. Noindividualvoterinformationwasentered.
+### Official Sebastian final ballot verified October 30
 
+County-hosted final ballot: https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3 . Candidates appear on page 1 and referenda on page 2.
+
+Matching official Ordinance O-26-19: https://cityofsebastian.granicus.com/services/legistar/download/pdf/4209956/Charter_Amendment__Ordinance__June_2026.pdf , pages 4–5.
+
+This closes the previous Sebastian ballot-wording gap. No individual voter information was entered to retrieve the sample ballot.
