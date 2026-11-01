@@ -167,3 +167,9 @@ The county status now says it is awaiting official November returns and shows th
 Validation: all 116 Python tests passed with local network and temporary-file access; candidate portrait and night-desk JavaScript checks passed, including invalid crop values and older-client path rejection.
 
 Final review approved the crop guard and old-client compatibility. Local browser visually confirmed Craig alone in the thumbnail and the county awaiting-publication message. The added Fellsmere ballot regression passes.
+
+
+### November 1 release acceptance
+Release 7827af6 deployed successfully in Pages run 41350217722. Updated collector 41350273552 replaced the two superseded jobs. Verified live snapshots at 21:10:42 and 21:11:42 UTC, exactly 60 seconds apart, with Craig MacCoy photo metadata and the official Fellsmere ballot URL. Florida, national, polling baseline, and both markets reported connected after takeover; county November ENR remains not published. Handover required lease expiry and briefly raised stale source warnings; retained data remained visible.
+
+Final total: 117 Python tests pass; all four JavaScript test scripts pass. Public browser confirmed Craig's thumbnail and county pending text. At 3840 by 2160, document dimensions matched the viewport and the ticker ended at y=2080.8, with no browser errors or warnings. Local installation was synchronized with verified backups. Jose Zamarripa remains a labeled initials fallback. Source availability and physical TV viewing distance remain external limitations.
