@@ -5410,6 +5410,24 @@
         "term_note": "Not the verified current holder of this office. Any earlier service is not yet verified.",
         "source_url": "https://www.irmosquito.com/our-commissioners",
         "as_of": "2026-10-27"
+      },
+      "photo": {
+        "path": "/static/portraits/59e13f70afa4988a09b0.frame.jpg",
+        "subject": "Craig E. MacCoy",
+        "source_url": "https://www.yahoo.com/news/videos/indian-river-county-mosquito-control-041450600.html",
+        "image_url": "https://cf-images.us-east-1.prod.boltdns.net/v1/jit/6415665815001/2374622c-21be-4879-9969-2fb3f883e870/main/1280x720/22m56s906ms/match/image.jpg",
+        "credit": "TCPalm / Treasure Coast Newspapers editorial board interview, republished by Yahoo News",
+        "verified_at": "2026-10-30",
+        "caption": "Craig MacCoy, identified by the on-screen name label in the second tile on the right",
+        "image_note": "Interview video still; thumbnail displays the labeled Craig MacCoy tile. Interview September 10, 2026; published September 27, 2026. Original full frame is stored unchanged.",
+        "crop": {
+          "x": 1110,
+          "y": 224,
+          "width": 128,
+          "height": 110,
+          "source_width": 1280,
+          "source_height": 720
+        }
       }
     },
     "irc:ballot:vero-council|2ba5e4f158873d2e2166": {

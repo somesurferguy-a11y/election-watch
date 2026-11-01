@@ -12,4 +12,6 @@ assert.equal(vm.runInContext('rotationPlaylist().length',context),context.views.
 vm.runInContext('updateCountdowns()',context);
 assert.equal(timers[0].textContent,'1h 0m 0s');assert.equal(timers[1].textContent,'2h 0m 0s');assert.equal(timers[2].textContent,'7h 0m 0s');
 current=Date.parse('2026-11-04T06:01:00Z');vm.runInContext('updateCountdowns()',context);assert.equal(timers[2].textContent,'Scheduled time reached');
+const bar={};context.$=()=>bar;context.view='indian_river';context.online=true;context.esc=x=>String(x);context.state={demo:false,server_time:new Clock(current).toISOString(),sources:[{id:'indian_river',status:'not_published',last_attempt:new Clock(current-60000).toISOString()}]};
+vm.runInContext('updateFreshness()',context);assert.match(bar.innerHTML,/awaiting official November returns/);assert.match(bar.innerHTML,/last attempted check 1m ago/);assert.doesNotMatch(bar.innerHTML,/checked never/);
 console.log('7 JavaScript checks passed: local weighting, section rotation, opt-out, Eastern/Central split, midnight rollover, expired timer.');

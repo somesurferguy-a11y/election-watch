@@ -11276,14 +11276,15 @@
         "Fellsmere City Council",
         "City of Fellsmere City Council",
         "City of Fellsmere Council Member",
-        "City Council - Fellsmere"
+        "City Council - Fellsmere",
+        "City of Fellsmere City Council Member"
       ],
-      "source_name": "TCPalm candidate questionnaires via AOL",
-      "source_url": "https://www.aol.com/articles/3-seats-election-nov-3-185205000.html",
+      "source_name": "Indian River County official November 3, 2026 sample ballot, Precinct 2",
+      "source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%202.0&party=GEN&election=103",
       "source_updated_at": null,
-      "roster_source_name": "TCPalm candidate questionnaires via AOL",
-      "roster_source_url": "https://www.aol.com/articles/3-seats-election-nov-3-185205000.html",
-      "roster_verified_at": "2026-10-27T01:02:07.461497Z",
+      "roster_source_name": "Indian River County official November 3, 2026 sample ballot, Precinct 2",
+      "roster_source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%202.0&party=GEN&election=103",
+      "roster_verified_at": "2026-11-01T21:04:47.931520Z",
       "candidates": [
         {
           "id": "d4cd7c7beb6cc633b749",
@@ -11331,8 +11332,8 @@
           ]
         }
       ],
-      "coverage_note": "Fellsmere city voters only. Four candidates compete for three at-large seats. Candidate names were checked against TCPalm questionnaires and the election listing; a typo in a republished meeting transcript was not adopted.",
-      "eligibility": "Fellsmere city voters only. Four candidates compete for three at-large seats. Candidate names were checked against TCPalm questionnaires and the election listing; a typo in a republished meeting transcript was not adopted.",
+      "coverage_note": "Fellsmere city voters only. The official November 3, 2026 Precinct 2 ballot lists four candidates and instructs voters to vote for up to three.",
+      "eligibility": "Fellsmere city voters only. The official November 3, 2026 Precinct 2 ballot lists four candidates and instructs voters to vote for up to three.",
       "evidence": [
         {
           "url": "https://www.aol.com/articles/3-seats-election-nov-3-185205000.html",
@@ -11349,6 +11350,17 @@
         {
           "url": "https://www.cityoffellsmere.org/city-clerk/page/election-information",
           "supports": "Official 2026 election for three council seats"
+        },
+        {
+          "url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%202.0&party=GEN&election=103",
+          "page": 1,
+          "supports": "Official November 3, 2026 Precinct 2 ballot: City of Fellsmere City Council Member, vote for up to three; Fernando R. Herrera, Shayla Macias, Javi Murillo, Jose M. Zamarripa.",
+          "verified_at": "2026-11-01T21:04:47.931520Z"
+        },
+        {
+          "url": "https://www.voterfocus.com/PrecinctFinder/precinctSummary?county=FL-IND&precinct=%20%202",
+          "supports": "County public precinct directory identifies Precinct 2 polling place as Fellsmere Community Bible Church, 12 N Hickory St, Fellsmere.",
+          "verified_at": "2026-11-01T21:04:47.931520Z"
         }
       ]
     },

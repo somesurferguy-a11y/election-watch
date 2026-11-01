@@ -13,4 +13,15 @@ context.races=[{id:'a'},{id:'b'},{id:'vero',seats_to_elect:3},{id:'c'}];vm.runIn
 context.candidate={name:'Test Person',photo:{path:'https://external.example/photo.jpg'}};assert.doesNotMatch(vm.runInContext('portraitHtml(candidate)',context),/<img/);
 assert.equal(vm.runInContext('isPerson({name:"Yes for Approval"})',context),false);
 assert.equal(vm.runInContext('serviceDetails({candidates:[{name:"Yes"},{name:"No"}]})',context),'');
+context.cropPhoto={path:'/static/portraits/abcdef123456.jpg',crop:{x:1110,y:224,width:128,height:110,source_width:1280,source_height:720}};
+context.croppedCandidate={name:'Craig MacCoy',photo:context.cropPhoto};
+const frame=vm.runInContext('portraitHtml(croppedCandidate)',context);assert.match(frame,/viewBox="1110 224 128 110"/);assert.match(frame,/preserveAspectRatio="xMidYMid slice"/);assert.match(frame,/<image href="\/static\/portraits\/abcdef123456.jpg"/);
+context.cropPhoto.crop.width=9999;assert.equal(vm.runInContext('validPhotoCrop(cropPhoto)',context),null);
+assert.doesNotMatch(vm.runInContext('portraitHtml(croppedCandidate)',context),/<img|<svg/);
+context.cropPhoto.crop.width='128';assert.equal(vm.runInContext('validPhotoCrop(cropPhoto)',context),null);
 console.log('9 candidate display checks passed: incumbent-first order, all multi-seat candidates, cutoff ties, pending ranks, whole-contest pagination, safe photo paths and ballot choices.');
+
+for(const invalid of [null,false,0,'',{},[]]){context.cropPhoto.crop=invalid;assert.doesNotMatch(vm.runInContext('portraitHtml(croppedCandidate)',context),/<img|<svg/);}
+context.cropPhoto.path='/static/portraits/abcdef123456.frame.jpg';delete context.cropPhoto.crop;assert.doesNotMatch(vm.runInContext('portraitHtml(croppedCandidate)',context),/<img|<svg/);
+context.cropPhoto.crop={x:1110,y:224,width:128,height:110,source_width:1280,source_height:720};assert.match(vm.runInContext('portraitHtml(croppedCandidate)',context),/<svg/);
+assert.equal(/^\/static\/portraits\/[a-f0-9]+\.(jpg|png|webp)$/.test(context.cropPhoto.path),false);

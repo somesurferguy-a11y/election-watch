@@ -25,6 +25,16 @@ class BallotRosterTests(unittest.TestCase):
         names=[c['name'] for c in self.find('fellsmere-council')['candidates']]
         self.assertIn('Fernando R. Herrera',names);self.assertIn('Jose M. Zamarripa',names)
         self.assertFalse(any('Zammaripa' in n for n in names))
+    def test_fellsmere_official_final_ballot_and_office_alias(self):
+        base=self.find('fellsmere-council')
+        self.assertEqual(base['seats_to_elect'],3)
+        self.assertEqual({c['name'] for c in base['candidates']},{'Fernando R. Herrera','Shayla Macias','Javi Murillo','Jose M. Zamarripa'})
+        self.assertIn('precinct=%20%202.0',base['roster_source_url'])
+        self.assertIn('election=103',base['roster_source_url'])
+        self.assertTrue(any(e.get('page')==1 and e['url']==base['roster_source_url'] for e in base['evidence']))
+        result=copy.deepcopy(base);result.update(id='county-fellsmere-final',name='City of Fellsmere City Council Member')
+        merged=compose_roster({'races':[base]},[result])
+        self.assertEqual(len(merged),1);self.assertEqual(merged[0]['id'],base['id'])
     def test_full_governor_ticket_names_without_changing_poll_ids(self):
         races=[r for r in self.roster['races'] if r.get('office_code')=='GOV']
         self.assertEqual(len(races),2)

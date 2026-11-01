@@ -91,3 +91,8 @@ County-hosted final ballot: https://www.voterfocus.com/SampleBallots/WHSampleBal
 Matching official Ordinance O-26-19: https://cityofsebastian.granicus.com/services/legistar/download/pdf/4209956/Charter_Amendment__Ordinance__June_2026.pdf , pages 4–5.
 
 This closes the previous Sebastian ballot-wording gap. No individual voter information was entered to retrieve the sample ballot.
+
+
+November 1: Craig MacCoy uses the labeled interview tile from the TCPalm/Yahoo source in candidate_profiles.json, with the original full frame preserved and bounded display clipping. Jose Zamarripa remains initials pending verified identity. County November results are still unpublished; automatic discovery continues.
+
+Fellsmere final ballot verified: https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%202.0&party=GEN&election=103 page 1 confirms the four candidates and vote for up to three.

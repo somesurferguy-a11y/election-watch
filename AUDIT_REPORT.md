@@ -157,3 +157,13 @@ Rehearsal run 41043768735 completed successfully. Its log records a live publica
 
 Public browser verification: official wording and source links rendered correctly for eligibility and compensation. Questions 1 and 2 and the omission of the irrelevant incumbency section were checked. The page reported fresh snapshots with no console warnings or errors. Geometry at 3840 by 2160 showed no document overflow, with the ticker and footer within bounds. The local server had stopped after the previous session; it was restarted and synchronized with verified backups and new ballot wording. Craig/Jose portraits and the county November returns feed remain source gaps. Actual TV seating-distance readability remains untested.
 
+
+
+### November 1 final display fixes
+Craig MacCoy now has a source-identified thumbnail showing only his labeled interview tile. The original interview frame is preserved unchanged; bounded SVG display clipping selects Craig. Invalid clipping metadata falls back to initials. A separate frame filename also makes older open clients fall back to initials instead of displaying the full interview image. Local November portrait coverage is 23 of 24; Jose Zamarripa retains initials because identity could not be verified safely.
+
+The county status now says it is awaiting official November returns and shows the last attempted check. The live service continues automatic discovery; unavailable returns are never represented as zero votes. Fellsmere final ballot is now verified from the official November 3 precinct 2 sample ballot: Fernando R. Herrera, Shayla Macias, Javi Murillo, and Jose M. Zamarripa; vote for up to three. Stable candidate IDs are unchanged.
+
+Validation: all 116 Python tests passed with local network and temporary-file access; candidate portrait and night-desk JavaScript checks passed, including invalid crop values and older-client path rejection.
+
+Final review approved the crop guard and old-client compatibility. Local browser visually confirmed Craig alone in the thumbnail and the county awaiting-publication message. The added Fellsmere ballot regression passes.
