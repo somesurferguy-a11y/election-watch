@@ -16,7 +16,7 @@ class PagesTests(unittest.TestCase):
   html=(folder/'index.html').read_text(encoding='utf-8')
   self.assertNotIn('/host',html);self.assertNotIn('src="/static',html)
   app=(folder/'static/js/app.js').read_text(encoding='utf-8')
-  self.assertNotIn("fetch('/api/",app);self.assertIn('setInterval(load,60000)',app)
+  self.assertNotIn('href="/host"',app);self.assertNotIn("fetch('/api/",app);self.assertIn('setInterval(load,60000)',app)
   for race in data['races']:
    for candidate in race['candidates']:
     if candidate.get('photo'):self.assertTrue((folder/candidate['photo']['path'].lstrip('/')).is_file())

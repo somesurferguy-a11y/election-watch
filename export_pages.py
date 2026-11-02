@@ -45,6 +45,7 @@ def build():
  app=app.replace('state=incoming;online=true;',"state=incoming;Object.assign(state.settings,JSON.parse(localStorage.getItem('election-watch-prefs')||'{}'));online=true;")
  app=app.replace('setInterval(load,5000)','setInterval(load,60000)')
  app=app.replace('updateFreshness();updateCountdowns();}',"updateFreshness();updateCountdowns();if(typeof pagesStatus==='function')pagesStatus();}")
+ app=app.replace('<a href="/host" target="_blank" rel="noopener">Open host controls</a>','')
  (out/'static/js/app.js').write_text(app,encoding='utf-8')
  profile=out/'static/js/candidate-profiles.js'
  profile.write_text(profile.read_text(encoding='utf-8').replace('${esc(path)}','${esc("."+path)}'),encoding='utf-8')
