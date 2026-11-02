@@ -61,3 +61,21 @@ body.host{font-size:16px;line-height:1.5}.host-wrap{max-width:1150px;margin:auto
 }
 
 @media(min-width:601px){.race-section .multi-seat .candidate{grid-template-rows:minmax(0,1fr)}.race-section .multi-seat .portrait{height:100%;max-height:3.9em;min-height:0}}
+
+[data-open-race]{cursor:pointer}[data-open-race]:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+/* Keep full names and larger portraits visible in the race detail sheet. */
+dialog{width:min(1600px,94vw);max-height:92dvh;overflow:auto}
+#details-content .candidate{grid-template-columns:4.8em minmax(0,1fr) 5em;gap:1rem}
+#details-content .candidate-list{gap:.8rem}
+#details-content .vote-track{display:none}
+#details-content .candidate-name{white-space:normal;overflow:visible;overflow-wrap:anywhere;font-size:1.1em}
+#details-content .portrait{width:4.5em;height:5.2em}
+#details-content .service-record .portrait{width:4.5em;height:5.2em}
+@media(min-width:601px){
+ .race-section .candidate{grid-template-columns:4.7em minmax(0,1.35fr) minmax(1rem,.35fr) 4em}
+ .race-section .portrait{width:4.4em;height:5em}
+ .race-section .multi-seat .candidate{grid-template-columns:4.7em minmax(0,1fr) 4em}
+ .race-section .multi-seat .portrait{width:4.4em;height:100%;max-height:5em}
+ .race-section .multi-seat .candidate-list{grid-template-rows:repeat(var(--council-rows,4),minmax(0,1fr))}
+}
+@media(max-width:600px){#details-content .candidate{grid-template-columns:3.5em minmax(0,1fr) 3em;gap:.5rem}#details-content .portrait{width:3.2em;height:4em}}

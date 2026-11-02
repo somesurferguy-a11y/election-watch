@@ -178,3 +178,8 @@ Final total: 117 Python tests pass; all four JavaScript test scripts pass. Publi
 ### November 1 TV readability and council layout
 Fixed race sections reserving an unused second grid row, which constrained city council cards to half the available height. Race sections now use the full content height. Candidate names are approximately one-third larger, portraits are wider, and service labels and race headings are larger. Council contests retain two columns with every candidate together; portrait height follows the available row so images cannot overlap. National rails, host controls, and phone stacking retain their separate layouts.
 Browser checks at 3840x2160 and 1920x1080 confirmed all eight Vero candidates fit, with no row or card overflow. At 1080p, Sebastian's five and Fellsmere's four candidates also fit. At 4K Vero names measure 49px and portraits approximately 150x130px.
+
+
+### November 1 Sebastian and race interaction follow-up
+Council grids now declare their actual row count so Sebastian's odd five-candidate list has three consistent rows. Portrait columns increased to 4.7em, with photos up to 4.4em wide (approximately 194px at 4K); row height remains bounded. Race cards open details when clicked outside their existing controls, with Enter/Space support on the focused card. Details use a wider scrollable panel, wrapping names and larger photos. Existing Pin and Details buttons retain separate behavior.
+Verified Sebastian card has no row or card overflow at the default viewport and at 4K. Clicking the Sebastian heading opens the correct five-candidate details sheet. Candidate display checks and JavaScript syntax pass.
