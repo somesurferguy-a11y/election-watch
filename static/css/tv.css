@@ -95,6 +95,6 @@ dialog{width:min(1600px,94vw);max-height:92dvh;overflow:auto}
 }
 #details-content .candidate-name,.service-record>div{min-width:0;overflow-wrap:anywhere}
 
-.portrait-unavailable{display:none;position:absolute;bottom:.2em;left:.1em;right:.1em;text-align:center;font-size:.28em;line-height:1.1;white-space:normal}.portrait:not(:has(img,svg)) .portrait-unavailable,.portrait:has(img[hidden]) .portrait-unavailable{display:block}
+.portrait-unavailable{display:none;position:absolute;bottom:.2em;left:.1em;right:.1em;text-align:center;font-size:clamp(7px,.28em,14px);line-height:1.1;white-space:normal}.portrait:not(:has(img,svg)) .portrait-unavailable,.portrait:has(img[hidden]) .portrait-unavailable{display:block}
 
 .portrait.photo-failed .portrait-unavailable{display:block}
