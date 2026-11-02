@@ -96,3 +96,6 @@ This closes the previous Sebastian ballot-wording gap. No individual voter infor
 November 1: Craig MacCoy uses the labeled interview tile from the TCPalm/Yahoo source in candidate_profiles.json, with the original full frame preserved and bounded display clipping. Jose Zamarripa remains initials pending verified identity. County November results are still unpublished; automatic discovery continues.
 
 Fellsmere final ballot verified: https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%202.0&party=GEN&election=103 page 1 confirms the four candidates and vote for up to three.
+
+
+Municipal service review November 1: candidate_profiles.json now carries per-candidate service.evidence with source title, URL and exact supported claim for all 17 municipal candidates. service.count_basis distinguishes reported counts from official-record counts and unverified totals. Primary evidence includes city rosters, official 2022/2024 county results, city minutes/budgets, Fellsmere resolutions, Sebastian Matthews profile, and PSC-filed Kramer testimony. Full lifetime counts remain incomplete where records do not establish every term and gap.

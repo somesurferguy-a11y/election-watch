@@ -25,3 +25,10 @@ for(const invalid of [null,false,0,'',{},[]]){context.cropPhoto.crop=invalid;ass
 context.cropPhoto.path='/static/portraits/abcdef123456.frame.jpg';delete context.cropPhoto.crop;assert.doesNotMatch(vm.runInContext('portraitHtml(croppedCandidate)',context),/<img|<svg/);
 context.cropPhoto.crop={x:1110,y:224,width:128,height:110,source_width:1280,source_height:720};assert.match(vm.runInContext('portraitHtml(croppedCandidate)',context),/<svg/);
 assert.equal(/^\/static\/portraits\/[a-f0-9]+\.(jpg|png|webp)$/.test(context.cropPhoto.path),false);
+
+context.former={name:'Former Person',service:{incumbent:false,former_member:true,terms_started:null,terms_completed:null}};
+assert.match(vm.runInContext('serviceBadge(former)',context),/Former member/);
+assert.doesNotMatch(vm.runInContext('serviceBadge(former)',context),/0 completed/);
+context.safeLink=u=>/^https:\/\//.test(u||'')?u:'';
+context.reviewed={as_of:'2026-11-01',verification_status:'Partial history',evidence:[{url:'https://city.example/minutes',title:'Council minutes',supports:'Prior membership confirmed'},{url:'javascript:alert(1)',title:'Unsafe'}]};
+const evidence=vm.runInContext('serviceEvidenceHtml(reviewed)',context);assert.match(evidence,/Council minutes/);assert.match(evidence,/2026-11-01/);assert.doesNotMatch(evidence,/javascript:|Unsafe/);

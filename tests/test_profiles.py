@@ -29,8 +29,19 @@ class CandidateProfileTests(unittest.TestCase):
   race=next(r for r in self.races if r['id']=='irc:ballot:mosquito-2');anna=next(c for c in race['candidates'] if c['name']=='Anna J. Kirkland');self.assertTrue(anna['service']['incumbent']);self.assertIsNone(anna['service']['terms_completed'])
  def test_vero_former_members_and_newcomers_have_distinct_verified_counts(self):
   race=next(r for r in self.races if r['id']=='irc:ballot:vero-council');counts={c['name']:c['service']['terms_completed'] for c in race['candidates']}
-  self.assertEqual(counts,{'Aaron Vos':0,'Linda Moore':1,'Jay Kramer':3,'Brian Heady':1,'Tracey Lockwood Zudans':1,'Robert MacCallum':0,"John O'Connor":0,'Davis Benedict':0})
+  self.assertEqual(counts,{'Aaron Vos':0,'Linda Moore':1,'Jay Kramer':3,'Brian Heady':1,'Tracey Lockwood Zudans':1,'Robert MacCallum':None,"John O'Connor":0,'Davis Benedict':0})
  def test_appointed_moody_is_not_labeled_as_having_completed_a_senate_term(self):
   race=next(r for r in self.races if r['scope']=='florida' and r['office_code']=='USS');c=next(c for c in race['candidates'] if c['name']=='Ashley Moody');self.assertTrue(c['service']['incumbent']);self.assertEqual(c['service']['terms_completed'],0);self.assertIn('Appointed',c['service']['term_note'])
  def test_governor_ticket_does_not_inherit_house_incumbency(self):
   race=next(r for r in self.races if r['scope']=='florida' and r['office_code']=='GOV');c=next(c for c in race['candidates'] if c['name'].startswith('Byron Donalds'));self.assertFalse(c['service']['incumbent'])
+
+ def test_municipal_service_records_expose_evidence_and_review_date(self):
+  people=[c for r in self.races if r['id'] in ['irc:ballot:vero-council','irc:ballot:sebastian-council','irc:ballot:fellsmere-council'] for c in r['candidates']]
+  self.assertEqual(len(people),17)
+  for c in people:
+   service=c['service'];self.assertEqual(service['as_of'],'2026-11-01');self.assertTrue(service['evidence']);self.assertTrue(service['verification_status'])
+   for evidence in service['evidence']:self.assertTrue(evidence['url'].startswith('https://'));self.assertTrue(evidence['supports'])
+  seb=next(r for r in self.races if r['id']=='irc:ballot:sebastian-council')
+  former={c['name'] for c in seb['candidates'] if c['service'].get('former_member')}
+  self.assertEqual(former,{'Damien Gilliams','Richard H. Gillmor'})
+  for c in seb['candidates']:self.assertIsNone(c['service']['terms_completed'])

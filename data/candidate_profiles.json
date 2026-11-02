@@ -5435,9 +5435,31 @@
         "incumbent": false,
         "terms_started": 3,
         "terms_completed": 3,
-        "term_note": "Three council terms, 2010–2016. The mayoral selections were not additional council terms.",
-        "source_url": "https://www.vb32963online.com/STORIES%202017/SEPTEMBER%202017/VB32963_Six_Candidates_Running_For_Vero_Beach_City_Council_Issue038_092117.html",
-        "as_of": "2026-10-27"
+        "term_note": "Three completed council terms are reported for 2010–2016. Testimony filed with the Florida Public Service Commission states first elected November 2010 and served until November 2016. Official city records also corroborate membership in 2011 and 2016. This review did not retrieve every election record; the lifetime count is not a fully reconstructed official election chain. Mayor selections are not additional council terms.",
+        "source_url": "https://www.psc.state.fl.us/library/filings/2018/06668-2018/06668-2018.pdf",
+        "as_of": "2026-11-01",
+        "since": null,
+        "former_member": true,
+        "current_term_label": null,
+        "verification_status": "Reported term count; official tenure corroboration; election-by-election audit incomplete",
+        "evidence": [
+          {
+            "title": "Florida PSC filed testimony, September 2018",
+            "url": "https://www.psc.state.fl.us/library/filings/2018/06668-2018/06668-2018.pdf",
+            "supports": "Kramer states first election November 2010 and service through November 2016."
+          },
+          {
+            "title": "Official 2011–2012 budget",
+            "url": "https://www.covb.org/Archive/ViewFile/Item/67",
+            "supports": "Lists Kramer as mayor in September 2011."
+          },
+          {
+            "title": "Official FY2016 financial report",
+            "url": "https://www.covb.org/ArchiveCenter/ViewFile/Item/122",
+            "supports": "Lists Kramer as mayor in September 2016."
+          }
+        ],
+        "count_basis": "reported"
       },
       "photo": {
         "path": "/static/portraits/1ccaf1d00129e4d57767.jpg",
@@ -5453,11 +5475,28 @@
     "irc:ballot:vero-council|a0373ac1e25c5415d6b2": {
       "service": {
         "incumbent": false,
-        "terms_started": 0,
-        "terms_completed": 0,
-        "term_note": "The 2026 candidate comparison identifies five candidates with council service and three newcomers without prior council service. School Board candidacy is not a completed council term.",
-        "source_url": "https://bluewaterhealthyliving.com/news/national-news/florida/vero-beach-city-council-recommendations-2026-our-view/",
-        "as_of": "2026-10-27"
+        "terms_started": null,
+        "terms_completed": null,
+        "term_note": "Not a current council member. No comprehensive official record establishing prior council service or a verified zero-term history was located. School Board candidacy does not count as council service.",
+        "source_url": "https://www.covb.org/283/City-Council",
+        "as_of": "2026-11-01",
+        "since": null,
+        "former_member": null,
+        "current_term_label": null,
+        "verification_status": "Current non-incumbency verified; prior council term count unverified",
+        "evidence": [
+          {
+            "title": "Official current council",
+            "url": "https://www.covb.org/283/City-Council",
+            "supports": "Not on current council roster."
+          },
+          {
+            "title": "2026 candidate coverage",
+            "url": "https://veronews.com/2026/10/19/8-candidates-contend-for-3-seats-on-vero-beach-city-council/",
+            "supports": "Former School Board candidacy does not establish a council term."
+          }
+        ],
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/8b1221d9b13415eeffe8.jpg",
@@ -5475,9 +5514,20 @@
         "incumbent": false,
         "terms_started": 0,
         "terms_completed": 0,
-        "term_note": "No prior Vero Beach City Council term; first council candidacy.",
-        "source_url": "https://bluewaterhealthyliving.com/news/national-news/florida/vero-beach-city-council-recommendations-2026-our-view/",
-        "as_of": "2026-10-27"
+        "term_note": "Local reporting explicitly describes him as a first-time candidate. The zero prior-term label relies on that reporting; no independent official lifetime service archive was located.",
+        "source_url": "https://veronews.com/2026/10/19/8-candidates-contend-for-3-seats-on-vero-beach-city-council/",
+        "as_of": "2026-11-01",
+        "since": null,
+        "current_term_label": null,
+        "verification_status": "First-time status reported by local news; lifetime official audit incomplete",
+        "evidence": [
+          {
+            "title": "2026 candidate coverage",
+            "url": "https://veronews.com/2026/10/19/8-candidates-contend-for-3-seats-on-vero-beach-city-council/",
+            "supports": "Explicitly describes O’Connor as a first-time candidate."
+          }
+        ],
+        "count_basis": "reported"
       },
       "photo": {
         "path": "/static/portraits/33df03160ae593d57996.jpg",
@@ -5495,12 +5545,32 @@
         "name": "Aaron Vos",
         "terms_started": 1,
         "terms_completed": 0,
-        "source_url": "https://veronews.com/2026/10/19/8-candidates-contend-for-3-seats-on-vero-beach-city-council/",
+        "source_url": "https://enr.electionsfl.org/IND/3739/Summary/",
         "source_name": "Reviewed official/local service history",
-        "as_of": "2026-10-27",
+        "as_of": "2026-11-01",
         "since": "2024",
-        "term_note": "Current term is included in terms started; completed terms exclude the ongoing term.",
-        "incumbent": true
+        "term_note": "Official 2024 results confirm election. His first-term status is explicitly stated in his 2026 candidate questionnaire; the term is ongoing, not completed.",
+        "incumbent": true,
+        "current_term_label": "First term · 2024–2026",
+        "verification_status": "Official election and current membership; first-term status candidate-reported",
+        "evidence": [
+          {
+            "title": "Official 2024 election results",
+            "url": "https://enr.electionsfl.org/IND/3739/Summary/",
+            "supports": "Vos elected with 3,391 votes."
+          },
+          {
+            "title": "Official current council",
+            "url": "https://www.covb.org/283/City-Council",
+            "supports": "Current council membership."
+          },
+          {
+            "title": "TCPalm candidate questionnaire",
+            "url": "https://www.aol.com/articles/eight-candidates-running-three-city-090547000.html",
+            "supports": "Vos describes this as his first term."
+          }
+        ],
+        "count_basis": "reported"
       },
       "photo": {
         "path": "/static/portraits/512058043871aca1e381.jpg",
@@ -5516,9 +5586,31 @@
         "incumbent": false,
         "terms_started": 1,
         "terms_completed": 1,
-        "term_note": "One full council term, 2022–2024; the 2026 TCPalm report explicitly corrects the record to reflect a full term.",
-        "source_url": "https://bluewaterhealthyliving.com/news/national-news/florida/vero-beach-city-council-recommendations-2026-our-view/",
-        "as_of": "2026-10-27"
+        "term_note": "Official results confirm the 2022 election and city minutes establish seated service in November 2023. Corrected TCPalm coverage explicitly confirms one full 2022–2024 term, not a partial term.",
+        "source_url": "https://enr.electionsfl.org/IND/3309/Summary/",
+        "as_of": "2026-11-01",
+        "since": null,
+        "former_member": true,
+        "current_term_label": null,
+        "verification_status": "Official election and service; full-term completion corroborated by corrected reporting",
+        "evidence": [
+          {
+            "title": "Official 2022 election results",
+            "url": "https://enr.electionsfl.org/IND/3309/Summary/",
+            "supports": "Elected with 2,435 votes."
+          },
+          {
+            "title": "Official November 22, 2023 organizational minutes",
+            "url": "https://www.covb.org/AgendaCenter/ViewFile/Minutes/_11222023-1607",
+            "supports": "Lists Zudans as seated council member."
+          },
+          {
+            "title": "Corrected TCPalm editorial",
+            "url": "https://bluewaterhealthyliving.com/news/national-news/florida/vero-beach-city-council-recommendations-2026-our-view/",
+            "supports": "Explicit correction confirms a full council term."
+          }
+        ],
+        "count_basis": "reported"
       },
       "photo": {
         "path": "/static/portraits/311804ac124589f05a05.jpg",
@@ -5536,9 +5628,31 @@
         "incumbent": false,
         "terms_started": 1,
         "terms_completed": 1,
-        "term_note": "One completed council term, 2009–2011.",
-        "source_url": "https://veronews.com/2012/07/14/brian-heady/",
-        "as_of": "2026-10-27"
+        "term_note": "Official city records establish membership in 2011. His candidate questionnaire lists council service from 2009 to 2011; contemporary election reporting records his unsuccessful reelection in November 2011. One completed term is supported by that self-report and reporting; a complete official lifetime election chain was not obtained.",
+        "source_url": "https://www.covb.org/Archive/ViewFile/Item/67",
+        "as_of": "2026-11-01",
+        "since": null,
+        "former_member": true,
+        "current_term_label": null,
+        "verification_status": "Official past membership; term duration candidate-reported and news-corroborated",
+        "evidence": [
+          {
+            "title": "Official 2011–2012 budget",
+            "url": "https://www.covb.org/Archive/ViewFile/Item/67",
+            "supports": "Lists Brian T. Heady as council member in September 2011."
+          },
+          {
+            "title": "Brian Heady candidate questionnaire",
+            "url": "https://veronews.com/2012/07/14/brian-heady/",
+            "supports": "Candidate reports council service from 2009 to 2011."
+          },
+          {
+            "title": "November 2011 election report",
+            "url": "https://veronews.com/2011/11/08/carroll-and-winger-elected-voters-approve-referendum-2-to-1/",
+            "supports": "Reports unsuccessful reelection."
+          }
+        ],
+        "count_basis": "reported"
       },
       "photo": {
         "path": "/static/portraits/623e2e2ec5cd81a7e330.jpg",
@@ -5556,12 +5670,37 @@
         "name": "Linda Moore",
         "terms_started": 2,
         "terms_completed": 1,
-        "source_url": "https://veronews.com/2026/10/19/8-candidates-contend-for-3-seats-on-vero-beach-city-council/",
+        "source_url": "https://enr.electionsfl.org/IND/3309/Summary/",
         "source_name": "Reviewed official/local service history",
-        "as_of": "2026-10-27",
+        "as_of": "2026-11-01",
         "since": "2022",
-        "term_note": "Current term is included in terms started; completed terms exclude the ongoing term.",
-        "incumbent": true
+        "term_note": "Elected in 2022 and reelected in 2024. The 2022–2024 term is completed; the current 2024–2026 term is ongoing. Current membership is official; first-election year is corroborated by local reporting. Vice-mayor selections are not extra council terms.",
+        "incumbent": true,
+        "current_term_label": "Second term · 2024–2026",
+        "verification_status": "Two official election wins and current membership; first-election year corroborated by reporting",
+        "evidence": [
+          {
+            "title": "Official 2022 election results",
+            "url": "https://enr.electionsfl.org/IND/3309/Summary/",
+            "supports": "Moore elected with 2,310 votes."
+          },
+          {
+            "title": "Official 2024 election results",
+            "url": "https://enr.electionsfl.org/IND/3739/Summary/",
+            "supports": "Moore reelected with 4,008 votes."
+          },
+          {
+            "title": "Official current council",
+            "url": "https://www.covb.org/283/City-Council",
+            "supports": "Current membership."
+          },
+          {
+            "title": "2026 candidate coverage",
+            "url": "https://veronews.com/2026/10/19/8-candidates-contend-for-3-seats-on-vero-beach-city-council/",
+            "supports": "Reports first council election in 2022."
+          }
+        ],
+        "count_basis": "official_records"
       },
       "photo": {
         "path": "/static/portraits/63dfaa927e4b62c1f527.jpg",
@@ -5577,9 +5716,20 @@
         "incumbent": false,
         "terms_started": 0,
         "terms_completed": 0,
-        "term_note": "No prior Vero Beach City Council term; first council candidacy.",
-        "source_url": "https://bluewaterhealthyliving.com/news/national-news/florida/vero-beach-city-council-recommendations-2026-our-view/",
-        "as_of": "2026-10-27"
+        "term_note": "Candidate identifies himself as a first-time candidate in his 2026 questionnaire. The zero label relies on that statement, not an exhaustive official lifetime service archive.",
+        "source_url": "https://www.aol.com/articles/eight-candidates-running-three-city-090547000.html",
+        "as_of": "2026-11-01",
+        "since": null,
+        "current_term_label": null,
+        "verification_status": "First-time status candidate-reported; lifetime official audit incomplete",
+        "evidence": [
+          {
+            "title": "TCPalm candidate questionnaire",
+            "url": "https://www.aol.com/articles/eight-candidates-running-three-city-090547000.html",
+            "supports": "Benedict explicitly identifies himself as a first-time candidate."
+          }
+        ],
+        "count_basis": "reported"
       },
       "photo": {
         "path": "/static/portraits/a440951d88fa5261d0d6.jpg",
@@ -5597,9 +5747,21 @@
         "incumbent": false,
         "terms_started": null,
         "terms_completed": null,
-        "term_note": "Not the verified current holder of this office. Any earlier service is not yet verified.",
-        "source_url": "https://www.cityofsebastian.org/560/Sherrie-Matthews",
-        "as_of": "2026-10-27"
+        "term_note": "Not on current council roster. No official record establishing prior council service or a verified zero-term history was found; retain unknown counts.",
+        "source_url": "https://cityofsebastian.org/266/City-Council",
+        "as_of": "2026-11-01",
+        "former_member": null,
+        "since": null,
+        "current_term_label": null,
+        "evidence": [
+          {
+            "title": "City of Sebastian current City Council directory",
+            "url": "https://cityofsebastian.org/266/City-Council",
+            "supports": "Current roster lists Fred Jones, Bob McPartlan, Christopher Nunn, Ed Dodd and Sherrie Matthews. Of these five candidates, only Matthews currently holds a council seat. Council terms normally last two years; mayor is chosen separately from council membership."
+          }
+        ],
+        "verification_status": "Official records reviewed; lifetime term count incomplete",
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/aa84c00f1b22bfd229c1.jpg",
@@ -5616,9 +5778,31 @@
         "incumbent": false,
         "terms_started": null,
         "terms_completed": null,
-        "term_note": "Not the verified current holder of this office. Any earlier service is not yet verified.",
-        "source_url": "https://www.cityofsebastian.org/560/Sherrie-Matthews",
-        "as_of": "2026-10-27"
+        "term_note": "Former council service confirmed by official May 14, 2020 resolution and September 15, 2020 recall notice. Exact first/last service dates and completed-term count remain unverified in primary records reviewed; do not assume partial service completed a full term.",
+        "source_url": "https://cityofsebastian.org/266/City-Council",
+        "as_of": "2026-11-01",
+        "former_member": true,
+        "since": null,
+        "current_term_label": null,
+        "evidence": [
+          {
+            "title": "City of Sebastian current City Council directory",
+            "url": "https://cityofsebastian.org/266/City-Council",
+            "supports": "Current roster lists Fred Jones, Bob McPartlan, Christopher Nunn, Ed Dodd and Sherrie Matthews. Of these five candidates, only Matthews currently holds a council seat. Council terms normally last two years; mayor is chosen separately from council membership."
+          },
+          {
+            "title": "Official Sebastian resolution reproduced in CRS progress report",
+            "url": "https://www.cityofsebastian.org/DocumentCenter/View/1648/CRS-Activity-510-Progress-Report---2022",
+            "supports": "Resolution adopted May 14, 2020 lists Councilmember Damien Gilliams and records his motion."
+          },
+          {
+            "title": "Official September 15, 2020 recall-election legal notice",
+            "url": "https://cityofsebastian.org/m/newsflash/Archive/Item/41?arcId=100",
+            "supports": "City notice identifies Damien Gilliams as a sitting council member subject to the September 15, 2020 recall election. Notice is not the certified outcome or removal-effective-date record."
+          }
+        ],
+        "verification_status": "Official records reviewed; lifetime term count incomplete",
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/54dd558dcf8017f52acb.jpg",
@@ -5635,9 +5819,31 @@
         "incumbent": false,
         "terms_started": null,
         "terms_completed": null,
-        "term_note": "Not the verified current holder of this office. Any earlier service is not yet verified.",
-        "source_url": "https://www.cityofsebastian.org/560/Sherrie-Matthews",
-        "as_of": "2026-10-27"
+        "term_note": "Official records establish earlier service as mayor in the 2009–2010 proposed budget and council member in the FY2016 financial report. These snapshots do not establish uninterrupted service, election-by-election terms, or exact completed count. Keep counts and original start date unknown.",
+        "source_url": "https://cityofsebastian.org/266/City-Council",
+        "as_of": "2026-11-01",
+        "former_member": true,
+        "since": null,
+        "current_term_label": null,
+        "evidence": [
+          {
+            "title": "City of Sebastian current City Council directory",
+            "url": "https://cityofsebastian.org/266/City-Council",
+            "supports": "Current roster lists Fred Jones, Bob McPartlan, Christopher Nunn, Ed Dodd and Sherrie Matthews. Of these five candidates, only Matthews currently holds a council seat. Council terms normally last two years; mayor is chosen separately from council membership."
+          },
+          {
+            "title": "Official proposed annual budget FY2009–2010",
+            "url": "https://cityofsebastian.org/Archive.aspx?ADID=58",
+            "supports": "Dated August 19, 2009; front matter lists Richard H. Gillmor as mayor."
+          },
+          {
+            "title": "Official FY2016 comprehensive annual financial report",
+            "url": "https://www.cityofsebastian.org/ArchiveCenter/ViewFile/Item/74",
+            "supports": "Cover page lists Richard Gillmor as council member for year ended September 30, 2016. Mayor title changes must not be counted as new council terms."
+          }
+        ],
+        "verification_status": "Official records reviewed; lifetime term count incomplete",
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/dfdf99e1a9b130e5f20e.jpg",
@@ -5652,14 +5858,30 @@
     "irc:ballot:sebastian-council|aa1af39f0b4764106c98": {
       "service": {
         "name": "Sherrie Matthews",
-        "terms_started": 1,
-        "terms_completed": 0,
-        "source_url": "https://www.cityofsebastian.org/560/Sherrie-Matthews",
+        "terms_started": null,
+        "terms_completed": null,
+        "source_url": "https://cityofsebastian.org/266/City-Council",
         "source_name": "Reviewed official/local service history",
-        "as_of": "2026-10-27",
-        "since": "2025",
-        "term_note": "Serving a 2025–2026 partial term; no completed term in this current service period.",
-        "incumbent": true
+        "as_of": "2026-11-01",
+        "since": 2025,
+        "term_note": "Official profile identifies the current 2025–2026 term. Treat it as a current partial term, not a completed full two-year term. Primary records reviewed do not establish a comprehensive earlier service history or exact swearing-in date.",
+        "incumbent": true,
+        "former_member": null,
+        "current_term_label": "2025–2026 partial term",
+        "evidence": [
+          {
+            "title": "City of Sebastian current City Council directory",
+            "url": "https://cityofsebastian.org/266/City-Council",
+            "supports": "Current roster lists Fred Jones, Bob McPartlan, Christopher Nunn, Ed Dodd and Sherrie Matthews. Of these five candidates, only Matthews currently holds a council seat. Council terms normally last two years; mayor is chosen separately from council membership."
+          },
+          {
+            "title": "Official Sherrie Matthews profile",
+            "url": "https://www.cityofsebastian.org/560/Sherrie-Matthews",
+            "supports": "Profile explicitly states Term 2025 to 2026; biography is still marked Biography to come."
+          }
+        ],
+        "verification_status": "Official records reviewed; lifetime term count incomplete",
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/8983dbe2ecc6a6a53fe8.jpg",
@@ -5675,9 +5897,26 @@
         "incumbent": false,
         "terms_started": null,
         "terms_completed": null,
-        "term_note": "Not the verified current holder of this office. Any earlier service is not yet verified.",
-        "source_url": "https://www.cityofsebastian.org/560/Sherrie-Matthews",
-        "as_of": "2026-10-27"
+        "term_note": "Official Natural Resources Board record confirms advisory-board service, not council service. No primary evidence establishing a prior council term or verified zero-term history was found.",
+        "source_url": "https://cityofsebastian.org/266/City-Council",
+        "as_of": "2026-11-01",
+        "former_member": null,
+        "since": null,
+        "current_term_label": null,
+        "evidence": [
+          {
+            "title": "City of Sebastian current City Council directory",
+            "url": "https://cityofsebastian.org/266/City-Council",
+            "supports": "Current roster lists Fred Jones, Bob McPartlan, Christopher Nunn, Ed Dodd and Sherrie Matthews. Of these five candidates, only Matthews currently holds a council seat. Council terms normally last two years; mayor is chosen separately from council membership."
+          },
+          {
+            "title": "Official Natural Resources Board January 6, 2026 agenda packet",
+            "url": "https://cityofsebastian.org/AgendaCenter/ViewFile/Agenda/_01062026-556",
+            "supports": "December 2, 2025 minutes list Ms. Shellenberger as alternate and voting in place of an absent member; this is not a council position."
+          }
+        ],
+        "verification_status": "Official records reviewed; lifetime term count incomplete",
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/91524321b2e129aec162.jpg",
@@ -5694,12 +5933,58 @@
         "name": "Fernando R. Herrera",
         "terms_started": null,
         "terms_completed": null,
-        "source_url": "https://www.cityoffellsmere.org/media/19006",
+        "source_url": "https://www.cityoffellsmere.org/media/5196",
         "source_name": "Reviewed official/local service history",
-        "as_of": "2026-10-27",
+        "as_of": "2026-11-01",
         "since": null,
-        "term_note": "Current council membership verified; lifetime term count not verified.",
-        "incumbent": true
+        "term_note": "Current council member and vice mayor. Official records establish council service in 2008, an unopposed two-year election win in 2010, another unopposed win and swearing-in on November 20, 2014, and election again in 2024. The November 21, 2024 agenda scheduled his next oath; that agenda alone does not establish the oath occurred. A complete official chain establishing every term and any service gaps was not obtained. Published accounts conflict on first election: TCPalm says 2001, while a city historian's account and 2012 Vero News report say 2002. Keep exact lifetime counts and first-service date unknown. Mayor/vice mayor selections are not additional council terms.",
+        "incumbent": true,
+        "former_member": false,
+        "current_term_label": "2024–2026 term",
+        "evidence": [
+          {
+            "title": "City of Fellsmere, December 4, 2008 council minutes",
+            "url": "https://www.cityoffellsmere.org/media/5196",
+            "supports": "Roll call names Fernando Herrera as a sitting council member; does not establish first election or total terms."
+          },
+          {
+            "title": "City of Fellsmere Resolution 2010-38",
+            "url": "https://www.cityoffellsmere.org/media/4196",
+            "supports": "Declares unopposed incumbent Fernando R. Herrera a winner for a two-year council term at the November 2, 2010 election."
+          },
+          {
+            "title": "City of Fellsmere, November 20, 2014 approved council minutes",
+            "url": "https://www.cityoffellsmere.org/media/2911",
+            "supports": "Adopts Resolution 2014-33 declaring Herrera, Salgado and Tyson unopposed winners, then records Attorney Dill swearing them into office. Pages 3–4 distinguish mayor/pro-tem selections from council election."
+          },
+          {
+            "title": "Official Indian River County 2024 general-election results",
+            "url": "https://enr.electionsfl.org/IND/3739/Summary/",
+            "supports": "Herrera won one of three Fellsmere council seats at the November 5, 2024 general election (280 votes)."
+          },
+          {
+            "title": "City of Fellsmere amended November 21, 2024 agenda",
+            "url": "https://www.cityoffellsmere.org/media/18241",
+            "supports": "Schedules oath administration for Fernando Herrera, Jessica Salgado and Shayla Macias and Resolution 2024-86. This is an agenda, not proof that the oath occurred."
+          },
+          {
+            "title": "History of Fellsmere, city historian Richard B. Votapka, June 13, 2024, page 47",
+            "url": "https://fellsmerehistoricwalkingtour.com/wp-content/uploads/2024/08/History-of-Fellsmere.pdf",
+            "supports": "Reports election in 2002 and twenty years of service as of 2024; footnote 345 attributes information to Herrera and City Clerk Maria Suarez-Sanchez on June 11, 2024. Does not provide a term-by-term chronology, and its years-served wording does not justify division into exact terms."
+          },
+          {
+            "title": "Vero News, November 6, 2012 election report",
+            "url": "https://veronews.com/2012/11/06/fellsmeres-tyson-herrera-return-to-council-dais-salgado-to-join-them/",
+            "supports": "Secondary report explicitly describes consecutive council terms since 2002 and a 2012 reelection. Does not establish continuity after 2012."
+          },
+          {
+            "title": "TCPalm 2024 candidate coverage, republished by Yahoo",
+            "url": "https://www.yahoo.com/news/planning-growth-fellsmere-tops-council-110232870.html",
+            "supports": "Reports first election in 2001, creating an unresolved conflict with the 2002 accounts."
+          }
+        ],
+        "verification_status": "Current membership and specific historical election events verified; exact lifetime term counts and first-service year unresolved",
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/081e6042872c5eed79ed.webp",
@@ -5716,9 +6001,36 @@
         "incumbent": false,
         "terms_started": null,
         "terms_completed": null,
-        "term_note": "Not the verified current holder of this office. Any earlier service is not yet verified.",
-        "source_url": "https://www.cityoffellsmere.org/media/19006",
-        "as_of": "2026-10-27"
+        "term_note": "Qualified 2026 challenger, not a current council member. Official records separately identify Pablo Javier/Javi Murillo in public comment and as a Beautification Committee member; his former city permit-clerk employment and committee service are not council terms. A complete source proving absence of any earlier council service was not found, so lifetime council term counts remain unknown rather than zero.",
+        "source_url": "https://www.cityoffellsmere.org/media/21566",
+        "as_of": "2026-11-01",
+        "former_member": null,
+        "since": null,
+        "current_term_label": "Challenger; no current council term",
+        "evidence": [
+          {
+            "title": "City of Fellsmere August 20, 2026 council packet/minutes",
+            "url": "https://www.cityoffellsmere.org/media/21566",
+            "supports": "City clerk's qualified-candidate report lists Fernando Herrera, Javi Murillo, Shayla Macias and Jose M. Zamarripa; incumbent council roster is separate."
+          },
+          {
+            "title": "City of Fellsmere 2024 council minutes",
+            "url": "https://www.cityoffellsmere.org/media/18251",
+            "supports": "Records Pablo Javier Murillo, also known as Coach Javi, introducing wellness initiatives during public comment. This is public participation, not council membership."
+          },
+          {
+            "title": "City of Fellsmere Beautification Committee agenda, April 20, 2026",
+            "url": "https://www.cityoffellsmere.org/media/20481",
+            "supports": "Lists Javier Murillo as a committee member and Ben Baker separately as City Council liaison; committee membership must not be counted as a council term."
+          },
+          {
+            "title": "TCPalm 2026 Fellsmere candidate questionnaire, republished by AOL",
+            "url": "https://www.aol.com/articles/3-seats-election-nov-3-185205000.html",
+            "supports": "Murillo describes former employment as the city permit clerk and other work; does not establish a previous council term or explicitly prove zero prior terms."
+          }
+        ],
+        "verification_status": "Challenger and non-council municipal roles verified; complete lifetime council history not established",
+        "count_basis": "unverified"
       },
       "photo": {
         "path": "/static/portraits/2d860edf913b916d794b.png",
@@ -5737,10 +6049,36 @@
         "terms_completed": 0,
         "source_url": "https://enr.electionsfl.org/IND/3739/Summary/",
         "source_name": "Reviewed official/local service history",
-        "as_of": "2026-10-27",
+        "as_of": "2026-11-01",
         "since": "2024",
-        "term_note": "First elected in 2024 per the reviewed election and candidate coverage; current term ongoing.",
-        "incumbent": true
+        "term_note": "First elected November 5, 2024 with 329 votes. Her 2026 candidate questionnaire explicitly describes this as her first council term. One term started and none completed as of November 1, 2026. The city scheduled her oath for November 21, 2024; do not state that exact swearing-in date as completed fact without the meeting minutes.",
+        "incumbent": true,
+        "former_member": false,
+        "current_term_label": "First term · 2024–2026",
+        "evidence": [
+          {
+            "title": "Official Indian River County 2024 general-election results",
+            "url": "https://enr.electionsfl.org/IND/3739/Summary/",
+            "supports": "Macias won a Fellsmere council seat November 5, 2024 with 329 votes, the highest total in the five-candidate contest."
+          },
+          {
+            "title": "City of Fellsmere amended November 21, 2024 agenda",
+            "url": "https://www.cityoffellsmere.org/media/18241",
+            "supports": "Lists Macias among newly elected council members scheduled for oath administration; agenda does not prove the oath occurred."
+          },
+          {
+            "title": "City of Fellsmere September 2025 council agenda",
+            "url": "https://www.cityoffellsmere.org/media/19661",
+            "supports": "Lists Council Member Macias and her requested council matters, corroborating council service during the 2024–2026 term."
+          },
+          {
+            "title": "TCPalm 2026 Fellsmere candidate questionnaires, republished by AOL",
+            "url": "https://www.aol.com/articles/3-seats-election-nov-3-185205000.html",
+            "supports": "Macias's first-person answer explicitly refers to being elected to her first term and identifies her 329-vote victory. This supports first-term status beyond merely finding one election win."
+          }
+        ],
+        "verification_status": "First term verified through official election result, official council records, and explicit first-person candidate statement; exact oath date not confirmed from minutes",
+        "count_basis": "reported"
       },
       "photo": {
         "path": "/static/portraits/7219aaf55d4a62b3e5c0.jpg",
@@ -5757,9 +6095,31 @@
         "incumbent": false,
         "terms_started": null,
         "terms_completed": null,
-        "term_note": "Not the verified current holder of this office. Any earlier service is not yet verified.",
-        "source_url": "https://www.cityoffellsmere.org/media/19006",
-        "as_of": "2026-10-27"
+        "term_note": "Qualified 2026 challenger, not a verified current council member. No source establishing any prior council term or explicitly documenting that he has never served was obtained. Preserve unknown lifetime counts; do not infer zero from missing biography or failure to return a questionnaire.",
+        "source_url": "https://www.cityoffellsmere.org/media/21566",
+        "as_of": "2026-11-01",
+        "former_member": null,
+        "since": null,
+        "current_term_label": "Challenger; no current council term",
+        "evidence": [
+          {
+            "title": "City of Fellsmere August 20, 2026 council packet/minutes",
+            "url": "https://www.cityoffellsmere.org/media/21566",
+            "supports": "City clerk's qualified-candidate report names Jose M. Zamarripa for the 2026 contest; sitting council membership is separate."
+          },
+          {
+            "title": "City of Fellsmere 2026 election information",
+            "url": "https://www.cityoffellsmere.org/city-clerk/page/election-information",
+            "supports": "Official 2026 municipal-election and qualifying context. Does not establish lifetime service history."
+          },
+          {
+            "title": "TCPalm 2026 Fellsmere candidate coverage, republished by AOL",
+            "url": "https://www.aol.com/articles/3-seats-election-nov-3-185205000.html",
+            "supports": "Identifies Zamarripa as a council candidate and reports no returned questionnaire; absence of a response is not evidence of zero prior terms."
+          }
+        ],
+        "verification_status": "2026 challenger status verified; prior service and lifetime term counts unverified",
+        "count_basis": "unverified"
       }
     },
     "irc:ballot:sebastian-referendum-1|23cebd2dae54f2dde235": {

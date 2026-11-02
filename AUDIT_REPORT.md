@@ -183,3 +183,11 @@ Browser checks at 3840x2160 and 1920x1080 confirmed all eight Vero candidates fi
 ### November 1 Sebastian and race interaction follow-up
 Council grids now declare their actual row count so Sebastian's odd five-candidate list has three consistent rows. Portrait columns increased to 4.7em, with photos up to 4.4em wide (approximately 194px at 4K); row height remains bounded. Race cards open details when clicked outside their existing controls, with Enter/Space support on the focused card. Details use a wider scrollable panel, wrapping names and larger photos. Existing Pin and Details buttons retain separate behavior.
 Verified Sebastian card has no row or card overflow at the default viewport and at 4K. Clicking the Sebastian heading opens the correct five-candidate details sheet. Candidate display checks and JavaScript syntax pass.
+
+
+### November 1 municipal service-history verification
+Reviewed all 17 Vero Beach, Sebastian and Fellsmere candidates. Each service record now includes a review date, evidence URLs, a precise statement of what each record supports, and the remaining verification limit. Details render these records separately from vote totals and portrait sources.
+
+Corrections: Gilliams and Gillmor are confirmed former Sebastian members with unknown exact lifetime counts. Matthews has an official 2025–2026 partial term; prior lifetime count is not established and is no longer asserted as zero. MacCallum's unsupported zero was removed. Herrera's specific historical elections and current term are documented, but conflicting 2001/2002 start accounts and gaps prevent an exact lifetime count. Macias' first term is supported by official 2024 election/council records plus an explicit candidate statement. Moore's 2022/2024 wins and current membership are official. Retained counts that rely partly on candidate statements or secondary histories are marked reported rather than presented as a complete official lifetime audit.
+
+Mayor/vice-mayor selections, advisory boards, city employment, candidate filings, scheduled oaths and completed oaths are kept distinct. No recall outcome or effective removal date is inferred from an election notice. Missing biographies or records never establish zero.
