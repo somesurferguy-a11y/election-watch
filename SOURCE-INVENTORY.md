@@ -99,3 +99,6 @@ Fellsmere final ballot verified: https://www.voterfocus.com/SampleBallots/WHSamp
 
 
 Municipal service review November 1: candidate_profiles.json now carries per-candidate service.evidence with source title, URL and exact supported claim for all 17 municipal candidates. service.count_basis distinguishes reported counts from official-record counts and unverified totals. Primary evidence includes city rosters, official 2022/2024 county results, city minutes/budgets, Fellsmere resolutions, Sebastian Matthews profile, and PSC-filed Kramer testimony. Full lifetime counts remain incomplete where records do not establish every term and gap.
+
+
+November 2 portrait expansion: twelve new identified portraits, with individual source_url/image_url/credit records in candidate_profiles.json. Sources include Florida House, Attorney General, Department of Financial Services, FDACS, Congress Bioguide, Sebastian Inlet District and identified candidate campaign pages. All files are unchanged source downloads; display crop/position metadata selects the pictured subject. Congress Jolly portrait is explicitly historical. Unknown identities remain Photo unavailable.

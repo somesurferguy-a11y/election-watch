@@ -45,3 +45,13 @@ class CandidateProfileTests(unittest.TestCase):
   former={c['name'] for c in seb['candidates'] if c['service'].get('former_member')}
   self.assertEqual(former,{'Damien Gilliams','Richard H. Gillmor'})
   for c in seb['candidates']:self.assertIsNone(c['service']['terms_completed'])
+
+ def test_new_photos_cover_both_state_and_county_versions(self):
+  expected={'Blaise Ingoglia','Wilton Simpson','Annette Taddeo','David Jolly / Gwen Graham','Jose Javier Rodriguez','Joey Mendoza Atkins','Dan Green','Jordyn Guadalupe Balderas','Calvin Holton','Lisa Leger Frazier','Robert Brackett','James Uthmeier'}
+  for name in expected:
+   matches=[c for r in self.races for c in r['candidates'] if c['name']==name]
+   self.assertEqual(len(matches),2,name)
+   self.assertTrue(all(c.get('photo') for c in matches),name)
+   for c in matches:
+    photo=c['photo']
+    if photo.get('crop'):self.assertIn('.frame.',photo['path'])

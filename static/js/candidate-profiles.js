@@ -7,13 +7,14 @@ function validPhotoCrop(photo){
  if(c.x<0||c.y<0||c.width<=0||c.height<=0||c.source_width>10000||c.source_height>10000||c.x+c.width>c.source_width||c.y+c.height>c.source_height)return null;
  return c;
 }
+function photoPosition(photo){const p=photo?.position;return p&&['x','y'].every(k=>typeof p[k]==='number'&&Number.isFinite(p[k])&&p[k]>=0&&p[k]<=100)?p.x+'% '+p.y+'%':'50% 15%';}
 function portraitHtml(c){
  if(!isPerson(c))return '<span class="choice-symbol" aria-hidden="true">'+(/^yes/i.test(c.name)?'✓':'−')+'</span>';
  const initials=c.name.replace(/\([^)]*\)/g,'').split(/\s+/).filter(Boolean).slice(0,2).map(n=>n[0]).join('');
  const path=c.photo?.path,crop=validPhotoCrop(c.photo),hasCrop=!!c.photo&&Object.hasOwn(c.photo,'crop');
- const safe=typeof path==='string'&&(/^\/static\/portraits\/[a-f0-9]+\.(jpg|png|webp)$/.test(path)||(/^\/static\/portraits\/[a-f0-9]+\.frame\.jpg$/.test(path)&&crop));
- const media=(!safe||(hasCrop&&!crop))?'':crop?`<svg class="portrait-frame" viewBox="${crop.x} ${crop.y} ${crop.width} ${crop.height}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(c.photo.subject||c.name)}"><image href="${esc(path)}" width="${crop.source_width}" height="${crop.source_height}"/></svg>`:`<img src="${esc(path)}" alt="${esc(c.photo.subject||c.name)}" loading="lazy" decoding="async">`;
- return `<span class="portrait" title="${esc(path?'Portrait of '+(c.photo.subject||c.name)+(c.photo.image_note?' · '+c.photo.image_note:''):'Verified photo unavailable')}"><span aria-hidden="true">${esc(initials)}</span>${media}</span>`;
+ const safe=typeof path==='string'&&(/^\/static\/portraits\/[a-f0-9]+\.(jpg|png|webp)$/.test(path)||(/^\/static\/portraits\/[a-f0-9]+\.frame\.(jpg|png|webp)$/.test(path)&&crop));
+ const media=(!safe||(hasCrop&&!crop))?'':crop?`<svg class="portrait-frame" viewBox="${crop.x} ${crop.y} ${crop.width} ${crop.height}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(c.photo.subject||c.name)}"><image href="${esc(path)}" width="${crop.source_width}" height="${crop.source_height}"/></svg>`:`<img style="object-position:${photoPosition(c.photo)}" src="${esc(path)}" alt="${esc(c.photo.subject||c.name)}" loading="lazy" decoding="async">`;
+ return `<span class="portrait" title="${esc(media?'Portrait of '+(c.photo.subject||c.name)+(c.photo.image_note?' · '+c.photo.image_note:''):'Verified photo unavailable')}"><span aria-hidden="true">${esc(initials)}</span><small class="portrait-unavailable">Photo unavailable</small>${media}</span>`;
 }
 function serviceBadge(c){
  if(!isPerson(c)||state.demo)return '';
@@ -39,4 +40,4 @@ function seatRank(c,r){
  const label=rank<=seats?(rank+tied-1>seats?'Tied at cutoff':`In top ${seats} · unofficial`):'Outside current top '+seats;
  return `<small class="rank-badge">Rank ${rank} · ${esc(label)}</small>`;
 }
-document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement&&e.target.closest('.portrait'))e.target.hidden=true;else if(e.target.tagName?.toLowerCase()==='image'&&e.target.closest('.portrait-frame'))e.target.closest('.portrait-frame').style.display='none';},true);
+document.addEventListener('error',e=>{const portrait=e.target.closest?.('.portrait');if(!portrait)return;if(e.target instanceof HTMLImageElement){e.target.hidden=true;portrait.classList.add('photo-failed');}else if(e.target.tagName?.toLowerCase()==='image'&&e.target.closest('.portrait-frame')){e.target.closest('.portrait-frame').style.display='none';portrait.classList.add('photo-failed');}},true);

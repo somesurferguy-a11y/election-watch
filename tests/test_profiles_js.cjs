@@ -32,3 +32,8 @@ assert.doesNotMatch(vm.runInContext('serviceBadge(former)',context),/0 completed
 context.safeLink=u=>/^https:\/\//.test(u||'')?u:'';
 context.reviewed={as_of:'2026-11-01',verification_status:'Partial history',evidence:[{url:'https://city.example/minutes',title:'Council minutes',supports:'Prior membership confirmed'},{url:'javascript:alert(1)',title:'Unsafe'}]};
 const evidence=vm.runInContext('serviceEvidenceHtml(reviewed)',context);assert.match(evidence,/Council minutes/);assert.match(evidence,/2026-11-01/);assert.doesNotMatch(evidence,/javascript:|Unsafe/);
+
+context.positionPhoto={position:{x:30,y:30}};assert.equal(vm.runInContext('photoPosition(positionPhoto)',context),'30% 30%');context.positionPhoto.position.x='30; color:red';assert.equal(vm.runInContext('photoPosition(positionPhoto)',context),'50% 15%');
+context.cropPhoto.path='/static/portraits/abcdef123456.frame.webp';assert.match(vm.runInContext('portraitHtml(croppedCandidate)',context),/<svg/);context.cropPhoto.crop=null;assert.doesNotMatch(vm.runInContext('portraitHtml(croppedCandidate)',context),/<img|<svg/);
+
+let imageError;const errorContext={document:{addEventListener(name,handler){if(name==='error')imageError=handler;}},HTMLImageElement:class {}};vm.createContext(errorContext);vm.runInContext(fs.readFileSync('static/js/candidate-profiles.js','utf8'),errorContext);let failureMarked=false;const photoFrame={style:{}};const portrait={classList:{add(name){failureMarked=name==='photo-failed';}}};imageError({target:{tagName:'image',closest(selector){return selector==='.portrait'?portrait:photoFrame;}}});assert.equal(failureMarked,true);assert.equal(photoFrame.style.display,'none');

@@ -441,6 +441,14 @@
         "source_url": "https://github.com/unitedstates/congress-legislators",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/2fc1cdb0c4dd546ef50d.jpg",
+        "subject": "Dan Green",
+        "source_url": "https://dangreenfl.com/",
+        "image_url": "https://dangreenfl.com/wp-content/themes/template/images/dan.jpg",
+        "credit": "Dan Green campaign",
+        "verified_at": "2026-11-02T02:54:17.495738Z"
       }
     },
     "fl:ba974b0a737575d41e24|e678943d1945fb29a9a5": {
@@ -474,6 +482,14 @@
         "source_url": "https://github.com/unitedstates/congress-legislators",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/2fc1cdb0c4dd546ef50d.jpg",
+        "subject": "Dan Green",
+        "source_url": "https://dangreenfl.com/",
+        "image_url": "https://dangreenfl.com/wp-content/themes/template/images/dan.jpg",
+        "credit": "Dan Green campaign",
+        "verified_at": "2026-11-02T02:54:17.495738Z"
       }
     },
     "irc:ba974b0a737575d41e24|e678943d1945fb29a9a5": {
@@ -1266,6 +1282,14 @@
         "source_url": "https://www.flgov.com/eog/leadership/governor",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/8a0b98a6ea38f251aadc.jpg",
+        "subject": "David Jolly",
+        "source_url": "https://bioguide.congress.gov/search/bio/J000296",
+        "image_url": "https://bioguide.congress.gov/bioguide/photo/J/J000296.jpg",
+        "credit": "U.S. Congress historical official portrait; depicts David Jolly",
+        "verified_at": "2026-11-01"
       }
     },
     "fl:6850a80c5262d72ad1ce|1a7a97989b4628409ba0": {
@@ -1384,6 +1408,14 @@
         "source_url": "https://www.flgov.com/eog/leadership/governor",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/8a0b98a6ea38f251aadc.jpg",
+        "subject": "David Jolly",
+        "source_url": "https://bioguide.congress.gov/search/bio/J000296",
+        "image_url": "https://bioguide.congress.gov/bioguide/photo/J/J000296.jpg",
+        "credit": "U.S. Congress historical official portrait; depicts David Jolly",
+        "verified_at": "2026-11-01"
       }
     },
     "irc:6850a80c5262d72ad1ce|1a7a97989b4628409ba0": {
@@ -1486,6 +1518,14 @@
         "term_note": "Appointed February 2025 to an unexpired term; no completed attorney-general term.",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/d8d7f44a5e04daa9f396.jpg",
+        "subject": "James Uthmeier",
+        "source_url": "https://www.myfloridalegal.com/ag-bio",
+        "image_url": "https://www.myfloridalegal.com/sites/default/files/ag_james_uthmeier_large.jpg",
+        "credit": "Florida Attorney General official portrait",
+        "verified_at": "2026-11-02"
       }
     },
     "fl:fe9ca0a37591eeec990d|993e186e2205ab804f99": {
@@ -1497,6 +1537,22 @@
         "source_url": "https://www.myfloridalegal.com/ag-bio",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/466f9e877db84d9037d2.frame.jpg",
+        "subject": "Jose Javier Rodriguez",
+        "source_url": "https://www.jjr.vote/",
+        "image_url": "https://cdn.prod.website-files.com/6838900cec4d436b680613d0/68389c570c6db23fa17facf4_Resonance-Jose-Rodriguez-0876-EDITED-3.jpg",
+        "credit": "Jose Javier Rodriguez campaign photograph",
+        "verified_at": "2026-11-01",
+        "crop": {
+          "x": 380,
+          "y": 150,
+          "width": 520,
+          "height": 720,
+          "source_width": 2500,
+          "source_height": 1667
+        }
       }
     },
     "irc:fe9ca0a37591eeec990d|5e117ba1ef0a70c7644b": {
@@ -1511,6 +1567,14 @@
         "term_note": "Appointed February 2025 to an unexpired term; no completed attorney-general term.",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/d8d7f44a5e04daa9f396.jpg",
+        "subject": "James Uthmeier",
+        "source_url": "https://www.myfloridalegal.com/ag-bio",
+        "image_url": "https://www.myfloridalegal.com/sites/default/files/ag_james_uthmeier_large.jpg",
+        "credit": "Florida Attorney General official portrait",
+        "verified_at": "2026-11-02"
       }
     },
     "irc:fe9ca0a37591eeec990d|993e186e2205ab804f99": {
@@ -1522,6 +1586,22 @@
         "source_url": "https://www.myfloridalegal.com/ag-bio",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/466f9e877db84d9037d2.frame.jpg",
+        "subject": "Jose Javier Rodriguez",
+        "source_url": "https://www.jjr.vote/",
+        "image_url": "https://cdn.prod.website-files.com/6838900cec4d436b680613d0/68389c570c6db23fa17facf4_Resonance-Jose-Rodriguez-0876-EDITED-3.jpg",
+        "credit": "Jose Javier Rodriguez campaign photograph",
+        "verified_at": "2026-11-01",
+        "crop": {
+          "x": 380,
+          "y": 150,
+          "width": 520,
+          "height": 720,
+          "source_width": 2500,
+          "source_height": 1667
+        }
       }
     },
     "fl:4dbaad6a266e69816d0c|85e2fb2cad6df477e125": {
@@ -1536,6 +1616,14 @@
         "term_note": "Appointed July 2025 to an unexpired term; no completed CFO term.",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/f979523c7680b916698d.jpg",
+        "subject": "Blaise Ingoglia",
+        "source_url": "https://myfloridacfo.com/about/meet-the-cfo",
+        "image_url": "https://myfloridacfo.com/sitefinity-images/default-source/assets/cfo-blaise-ingoglia-portrait.jpg?sfvrsn=c728cebf_1",
+        "credit": "Florida Department of Financial Services official portrait",
+        "verified_at": "2026-11-01"
       }
     },
     "fl:4dbaad6a266e69816d0c|621d3117a600022ad103": {
@@ -1547,6 +1635,22 @@
         "source_url": "https://myfloridacfo.com/news/pressreleases/press-release-details/2025/12/23/chief-financial-officer-blaise-ingoglia-highlights-major-accomplishments-of-2025",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/43e67512b376e2e3d763.frame.webp",
+        "subject": "Annette Taddeo",
+        "source_url": "https://annettetaddeo.com/about/",
+        "image_url": "https://annettetaddeo.com/ignition/resources/img/hero-desktop.webp",
+        "credit": "Annette Taddeo campaign photograph",
+        "verified_at": "2026-11-01",
+        "crop": {
+          "x": 1250,
+          "y": 110,
+          "width": 850,
+          "height": 1050,
+          "source_width": 2400,
+          "source_height": 1400
+        }
       }
     },
     "irc:4dbaad6a266e69816d0c|85e2fb2cad6df477e125": {
@@ -1561,6 +1665,14 @@
         "term_note": "Appointed July 2025 to an unexpired term; no completed CFO term.",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/f979523c7680b916698d.jpg",
+        "subject": "Blaise Ingoglia",
+        "source_url": "https://myfloridacfo.com/about/meet-the-cfo",
+        "image_url": "https://myfloridacfo.com/sitefinity-images/default-source/assets/cfo-blaise-ingoglia-portrait.jpg?sfvrsn=c728cebf_1",
+        "credit": "Florida Department of Financial Services official portrait",
+        "verified_at": "2026-11-01"
       }
     },
     "irc:4dbaad6a266e69816d0c|621d3117a600022ad103": {
@@ -1572,6 +1684,22 @@
         "source_url": "https://myfloridacfo.com/news/pressreleases/press-release-details/2025/12/23/chief-financial-officer-blaise-ingoglia-highlights-major-accomplishments-of-2025",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/43e67512b376e2e3d763.frame.webp",
+        "subject": "Annette Taddeo",
+        "source_url": "https://annettetaddeo.com/about/",
+        "image_url": "https://annettetaddeo.com/ignition/resources/img/hero-desktop.webp",
+        "credit": "Annette Taddeo campaign photograph",
+        "verified_at": "2026-11-01",
+        "crop": {
+          "x": 1250,
+          "y": 110,
+          "width": 850,
+          "height": 1050,
+          "source_width": 2400,
+          "source_height": 1400
+        }
       }
     },
     "fl:e36ed0badb49f53a1972|d217e7133b2586cbfdc0": {
@@ -1586,6 +1714,14 @@
         "term_note": "Current term is included in terms started; completed terms exclude the ongoing term.",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/5c82db4434c320f3ae01.jpg",
+        "subject": "Wilton Simpson",
+        "source_url": "https://www.fdacs.gov/About-Us/Meet-Commissioner-Simpson",
+        "image_url": "https://cc-fdacs-storage.s3.amazonaws.com/main/images/_aliases/reference/4/9/8/4/2804894-2-eng-US/5cf37ad2fd6f-Official-Photo-2x3-ratio.jpg",
+        "credit": "Florida Department of Agriculture and Consumer Services official portrait",
+        "verified_at": "2026-11-01"
       }
     },
     "fl:e36ed0badb49f53a1972|29d9acddb428dd6e9e6f": {
@@ -1597,6 +1733,22 @@
         "source_url": "https://www.fdacs.gov/Divisions-Offices/Commissioner",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/e78b261a2192aabebf8b.frame.jpg",
+        "subject": "Joey Mendoza Atkins",
+        "source_url": "https://www.joeyforflorida.com/",
+        "image_url": "https://run.imgix.net/af86dee2-d974-412f-b61b-633da4be28d8/dfdc50dc-d4c4-4e33-a9cf-32bc97a6ab44/dfdc50dc-d4c4-4e33-a9cf-32bc97a6ab44.jpg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=35%2C0%2C1135%2C649&auto=compress%2Cformat&fit=fillmax&w=1200&q=75&s=0c30243b6c8afa89e919ac2692b80573",
+        "credit": "Joey Mendoza Atkins campaign introductory photograph",
+        "verified_at": "2026-11-01",
+        "crop": {
+          "x": 505,
+          "y": 25,
+          "width": 180,
+          "height": 225,
+          "source_width": 1135,
+          "source_height": 649
+        }
       }
     },
     "fl:e36ed0badb49f53a1972|3febe3ab6d2fefdc1672": {
@@ -1622,6 +1774,14 @@
         "term_note": "Current term is included in terms started; completed terms exclude the ongoing term.",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/5c82db4434c320f3ae01.jpg",
+        "subject": "Wilton Simpson",
+        "source_url": "https://www.fdacs.gov/About-Us/Meet-Commissioner-Simpson",
+        "image_url": "https://cc-fdacs-storage.s3.amazonaws.com/main/images/_aliases/reference/4/9/8/4/2804894-2-eng-US/5cf37ad2fd6f-Official-Photo-2x3-ratio.jpg",
+        "credit": "Florida Department of Agriculture and Consumer Services official portrait",
+        "verified_at": "2026-11-01"
       }
     },
     "irc:e36ed0badb49f53a1972|29d9acddb428dd6e9e6f": {
@@ -1633,6 +1793,22 @@
         "source_url": "https://www.fdacs.gov/Divisions-Offices/Commissioner",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/e78b261a2192aabebf8b.frame.jpg",
+        "subject": "Joey Mendoza Atkins",
+        "source_url": "https://www.joeyforflorida.com/",
+        "image_url": "https://run.imgix.net/af86dee2-d974-412f-b61b-633da4be28d8/dfdc50dc-d4c4-4e33-a9cf-32bc97a6ab44/dfdc50dc-d4c4-4e33-a9cf-32bc97a6ab44.jpg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=35%2C0%2C1135%2C649&auto=compress%2Cformat&fit=fillmax&w=1200&q=75&s=0c30243b6c8afa89e919ac2692b80573",
+        "credit": "Joey Mendoza Atkins campaign introductory photograph",
+        "verified_at": "2026-11-01",
+        "crop": {
+          "x": 505,
+          "y": 25,
+          "width": 180,
+          "height": 225,
+          "source_width": 1135,
+          "source_height": 649
+        }
       }
     },
     "irc:e36ed0badb49f53a1972|3febe3ab6d2fefdc1672": {
@@ -3031,6 +3207,14 @@
         "since": "2022",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/8b8962dce0a32b140149.jpg",
+        "subject": "Robert Brackett",
+        "source_url": "https://flhouse.gov/Sections/Representatives/details.aspx?MemberId=4870",
+        "image_url": "https://flhouse.gov/FileStores/Web/Imaging/Member/4870.jpg",
+        "credit": "Florida House of Representatives official portrait",
+        "verified_at": "2026-11-02"
       }
     },
     "fl:2e5c40bd6b5c76373264|934d4fe4a57bb4a0b517": {
@@ -3042,6 +3226,14 @@
         "source_url": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4870&LegislativeTermId=91",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/83f9d027f9fcf1fb31c9.jpg",
+        "subject": "Jordyn Guadalupe Balderas",
+        "source_url": "https://jordynforfl.com/",
+        "image_url": "https://jordynforfl.com/images/jordyn-headshot.jpg",
+        "credit": "Jordyn Balderas campaign",
+        "verified_at": "2026-11-02T02:54:18.004942Z"
       }
     },
     "irc:2e5c40bd6b5c76373264|c8fe275b7e6d137a8dab": {
@@ -3056,6 +3248,14 @@
         "since": "2022",
         "incumbent": true,
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/8b8962dce0a32b140149.jpg",
+        "subject": "Robert Brackett",
+        "source_url": "https://flhouse.gov/Sections/Representatives/details.aspx?MemberId=4870",
+        "image_url": "https://flhouse.gov/FileStores/Web/Imaging/Member/4870.jpg",
+        "credit": "Florida House of Representatives official portrait",
+        "verified_at": "2026-11-02"
       }
     },
     "irc:2e5c40bd6b5c76373264|934d4fe4a57bb4a0b517": {
@@ -3067,6 +3267,14 @@
         "source_url": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4870&LegislativeTermId=91",
         "as_of": "2026-10-27",
         "incumbency_source_url": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      },
+      "photo": {
+        "path": "/static/portraits/83f9d027f9fcf1fb31c9.jpg",
+        "subject": "Jordyn Guadalupe Balderas",
+        "source_url": "https://jordynforfl.com/",
+        "image_url": "https://jordynforfl.com/images/jordyn-headshot.jpg",
+        "credit": "Jordyn Balderas campaign",
+        "verified_at": "2026-11-02T02:54:18.004942Z"
       }
     },
     "fl:a837a05362a2fc5861a3|061d839cff632645791b": {
@@ -5186,6 +5394,18 @@
         "since": null,
         "term_note": "Counts include the ongoing term; completed terms exclude it. Lifetime count unverified where blank.",
         "incumbent": false
+      },
+      "photo": {
+        "path": "/static/portraits/041d776854433e486116.jpg",
+        "subject": "Calvin Holton",
+        "source_url": "https://www.holtonforsebastianinlet.com/",
+        "image_url": "https://images.squarespace-cdn.com/content/v1/6943085169e5a657b27bfd7f/0fbfeec9-e6c6-4381-ad96-a8280cc64e4a/Tres+Holton+at+Sebastian+Inlet_2025_Casual.jpg",
+        "credit": "Calvin Holton campaign",
+        "verified_at": "2026-11-02T02:54:18.236938Z",
+        "position": {
+          "x": 30,
+          "y": 30
+        }
       }
     },
     "fl:85345a8d8be2f8b6b3b4|1a72544b163613da8608": {
@@ -5198,6 +5418,14 @@
         "since": null,
         "term_note": "Counts include the ongoing term; completed terms exclude it. Lifetime count unverified where blank.",
         "incumbent": true
+      },
+      "photo": {
+        "path": "/static/portraits/d718d6ffff21346e2c98.jpg",
+        "subject": "Lisa Leger Frazier",
+        "source_url": "https://www.sitd.us/lisa-frazier-vice-chair",
+        "image_url": "https://streamline.imgix.net/22adde7d-09c0-4ce9-8cd1-351991e75e66/7499382b-d8ec-404f-8dc3-7c0b0f194eab/Lisa%20Frazier%20headshot%20-%20Dec%202018.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=2073db9d6368a7d34a4a15eda7ba038c",
+        "credit": "Sebastian Inlet District",
+        "verified_at": "2026-11-02T02:54:18.361097Z"
       }
     },
     "irc:85345a8d8be2f8b6b3b4|f6ff1d9c67e87cd1024c": {
@@ -5210,6 +5438,18 @@
         "since": null,
         "term_note": "Counts include the ongoing term; completed terms exclude it. Lifetime count unverified where blank.",
         "incumbent": false
+      },
+      "photo": {
+        "path": "/static/portraits/041d776854433e486116.jpg",
+        "subject": "Calvin Holton",
+        "source_url": "https://www.holtonforsebastianinlet.com/",
+        "image_url": "https://images.squarespace-cdn.com/content/v1/6943085169e5a657b27bfd7f/0fbfeec9-e6c6-4381-ad96-a8280cc64e4a/Tres+Holton+at+Sebastian+Inlet_2025_Casual.jpg",
+        "credit": "Calvin Holton campaign",
+        "verified_at": "2026-11-02T02:54:18.236938Z",
+        "position": {
+          "x": 30,
+          "y": 30
+        }
       }
     },
     "irc:85345a8d8be2f8b6b3b4|1a72544b163613da8608": {
@@ -5222,6 +5462,14 @@
         "since": null,
         "term_note": "Counts include the ongoing term; completed terms exclude it. Lifetime count unverified where blank.",
         "incumbent": true
+      },
+      "photo": {
+        "path": "/static/portraits/d718d6ffff21346e2c98.jpg",
+        "subject": "Lisa Leger Frazier",
+        "source_url": "https://www.sitd.us/lisa-frazier-vice-chair",
+        "image_url": "https://streamline.imgix.net/22adde7d-09c0-4ce9-8cd1-351991e75e66/7499382b-d8ec-404f-8dc3-7c0b0f194eab/Lisa%20Frazier%20headshot%20-%20Dec%202018.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=2073db9d6368a7d34a4a15eda7ba038c",
+        "credit": "Sebastian Inlet District",
+        "verified_at": "2026-11-02T02:54:18.361097Z"
       }
     },
     "fl:2b38f0c0701f47b6941d|380ce2a94354d28b0ed5": {
