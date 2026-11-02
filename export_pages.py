@@ -1,5 +1,5 @@
 """Build the public display; never export local host controls or credentials."""
-import json,shutil,time,os,gzip,urllib.request
+import json,shutil,time,os,gzip,urllib.request,hashlib,re
 from urllib.parse import urlsplit
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
@@ -51,5 +51,13 @@ def build():
  note='Live-data checks every 60 seconds; source publishing may be delayed.' if live_url else 'Scheduled snapshots; publishing may be delayed.'
  status=(config.ROOT/'static/js/pages-status.js').read_text(encoding='utf-8')
  (out/'static/js/pages-status.js').write_text('const PAGE_SNAPSHOT_LIMIT='+str(3 if live_url else 15)+';\nconst PAGE_REFRESH_NOTE='+json.dumps(note)+';\n'+status,encoding='utf-8')
+ # Version assets by their exported content so browser caches cannot mix releases.
+ html=(out/'index.html').read_text(encoding='utf-8')
+ def version_asset(match):
+  relative=match.group(2)
+  digest=hashlib.sha256((out/relative).read_bytes()).hexdigest()[:12]
+  return match.group(1)+'./'+relative+'?v='+digest+'"'
+ html=re.sub(r'(src="|href=")\./(static/[^"?]+\.(?:js|css))"',version_asset,html)
+ (out/'index.html').write_text(html,encoding='utf-8')
  print('Public display built:',out)
 if __name__=='__main__':build()
