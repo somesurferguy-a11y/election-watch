@@ -26,3 +26,5 @@ SOURCES = {
  'polymarket': {'name':'Polymarket', 'url':'https://polymarket.com/', 'interval':60, 'kind':'markets', 'note':'Public Gamma API, exact House/Senate 2026 party-control contracts. Midpoint of valid bid/ask; metadata time is not quote time.'},
  'kalshi': {'name':'Kalshi', 'url':'https://kalshi.com/', 'interval':60, 'kind':'markets', 'note':'Public market data API; exact CONTROLS-2026 and CONTROLH-2026 tickers. No trading or account access.'},
 }
+
+SOURCES['robinhood']={'name':'Robinhood prediction markets','url':'https://robinhood.com/us/en/prediction-markets/midterms/control-of-congress/','interval':60,'kind':'markets','note':'Read-only public Robinhood page data for 2026 House/Senate control, Florida governor/Senate and FL-9. Bid/ask midpoints; underlying exchanges may overlap Kalshi. No login or trading.'}

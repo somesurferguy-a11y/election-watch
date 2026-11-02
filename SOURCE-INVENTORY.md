@@ -102,3 +102,6 @@ Municipal service review November 1: candidate_profiles.json now carries per-can
 
 
 November 2 portrait expansion: twelve new identified portraits, with individual source_url/image_url/credit records in candidate_profiles.json. Sources include Florida House, Attorney General, Department of Financial Services, FDACS, Congress Bioguide, Sebastian Inlet District and identified candidate campaign pages. All files are unchanged source downloads; display crop/position metadata selects the pictured subject. Congress Jolly portrait is explicitly historical. Unknown identities remain Photo unavailable.
+
+
+Robinhood (reviewed November 2): public structured page data at https://robinhood.com/us/en/prediction-markets/midterms/control-of-congress/ and https://robinhood.com/us/en/prediction-markets/midterms/florida/ . The exact ten contract/event IDs and Rothera exchange identifiers are in robinhood.py. This is a public-page adapter, not a documented stable Robinhood prediction API; layout/schema changes fail closed. Quote times come from the public quote map, not page retrieval. Source rules remain attached to each contract.

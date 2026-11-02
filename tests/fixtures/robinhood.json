@@ -1,0 +1,1383 @@
+{
+  "source_url": "https://robinhood.com/us/en/prediction-markets/midterms/florida/",
+  "retrieved_date": "2026-11-02",
+  "props": {
+    "pageProps": {
+      "events": [
+        {
+          "id": "b866f4c5-d317-4a52-b388-d57cee1c073e",
+          "name": "2026 U.S. House party winner",
+          "longDescription": "Who will be the Party to win the U.S. House in 2026?\n\nContracts resolve based on which party controls the U.S. House in the 2026 Congress election, as determined by the party affiliation of the Speaker of the House on the Expiration Date. Control is established when the Speaker of the House is a member of a given party, including any Independent who formally caucuses with that party's congressional caucus. Resolution occurs once the first determination is recorded by the Source Agency; any subsequent revision will not affect settlement once determined. If the Speaker of the House position is vacant on the Expiration Date, resolution is based on the party affiliation of the Speaker Pro Tempore; if neither has been designated, the Expiration Date is delayed until one is serving. If the Source Agency has not announced a result by the Expiration Date, contracts will remain open until the result is released. In the event a result cannot be determined, the contract will be settled to fair market value as determined by Rothera.\n\nGet $1 for every contract you own if your prediction is correct. Or close your position before the event resolves. Additional fees apply. Read the full [contract terms and conditions](https://publicfiles.rotheramarkets.com/contract_terms/CongressionalControl-T&C.pdf)",
+          "eventContracts": {
+            "0": {
+              "id": "3eaa7391-fa0e-4e5b-9593-e5aeaf04a5f7",
+              "eventId": "b866f4c5-d317-4a52-b388-d57cee1c073e",
+              "description": "Will the Republican Party win the U.S. House?",
+              "symbol": "CNTRLHOU-26-REP",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "Republican Party",
+              "displayLongName": "Republican Party",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Republican_32.png",
+              "color": {
+                "hex": {
+                  "light": "#FF001C",
+                  "dark": "#FF001C"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Republican party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-15T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Republican",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "b866f4c5-d317-4a52-b388-d57cee1c073e",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Republican_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#FF001C",
+                        "dark": "#FF001C"
+                      }
+                    }
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#FF001C",
+                        "dark": "#FF001C"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "e50bcbab-2949-47d8-a822-792c08088cf1",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            },
+            "1": {
+              "id": "3689dd5d-5503-43f9-b051-9d0340ad3fa9",
+              "eventId": "b866f4c5-d317-4a52-b388-d57cee1c073e",
+              "description": "Will the Democratic Party win the U.S. House?",
+              "symbol": "CNTRLHOU-26-DEM",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "Democratic Party",
+              "displayLongName": "Democratic Party",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Democratic_32.png",
+              "color": {
+                "hex": {
+                  "light": "#007FF5",
+                  "dark": "#007FF5"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Democratic party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-15T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Democratic",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "b866f4c5-d317-4a52-b388-d57cee1c073e",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Democratic_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#007FF5",
+                        "dark": "#007FF5"
+                      }
+                    }
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#007FF5",
+                        "dark": "#007FF5"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "e50bcbab-2949-47d8-a822-792c08088cf1",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            }
+          },
+          "viewMode": "EVENT_VIEW_MODE_PAIR",
+          "attestationValues": [
+            "rhd_event_contract_attestation_universal_agreement"
+          ],
+          "state": "ARSENAL_EVENT_STATE_ACTIVE",
+          "tickSize": "0.01",
+          "description": "Party to win the U.S. House in 2026",
+          "timeline": {
+            "entries": [
+              {
+                "title": "Trading hours",
+                "description": "24 hours a day, except Thursday 3AM-5AM ET",
+                "timestamp": "2026-07-15T17:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OPEN"
+              },
+              {
+                "title": "Event day",
+                "description": "November 3, 2026",
+                "timestamp": "2026-11-03T11:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_EVENT_DAY"
+              },
+              {
+                "title": "Contract resolves",
+                "description": "Determines the outcome of the contract",
+                "timestamp": "2026-11-04T07:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OTHER"
+              },
+              {
+                "title": "Payout",
+                "description": "Usually within 1 hour of event resolution",
+                "timestamp": "2026-11-04T08:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_PAYOUT"
+              }
+            ]
+          },
+          "prohibitionRules": [
+            "Candidates for federal or statewide public office.",
+            "Paid campaign staffers on Congressional campaigns.",
+            "Paid employees of Democratic and Republican Party organizations, such as the Democratic Congressional Campaign Committee or the Republican National Committee.",
+            "Paid employees of Political Action Committees (PACs) and \u201cSuper PACs\u201d.",
+            "Paid employees of major polling organizations. The Exchange shall determine which polling organizations constitute \u201cmajor\u201d and may modify that determination at any time.",
+            "Existing members of Congress, including those not running for re-election",
+            "Existing paid staffers of members of Congress.",
+            "Household members and immediate family members (siblings, children, and parents) of any of the above.",
+            "Any of the above listed institutions themselves."
+          ],
+          "pageType": "PAGE_TYPE_UNSPECIFIED",
+          "gameContractGroups": [],
+          "urlSlugs": [
+            "2026-us-house-party-winner-nov-03-2026"
+          ],
+          "category": "Elections",
+          "prepackContractGroup": [],
+          "propsContractGroupSections": [],
+          "supportsCombos": false,
+          "isLive": false,
+          "propsContractGroupSectionsV2": [],
+          "eventType": "EVENT_TYPE_UNSPECIFIED",
+          "parentEventId": "b866f4c5-d317-4a52-b388-d57cee1c073e",
+          "contractSortType": "CONTRACT_SORT_TYPE_UNSPECIFIED",
+          "isSports": false,
+          "displayStyle": "DISPLAY_STYLE_UNSPECIFIED",
+          "metadataTags": [],
+          "contractGroupPanels": [],
+          "mutuallyExclusive": true,
+          "seriesId": "e50bcbab-2949-47d8-a822-792c08088cf1",
+          "defaultChartSpan": "CHART_SPAN_UNSPECIFIED",
+          "searchable": true,
+          "smoothChartDefaultSpan": "CHART_SPAN_UNSPECIFIED"
+        },
+        {
+          "id": "7808f639-eb01-4ad8-81f7-f596f89f52e6",
+          "name": "2026 U.S. Senate party winner",
+          "longDescription": "Who will be the Party to win the U.S. Senate in 2026?\n\nContracts resolve based on which party controls the U.S. Senate in the 2026 Senate election,  as determined by the party affiliation of the President Pro Tempore on the Expiration Date. Control is established when the President Pro Tempore is a member of a given party, including any Independent who formally caucuses with that party's congressional caucus. Resolution occurs once the first determination is recorded by the Source Agency; any subsequent revision will not affect settlement once determined. If the Source Agency has not announced a result by the Expiration Date, contracts will remain open until the result is released. In the event a result cannot be determined, the contract will be settled to fair market value as determined by Rothera.\n\nGet $1 for every contract you own if your prediction is correct. Or close your position before the event resolves. Additional fees apply. Read the full [contract terms and conditions](https://publicfiles.rotheramarkets.com/contract_terms/CongressionalControl-T&C.pdf)",
+          "eventContracts": {
+            "0": {
+              "id": "cc9bce08-a88f-4761-8924-494d738ab368",
+              "eventId": "7808f639-eb01-4ad8-81f7-f596f89f52e6",
+              "description": "Will the Republican Party win the U.S. Senate?",
+              "symbol": "CNTRLSEN-26-REP",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "Republican Party",
+              "displayLongName": "Republican Party",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Republican_32.png",
+              "color": {
+                "hex": {
+                  "light": "#FF001C",
+                  "dark": "#FF001C"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Republican party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-15T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Republican",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "7808f639-eb01-4ad8-81f7-f596f89f52e6",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Republican_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#FF001C",
+                        "dark": "#FF001C"
+                      }
+                    }
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#FF001C",
+                        "dark": "#FF001C"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "0e982049-e1a0-40ef-afb9-578b55f086b2",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            },
+            "1": {
+              "id": "01f1d2d0-21b8-4309-9b84-c74e86afbddc",
+              "eventId": "7808f639-eb01-4ad8-81f7-f596f89f52e6",
+              "description": "Will the Democratic Party win the U.S. Senate?",
+              "symbol": "CNTRLSEN-26-DEM",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "Democratic Party",
+              "displayLongName": "Democratic Party",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Democratic_32.png",
+              "color": {
+                "hex": {
+                  "light": "#007FF5",
+                  "dark": "#007FF5"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Democratic party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-15T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Democratic",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "7808f639-eb01-4ad8-81f7-f596f89f52e6",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Democratic_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#007FF5",
+                        "dark": "#007FF5"
+                      }
+                    }
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#007FF5",
+                        "dark": "#007FF5"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "0e982049-e1a0-40ef-afb9-578b55f086b2",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            }
+          },
+          "viewMode": "EVENT_VIEW_MODE_PAIR",
+          "attestationValues": [
+            "rhd_event_contract_attestation_universal_agreement"
+          ],
+          "state": "ARSENAL_EVENT_STATE_ACTIVE",
+          "tickSize": "0.01",
+          "description": "Party to win the U.S. Senate in 2026",
+          "timeline": {
+            "entries": [
+              {
+                "title": "Trading hours",
+                "description": "24 hours a day, except Thursday 3AM-5AM ET",
+                "timestamp": "2026-07-15T17:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OPEN"
+              },
+              {
+                "title": "Event day",
+                "description": "November 3, 2026",
+                "timestamp": "2026-11-03T11:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_EVENT_DAY"
+              },
+              {
+                "title": "Contract resolves",
+                "description": "Determines the outcome of the contract",
+                "timestamp": "2026-11-04T07:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OTHER"
+              },
+              {
+                "title": "Payout",
+                "description": "Usually within 1 hour of event resolution",
+                "timestamp": "2026-11-04T08:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_PAYOUT"
+              }
+            ]
+          },
+          "prohibitionRules": [
+            "Candidates for federal or statewide public office.",
+            "Paid campaign staffers on Congressional campaigns.",
+            "Paid employees of Democratic and Republican Party organizations, such as the Democratic Congressional Campaign Committee or the Republican National Committee.",
+            "Paid employees of Political Action Committees (PACs) and \u201cSuper PACs\u201d.",
+            "Paid employees of major polling organizations. The Exchange shall determine which polling organizations constitute \u201cmajor\u201d and may modify that determination at any time.",
+            "Existing members of Congress, including those not running for re-election",
+            "Existing paid staffers of members of Congress.",
+            "Household members and immediate family members (siblings, children, and parents) of any of the above.",
+            "Any of the above listed institutions themselves."
+          ],
+          "pageType": "PAGE_TYPE_UNSPECIFIED",
+          "gameContractGroups": [],
+          "urlSlugs": [
+            "2026-us-senate-party-winner-nov-03-2026"
+          ],
+          "category": "Elections",
+          "prepackContractGroup": [],
+          "propsContractGroupSections": [],
+          "supportsCombos": false,
+          "isLive": false,
+          "propsContractGroupSectionsV2": [],
+          "eventType": "EVENT_TYPE_UNSPECIFIED",
+          "parentEventId": "7808f639-eb01-4ad8-81f7-f596f89f52e6",
+          "contractSortType": "CONTRACT_SORT_TYPE_UNSPECIFIED",
+          "isSports": false,
+          "displayStyle": "DISPLAY_STYLE_UNSPECIFIED",
+          "metadataTags": [],
+          "contractGroupPanels": [],
+          "mutuallyExclusive": true,
+          "seriesId": "0e982049-e1a0-40ef-afb9-578b55f086b2",
+          "defaultChartSpan": "CHART_SPAN_UNSPECIFIED",
+          "searchable": true,
+          "smoothChartDefaultSpan": "CHART_SPAN_UNSPECIFIED"
+        },
+        {
+          "id": "16bea76d-75f2-4ec6-b79a-94649fae00e4",
+          "name": "Florida Governor winner",
+          "longDescription": "Who will be the Party and/or Party to win the Florida Governor?\n\nContracts resolve based on the political party affiliation of the winning candidate in the 2026 Florida Governor race as determined by officially reported results. A party is considered to have won if the Source Agency reports that a candidate officially affiliated with or running under that political party has been elected Florida Governor, including through recounts, runoffs, or other legally recognized processes establishing that result.  If an Independent candidate wins, the race will resolve to the designated Independent contract. Resolution occurs once the Source Agency has reported a result; any subsequent revision will not affect settlement once determined. If the Source Agency has not announced a result by the Expiration Date, contracts will remain open until the result is released. In the event a result cannot be determined, the contract will be settled to fair market value as determined by Rothera.\n\nGet $1 for every contract you own if your prediction is correct. Or close your position before the event resolves. Additional fees apply. Read the full [contract terms and conditions](https://publicfiles.rotheramarkets.com/contract_terms/ElectionOutcome-T&C.pdf)",
+          "eventContracts": {
+            "0": {
+              "id": "e1bdb617-0261-4e92-bb83-f51f951f0ce6",
+              "eventId": "16bea76d-75f2-4ec6-b79a-94649fae00e4",
+              "description": "Will the Democratic Party win the Florida Governor?",
+              "symbol": "GOVRACE-26FL-DEM",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "D. Jolly (D)",
+              "displayLongName": "D. Jolly (D)",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/David_Jolly.png",
+              "color": {
+                "hex": {
+                  "light": "#0263F9",
+                  "dark": "#028BF4"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Democratic Party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-15T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Democratic",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "16bea76d-75f2-4ec6-b79a-94649fae00e4",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/David_Jolly.png"
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#0263F9",
+                        "dark": "#028BF4"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "f9b85321-9be2-4a53-8aa5-e485830993d4",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            },
+            "1": {
+              "id": "c7f21f58-d76d-4a8e-94cd-30084e50da54",
+              "eventId": "16bea76d-75f2-4ec6-b79a-94649fae00e4",
+              "description": "Will the Republican Party win the Florida Governor?",
+              "symbol": "GOVRACE-26FL-REP",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "B. Donalds (R)",
+              "displayLongName": "B. Donalds (R)",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/Byron_Donalds.png",
+              "color": {
+                "hex": {
+                  "light": "#E91B1B",
+                  "dark": "#E20101"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Republican Party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-15T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Republican",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "16bea76d-75f2-4ec6-b79a-94649fae00e4",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/Byron_Donalds.png"
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#E91B1B",
+                        "dark": "#E20101"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "f9b85321-9be2-4a53-8aa5-e485830993d4",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            }
+          },
+          "viewMode": "EVENT_VIEW_MODE_PAIR",
+          "attestationValues": [
+            "rhd_event_contract_attestation_universal_agreement"
+          ],
+          "state": "ARSENAL_EVENT_STATE_ACTIVE",
+          "tickSize": "0.01",
+          "description": "Party to win the Florida Governor",
+          "timeline": {
+            "entries": [
+              {
+                "title": "Trading hours",
+                "description": "24 hours a day, except Thursday 3AM-5AM ET",
+                "timestamp": "2026-07-15T17:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OPEN"
+              },
+              {
+                "title": "Event day",
+                "description": "November 3, 2026",
+                "timestamp": "2026-11-03T11:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_EVENT_DAY"
+              },
+              {
+                "title": "Contract resolves",
+                "description": "Determines the outcome of the contract",
+                "timestamp": "2026-11-04T07:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OTHER"
+              },
+              {
+                "title": "Payout",
+                "description": "Usually within 1 hour of event resolution",
+                "timestamp": "2026-11-04T08:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_PAYOUT"
+              }
+            ]
+          },
+          "prohibitionRules": [
+            "Candidates for federal or statewide public office.",
+            "Paid and unpaid campaign staffers on political campaigns.",
+            "Paid employees of Democratic and Republican Party organizations, such as the Democratic Congressional Campaign Committee or the Republican National Committee.",
+            "Paid employees of Political Action Committees (PACs) and \u201cSuper PACs\u201d.",
+            "Paid employees of major polling organizations. The Exchange shall determine which polling organizations constitute \u201cmajor\u201d and may modify that determination at any time.",
+            "Existing members of the current presidential administration.",
+            "Existing members of Congress, including those not running for re-election.",
+            "Existing paid and unpaid staffers of members of Congress or the current presidential administration.",
+            "Household members and immediate family members (siblings, children, and parents) of any of the above.",
+            "Any of the above listed institutions themselves."
+          ],
+          "pageType": "PAGE_TYPE_UNSPECIFIED",
+          "gameContractGroups": [],
+          "urlSlugs": [
+            "florida-governor-winner-nov-03-2026"
+          ],
+          "category": "Elections",
+          "prepackContractGroup": [],
+          "propsContractGroupSections": [],
+          "supportsCombos": false,
+          "isLive": false,
+          "propsContractGroupSectionsV2": [],
+          "eventType": "EVENT_TYPE_UNSPECIFIED",
+          "parentEventId": "16bea76d-75f2-4ec6-b79a-94649fae00e4",
+          "contractSortType": "CONTRACT_SORT_TYPE_UNSPECIFIED",
+          "isSports": false,
+          "displayStyle": "DISPLAY_STYLE_UNSPECIFIED",
+          "metadataTags": [],
+          "contractGroupPanels": [],
+          "mutuallyExclusive": true,
+          "seriesId": "f9b85321-9be2-4a53-8aa5-e485830993d4",
+          "defaultChartSpan": "CHART_SPAN_UNSPECIFIED",
+          "searchable": true,
+          "smoothChartDefaultSpan": "CHART_SPAN_UNSPECIFIED"
+        },
+        {
+          "id": "2931a5e9-0f8e-4673-906a-4e2b200a54e5",
+          "name": "Florida Senate special election winner",
+          "longDescription": "Who will be the Party and/or Party to win the Florida Senate?\n\nContracts resolve based on the political party affiliation of the winning candidate in the 2026 Florida Senate race as determined by officially reported results. A party is considered to have won if the Source Agency reports that a candidate officially affiliated with or running under that political party has been elected U.S. Senator for Florida, including through recounts, runoffs, or other legally recognized processes establishing that result. If an Independent candidate wins, the race will resolve to the designated Independent contract. Resolution occurs once the Source Agency has reported a result; any subsequent revision will not affect settlement once determined. If the Source Agency has not announced a result by the Expiration Date, contracts will remain open until the result is released. In the event a result cannot be determined, the contract will be settled to fair market value as determined by Rothera.\n\nGet $1 for every contract you own if your prediction is correct. Or close your position before the event resolves. Additional fees apply. Read the full [contract terms and conditions](https://publicfiles.rotheramarkets.com/contract_terms/ElectionOutcome-T&C.pdf)",
+          "eventContracts": {
+            "0": {
+              "id": "1a1f47b1-eee6-4be6-9006-95faec01a4bc",
+              "eventId": "2931a5e9-0f8e-4673-906a-4e2b200a54e5",
+              "description": "Will the Democratic Party win the Florida Senate?",
+              "symbol": "SENRACE-26FL-DEM",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "A. Nixon (D)",
+              "displayLongName": "A. Nixon (D)",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/Angie_Nixon.png",
+              "color": {
+                "hex": {
+                  "light": "#0263F9",
+                  "dark": "#028BF4"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Democratic Party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-25T06:30:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Democratic",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "2931a5e9-0f8e-4673-906a-4e2b200a54e5",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/Angie_Nixon.png"
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#0263F9",
+                        "dark": "#028BF4"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "a13543a4-c490-4854-bef3-2925a29022d6",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            },
+            "1": {
+              "id": "d95ba277-896b-4996-afc0-d6722ed21ba6",
+              "eventId": "2931a5e9-0f8e-4673-906a-4e2b200a54e5",
+              "description": "Will the Republican Party win the Florida Senate?",
+              "symbol": "SENRACE-26FL-REP",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "A. Moody (R)",
+              "displayLongName": "A. Moody (R)",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/Ashley_Moody.png",
+              "color": {
+                "hex": {
+                  "light": "#E91B1B",
+                  "dark": "#E20101"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Republican Party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-07-25T06:30:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Republican",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "2931a5e9-0f8e-4673-906a-4e2b200a54e5",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/candidate_profiles_640/Ashley_Moody.png"
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#E91B1B",
+                        "dark": "#E20101"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "a13543a4-c490-4854-bef3-2925a29022d6",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            }
+          },
+          "viewMode": "EVENT_VIEW_MODE_PAIR",
+          "attestationValues": [
+            "rhd_event_contract_attestation_universal_agreement"
+          ],
+          "state": "ARSENAL_EVENT_STATE_ACTIVE",
+          "tickSize": "0.01",
+          "description": "Party to win the Florida Senate",
+          "timeline": {
+            "entries": [
+              {
+                "title": "Trading hours",
+                "description": "24 hours a day, except Thursday 3AM-5AM ET",
+                "timestamp": "2026-07-25T06:30:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OPEN"
+              },
+              {
+                "title": "Event day",
+                "description": "November 3, 2026",
+                "timestamp": "2026-11-03T11:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_EVENT_DAY"
+              },
+              {
+                "title": "Contract resolves",
+                "description": "Determines the outcome of the contract",
+                "timestamp": "2026-11-04T07:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OTHER"
+              },
+              {
+                "title": "Payout",
+                "description": "Usually within 1 hour of event resolution",
+                "timestamp": "2026-11-04T08:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_PAYOUT"
+              }
+            ]
+          },
+          "prohibitionRules": [
+            "Candidates for federal or statewide public office.",
+            "Paid and unpaid campaign staffers on political campaigns.",
+            "Paid employees of Democratic and Republican Party organizations, such as the Democratic Congressional Campaign Committee or the Republican National Committee.",
+            "Paid employees of Political Action Committees (PACs) and \u201cSuper PACs\u201d.",
+            "Paid employees of major polling organizations. The Exchange shall determine which polling organizations constitute \u201cmajor\u201d and may modify that determination at any time.",
+            "Existing members of the current presidential administration.",
+            "Existing members of Congress, including those not running for re-election.",
+            "Existing paid and unpaid staffers of members of Congress or the current presidential administration.",
+            "Household members and immediate family members (siblings, children, and parents) of any of the above.",
+            "Any of the above listed institutions themselves."
+          ],
+          "pageType": "PAGE_TYPE_UNSPECIFIED",
+          "gameContractGroups": [],
+          "urlSlugs": [
+            "florida-senate-special-election-winner-nov-03-2026"
+          ],
+          "category": "Elections",
+          "prepackContractGroup": [],
+          "propsContractGroupSections": [],
+          "supportsCombos": false,
+          "isLive": false,
+          "propsContractGroupSectionsV2": [],
+          "eventType": "EVENT_TYPE_UNSPECIFIED",
+          "parentEventId": "2931a5e9-0f8e-4673-906a-4e2b200a54e5",
+          "contractSortType": "CONTRACT_SORT_TYPE_UNSPECIFIED",
+          "isSports": false,
+          "displayStyle": "DISPLAY_STYLE_UNSPECIFIED",
+          "metadataTags": [],
+          "contractGroupPanels": [],
+          "mutuallyExclusive": true,
+          "seriesId": "a13543a4-c490-4854-bef3-2925a29022d6",
+          "defaultChartSpan": "CHART_SPAN_UNSPECIFIED",
+          "searchable": true,
+          "smoothChartDefaultSpan": "CHART_SPAN_UNSPECIFIED"
+        },
+        {
+          "id": "027a7efd-a57f-4fc2-a4be-aa71784e8360",
+          "name": "FL-09 House race winner",
+          "longDescription": "Who will be the Party and/or Candidate to win the FL-09 House race?\n\nContracts resolve based on the political party affiliation of the winning candidate in the 2026 FL-09 House race as determined by officially reported results. A party is considered to have won if the Source Agency reports that a candidate officially affiliated with or running under that political party has been elected U.S. Representative for the FL-09 Congressional District, including through recounts, runoffs, or other legally recognized processes establishing that result. If an Independent candidate wins, the race will resolve to the designated Independent contract. Resolution occurs once the Source Agency has reported a result; any subsequent revision will not affect settlement once determined. If the Source Agency has not announced a result by the Expiration Date, contracts will remain open until the result is released. In the event a result cannot be determined, the contract will be settled to fair market value as determined by Rothera.\n\nGet $1 for every contract you own if your prediction is correct. Or close your position before the event resolves. Additional fees apply. Read the full [contract terms and conditions](https://publicfiles.rotheramarkets.com/contract_terms/ElectionOutcome-T&C.pdf)",
+          "eventContracts": {
+            "0": {
+              "id": "b14bb41d-4b5c-4171-8f3c-2ec5556539d2",
+              "eventId": "027a7efd-a57f-4fc2-a4be-aa71784e8360",
+              "description": "Will the Democratic Party win the FL-09 House race?",
+              "symbol": "HOURACE-26FL09-DEM",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "D. Soto (D)",
+              "displayLongName": "D. Soto (D)",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Democratic_32.png",
+              "color": {
+                "hex": {
+                  "light": "#0263F9",
+                  "dark": "#028BF4"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Democratic Party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-08-05T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Democratic",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "027a7efd-a57f-4fc2-a4be-aa71784e8360",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Democratic_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#0263F9",
+                        "dark": "#028BF4"
+                      }
+                    }
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#0263F9",
+                        "dark": "#028BF4"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "67819a5a-5786-433c-86fd-69ad5dc2b16a",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            },
+            "1": {
+              "id": "3eeb460a-1fc7-4f1d-a2ab-6c7046fada46",
+              "eventId": "027a7efd-a57f-4fc2-a4be-aa71784e8360",
+              "description": "Will the Republican Party win the FL-09 House race?",
+              "symbol": "HOURACE-26FL09-REP",
+              "tradability": "EVENT_CONTRACT_TRADABILITY_TRADABLE",
+              "displayShortName": "D. Green (R)",
+              "displayLongName": "D. Green (R)",
+              "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Republican_32.png",
+              "color": {
+                "hex": {
+                  "light": "#E91B1B",
+                  "dark": "#E20101"
+                }
+              },
+              "exchangeSource": 3,
+              "bannerText": "",
+              "name": "Republican Party wins",
+              "expirationDate": "2027-11-03T15:00:00Z",
+              "openDate": "2026-08-05T17:00:00Z",
+              "multiplier": "1",
+              "imageStyle": "IMAGE_STYLE_GENERIC",
+              "receiptShortname": "Republican",
+              "disableHeaderImageFlip": false,
+              "parentEventId": "027a7efd-a57f-4fc2-a4be-aa71784e8360",
+              "floorStrikeValue": "",
+              "isTeamContract": true,
+              "selectedLegs": [],
+              "isCombo": false,
+              "attestationValues": [
+                "rhd_event_contract_attestation_universal_agreement"
+              ],
+              "iconAsset": {
+                "layers": [
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Icons/Shapes/party+icons/Light_Ring_Republican_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#E91B1B",
+                        "dark": "#E20101"
+                      }
+                    }
+                  },
+                  {
+                    "imageUrl": "https://cdn.robinhood.com/app_assets/event_contracts/midterms/Ring+(PNG)/Ring_32.png",
+                    "color": {
+                      "hex": {
+                        "light": "#E91B1B",
+                        "dark": "#E20101"
+                      }
+                    }
+                  }
+                ]
+              },
+              "tickPriceRanges": [
+                {
+                  "start": "0.000000",
+                  "end": "1.000000",
+                  "step": "0.010000"
+                }
+              ],
+              "contentfulId": "4bE9JMgXyLUZokWhCjfzOm",
+              "isFractionable": false,
+              "quantityDecimals": 0,
+              "comboType": "COMBO_TYPE_NOT_COMBO",
+              "locationRequirement": "LOCATION_REQUIREMENT_NONE",
+              "discoverable": true,
+              "seriesId": "67819a5a-5786-433c-86fd-69ad5dc2b16a",
+              "exchange": "EXCHANGE_SOURCE_ROTHERA",
+              "expectedExpirationTime": "2027-11-03T15:00:00Z"
+            }
+          },
+          "viewMode": "EVENT_VIEW_MODE_PAIR",
+          "attestationValues": [
+            "rhd_event_contract_attestation_universal_agreement"
+          ],
+          "state": "ARSENAL_EVENT_STATE_ACTIVE",
+          "tickSize": "0.01",
+          "description": "Candidate to win the FL-09 House race",
+          "timeline": {
+            "entries": [
+              {
+                "title": "Trading hours",
+                "description": "24 hours a day, except Thursday 3AM-5AM ET",
+                "timestamp": "2026-08-05T17:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OPEN"
+              },
+              {
+                "title": "Event day",
+                "description": "November 3, 2026",
+                "timestamp": "2026-11-03T11:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_EVENT_DAY"
+              },
+              {
+                "title": "Contract resolves",
+                "description": "Determines the outcome of the contract",
+                "timestamp": "2026-11-04T07:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_OTHER"
+              },
+              {
+                "title": "Payout",
+                "description": "Usually within 1 hour of event resolution",
+                "timestamp": "2026-11-04T08:00:00Z",
+                "type": "TIMELINE_ENTRY_TYPE_PAYOUT"
+              }
+            ]
+          },
+          "prohibitionRules": [
+            "Candidates for federal or statewide public office.",
+            "Paid and unpaid campaign staffers on political campaigns.",
+            "Paid employees of Democratic and Republican Party organizations, such as the Democratic Congressional Campaign Committee or the Republican National Committee.",
+            "Paid employees of Political Action Committees (PACs) and \u201cSuper PACs\u201d.",
+            "Paid employees of major polling organizations. The Exchange shall determine which polling organizations constitute \u201cmajor\u201d and may modify that determination at any time.",
+            "Existing members of the current presidential administration.",
+            "Existing members of Congress, including those not running for re-election.",
+            "Existing paid and unpaid staffers of members of Congress or the current presidential administration.",
+            "Household members and immediate family members (siblings, children, and parents) of any of the above.",
+            "Any of the above listed institutions themselves."
+          ],
+          "pageType": "PAGE_TYPE_UNSPECIFIED",
+          "gameContractGroups": [],
+          "urlSlugs": [
+            "fl-09-house-race-winner-nov-03-2026"
+          ],
+          "category": "Elections",
+          "prepackContractGroup": [],
+          "propsContractGroupSections": [],
+          "supportsCombos": false,
+          "isLive": false,
+          "propsContractGroupSectionsV2": [],
+          "eventType": "EVENT_TYPE_UNSPECIFIED",
+          "parentEventId": "027a7efd-a57f-4fc2-a4be-aa71784e8360",
+          "contractSortType": "CONTRACT_SORT_TYPE_UNSPECIFIED",
+          "isSports": false,
+          "displayStyle": "DISPLAY_STYLE_UNSPECIFIED",
+          "metadataTags": [],
+          "contractGroupPanels": [],
+          "mutuallyExclusive": true,
+          "seriesId": "67819a5a-5786-433c-86fd-69ad5dc2b16a",
+          "defaultChartSpan": "CHART_SPAN_UNSPECIFIED",
+          "searchable": true,
+          "smoothChartDefaultSpan": "CHART_SPAN_UNSPECIFIED"
+        }
+      ],
+      "quotes": {
+        "3eaa7391-fa0e-4e5b-9593-e5aeaf04a5f7": {
+          "yes_bid_price": "0.07",
+          "yes_ask_price": "0.08",
+          "no_bid_price": "0.92",
+          "no_ask_price": "0.93",
+          "ask_price": "0.08",
+          "ask_size": 250,
+          "ask_size_fractional": "250",
+          "ask_venue_timestamp": "2026-11-02T21:37:23.807109399Z",
+          "bid_price": "0.07",
+          "bid_size": 472,
+          "bid_size_fractional": "472",
+          "bid_venue_timestamp": "2026-11-02T23:42:12.928505764Z",
+          "last_trade_price": "0.08",
+          "last_trade_size": 58,
+          "last_trade_size_fractional": "58",
+          "last_trade_venue_timestamp": "2026-11-02T23:43:13.783534013Z",
+          "display_yes_bid": "0.07",
+          "display_no_bid": "0.92",
+          "symbol": "CNTRLHOU-26-REP",
+          "instrument_id": "3eaa7391-fa0e-4e5b-9593-e5aeaf04a5f7",
+          "state": "active",
+          "updated_at": "2026-11-02T23:43:13.783534013Z"
+        },
+        "3689dd5d-5503-43f9-b051-9d0340ad3fa9": {
+          "yes_bid_price": "0.92",
+          "yes_ask_price": "0.94",
+          "no_bid_price": "0.06",
+          "no_ask_price": "0.08",
+          "ask_price": "0.94",
+          "ask_size": 10000,
+          "ask_size_fractional": "10000",
+          "ask_venue_timestamp": "2026-11-02T23:42:38.05331899Z",
+          "bid_price": "0.92",
+          "bid_size": 3000,
+          "bid_size_fractional": "3000",
+          "bid_venue_timestamp": "2026-11-02T23:42:11.999027424Z",
+          "last_trade_price": "0.94",
+          "last_trade_size": 10,
+          "last_trade_size_fractional": "10",
+          "last_trade_venue_timestamp": "2026-11-02T23:42:38.033383884Z",
+          "display_yes_bid": "0.92",
+          "display_no_bid": "0.06",
+          "symbol": "CNTRLHOU-26-DEM",
+          "instrument_id": "3689dd5d-5503-43f9-b051-9d0340ad3fa9",
+          "state": "active",
+          "updated_at": "2026-11-02T23:42:38.05331899Z"
+        },
+        "cc9bce08-a88f-4761-8924-494d738ab368": {
+          "yes_bid_price": "0.26",
+          "yes_ask_price": "0.28",
+          "no_bid_price": "0.72",
+          "no_ask_price": "0.74",
+          "ask_price": "0.28",
+          "ask_size": 5,
+          "ask_size_fractional": "5",
+          "ask_venue_timestamp": "2026-11-02T22:55:55.286217141Z",
+          "bid_price": "0.26",
+          "bid_size": 1000,
+          "bid_size_fractional": "1000",
+          "bid_venue_timestamp": "2026-11-02T23:04:21.511837057Z",
+          "last_trade_price": "0.28",
+          "last_trade_size": 340,
+          "last_trade_size_fractional": "340",
+          "last_trade_venue_timestamp": "2026-11-02T23:43:07.859314653Z",
+          "display_yes_bid": "0.26",
+          "display_no_bid": "0.72",
+          "symbol": "CNTRLSEN-26-REP",
+          "instrument_id": "cc9bce08-a88f-4761-8924-494d738ab368",
+          "state": "active",
+          "updated_at": "2026-11-02T23:43:07.859314653Z"
+        },
+        "01f1d2d0-21b8-4309-9b84-c74e86afbddc": {
+          "yes_bid_price": "0.73",
+          "yes_ask_price": "0.76",
+          "no_bid_price": "0.24",
+          "no_ask_price": "0.27",
+          "ask_price": "0.76",
+          "ask_size": 10000,
+          "ask_size_fractional": "10000",
+          "ask_venue_timestamp": "2026-11-02T21:44:27.446262866Z",
+          "bid_price": "0.73",
+          "bid_size": 5,
+          "bid_size_fractional": "5",
+          "bid_venue_timestamp": "2026-11-02T23:15:24.454482369Z",
+          "last_trade_price": "0.76",
+          "last_trade_size": 129,
+          "last_trade_size_fractional": "129",
+          "last_trade_venue_timestamp": "2026-11-02T23:43:14.039979919Z",
+          "display_yes_bid": "0.73",
+          "display_no_bid": "0.24",
+          "symbol": "CNTRLSEN-26-DEM",
+          "instrument_id": "01f1d2d0-21b8-4309-9b84-c74e86afbddc",
+          "state": "active",
+          "updated_at": "2026-11-02T23:43:14.039979919Z"
+        },
+        "e1bdb617-0261-4e92-bb83-f51f951f0ce6": {
+          "yes_bid_price": "0.33",
+          "yes_ask_price": "0.36",
+          "no_bid_price": "0.64",
+          "no_ask_price": "0.67",
+          "ask_price": "0.36",
+          "ask_size": 3000,
+          "ask_size_fractional": "3000",
+          "ask_venue_timestamp": "2026-11-02T23:36:43.423699394Z",
+          "bid_price": "0.33",
+          "bid_size": 1000,
+          "bid_size_fractional": "1000",
+          "bid_venue_timestamp": "2026-11-02T23:35:58.796090943Z",
+          "last_trade_price": "0.36",
+          "last_trade_size": 133,
+          "last_trade_size_fractional": "133",
+          "last_trade_venue_timestamp": "2026-11-02T23:41:01.316131125Z",
+          "display_yes_bid": "0.33",
+          "display_no_bid": "0.64",
+          "symbol": "GOVRACE-26FL-DEM",
+          "instrument_id": "e1bdb617-0261-4e92-bb83-f51f951f0ce6",
+          "state": "active",
+          "updated_at": "2026-11-02T23:41:01.316131125Z"
+        },
+        "c7f21f58-d76d-4a8e-94cd-30084e50da54": {
+          "yes_bid_price": "0.7",
+          "yes_ask_price": "0.72",
+          "no_bid_price": "0.28",
+          "no_ask_price": "0.3",
+          "ask_price": "0.72",
+          "ask_size": 350,
+          "ask_size_fractional": "350",
+          "ask_venue_timestamp": "2026-11-02T23:42:57.223181046Z",
+          "bid_price": "0.7",
+          "bid_size": 100,
+          "bid_size_fractional": "100",
+          "bid_venue_timestamp": "2026-11-02T23:42:10.8982115Z",
+          "last_trade_price": "0.72",
+          "last_trade_size": 681,
+          "last_trade_size_fractional": "681",
+          "last_trade_venue_timestamp": "2026-11-02T23:43:08.096692438Z",
+          "display_yes_bid": "0.7",
+          "display_no_bid": "0.28",
+          "symbol": "GOVRACE-26FL-REP",
+          "instrument_id": "c7f21f58-d76d-4a8e-94cd-30084e50da54",
+          "state": "active",
+          "updated_at": "2026-11-02T23:43:08.096692438Z"
+        },
+        "1a1f47b1-eee6-4be6-9006-95faec01a4bc": {
+          "yes_bid_price": "0.12",
+          "yes_ask_price": "0.15",
+          "no_bid_price": "0.85",
+          "no_ask_price": "0.88",
+          "ask_price": "0.15",
+          "ask_size": 1000,
+          "ask_size_fractional": "1000",
+          "ask_venue_timestamp": "2026-11-02T23:43:03.040524607Z",
+          "bid_price": "0.12",
+          "bid_size": 1000,
+          "bid_size_fractional": "1000",
+          "bid_venue_timestamp": "2026-11-02T20:36:51.040252845Z",
+          "last_trade_price": "0.15",
+          "last_trade_size": 307,
+          "last_trade_size_fractional": "307",
+          "last_trade_venue_timestamp": "2026-11-02T23:40:54.568881573Z",
+          "display_yes_bid": "0.12",
+          "display_no_bid": "0.85",
+          "symbol": "SENRACE-26FL-DEM",
+          "instrument_id": "1a1f47b1-eee6-4be6-9006-95faec01a4bc",
+          "state": "active",
+          "updated_at": "2026-11-02T23:43:03.040524607Z"
+        },
+        "d95ba277-896b-4996-afc0-d6722ed21ba6": {
+          "yes_bid_price": "0.85",
+          "yes_ask_price": "0.88",
+          "no_bid_price": "0.12",
+          "no_ask_price": "0.15",
+          "ask_price": "0.88",
+          "ask_size": 1000,
+          "ask_size_fractional": "1000",
+          "ask_venue_timestamp": "2026-11-02T18:52:59.051528603Z",
+          "bid_price": "0.85",
+          "bid_size": 1000,
+          "bid_size_fractional": "1000",
+          "bid_venue_timestamp": "2026-11-02T23:19:29.588367315Z",
+          "last_trade_price": "0.88",
+          "last_trade_size": 11,
+          "last_trade_size_fractional": "11",
+          "last_trade_venue_timestamp": "2026-11-02T23:41:38.380241537Z",
+          "display_yes_bid": "0.85",
+          "display_no_bid": "0.12",
+          "symbol": "SENRACE-26FL-REP",
+          "instrument_id": "d95ba277-896b-4996-afc0-d6722ed21ba6",
+          "state": "active",
+          "updated_at": "2026-11-02T23:41:38.380241537Z"
+        },
+        "b14bb41d-4b5c-4171-8f3c-2ec5556539d2": {
+          "yes_bid_price": "0.38",
+          "yes_ask_price": "0.41",
+          "no_bid_price": "0.59",
+          "no_ask_price": "0.62",
+          "ask_price": "0.41",
+          "ask_size": 1000,
+          "ask_size_fractional": "1000",
+          "ask_venue_timestamp": "2026-11-02T22:33:38.051177935Z",
+          "bid_price": "0.38",
+          "bid_size": 1000,
+          "bid_size_fractional": "1000",
+          "bid_venue_timestamp": "2026-11-02T22:33:38.054864103Z",
+          "last_trade_price": "0.39",
+          "last_trade_size": 12,
+          "last_trade_size_fractional": "12",
+          "last_trade_venue_timestamp": "2026-11-02T22:18:35.119747722Z",
+          "display_yes_bid": "0.38",
+          "display_no_bid": "0.59",
+          "symbol": "HOURACE-26FL09-DEM",
+          "instrument_id": "b14bb41d-4b5c-4171-8f3c-2ec5556539d2",
+          "state": "active",
+          "updated_at": "2026-11-02T22:33:38.054864103Z"
+        },
+        "3eeb460a-1fc7-4f1d-a2ab-6c7046fada46": {
+          "yes_bid_price": "0.59",
+          "yes_ask_price": "0.62",
+          "no_bid_price": "0.38",
+          "no_ask_price": "0.41",
+          "ask_price": "0.62",
+          "ask_size": 3000,
+          "ask_size_fractional": "3000",
+          "ask_venue_timestamp": "2026-11-02T23:04:23.12894208Z",
+          "bid_price": "0.59",
+          "bid_size": 1000,
+          "bid_size_fractional": "1000",
+          "bid_venue_timestamp": "2026-11-02T22:29:05.047282282Z",
+          "last_trade_price": "0.62",
+          "last_trade_size": 93,
+          "last_trade_size_fractional": "93",
+          "last_trade_venue_timestamp": "2026-11-02T23:40:13.741040817Z",
+          "display_yes_bid": "0.59",
+          "display_no_bid": "0.38",
+          "symbol": "HOURACE-26FL09-REP",
+          "instrument_id": "3eeb460a-1fc7-4f1d-a2ab-6c7046fada46",
+          "state": "active",
+          "updated_at": "2026-11-02T23:40:13.741040817Z"
+        }
+      },
+      "fundamentals": {
+        "3eaa7391-fa0e-4e5b-9593-e5aeaf04a5f7": {
+          "instrument_id": "3eaa7391-fa0e-4e5b-9593-e5aeaf04a5f7",
+          "volume": "13241267",
+          "open_interest": 11505398,
+          "open_interest_fractional": "11505398"
+        },
+        "3689dd5d-5503-43f9-b051-9d0340ad3fa9": {
+          "instrument_id": "3689dd5d-5503-43f9-b051-9d0340ad3fa9",
+          "volume": "4653899",
+          "open_interest": 3394414,
+          "open_interest_fractional": "3394414"
+        },
+        "cc9bce08-a88f-4761-8924-494d738ab368": {
+          "instrument_id": "cc9bce08-a88f-4761-8924-494d738ab368",
+          "volume": "4446364",
+          "open_interest": 3617348,
+          "open_interest_fractional": "3617348"
+        },
+        "01f1d2d0-21b8-4309-9b84-c74e86afbddc": {
+          "instrument_id": "01f1d2d0-21b8-4309-9b84-c74e86afbddc",
+          "volume": "4007668",
+          "open_interest": 3326383,
+          "open_interest_fractional": "3326383"
+        },
+        "e1bdb617-0261-4e92-bb83-f51f951f0ce6": {
+          "instrument_id": "e1bdb617-0261-4e92-bb83-f51f951f0ce6",
+          "volume": "944391",
+          "open_interest": 641317,
+          "open_interest_fractional": "641317"
+        },
+        "c7f21f58-d76d-4a8e-94cd-30084e50da54": {
+          "instrument_id": "c7f21f58-d76d-4a8e-94cd-30084e50da54",
+          "volume": "3122556",
+          "open_interest": 2974102,
+          "open_interest_fractional": "2974102"
+        },
+        "1a1f47b1-eee6-4be6-9006-95faec01a4bc": {
+          "instrument_id": "1a1f47b1-eee6-4be6-9006-95faec01a4bc",
+          "volume": "690106",
+          "open_interest": 404370,
+          "open_interest_fractional": "404370"
+        },
+        "d95ba277-896b-4996-afc0-d6722ed21ba6": {
+          "instrument_id": "d95ba277-896b-4996-afc0-d6722ed21ba6",
+          "volume": "508321",
+          "open_interest": 448897,
+          "open_interest_fractional": "448897"
+        },
+        "b14bb41d-4b5c-4171-8f3c-2ec5556539d2": {
+          "instrument_id": "b14bb41d-4b5c-4171-8f3c-2ec5556539d2",
+          "volume": "12025",
+          "open_interest": 7674,
+          "open_interest_fractional": "7674"
+        },
+        "3eeb460a-1fc7-4f1d-a2ab-6c7046fada46": {
+          "instrument_id": "3eeb460a-1fc7-4f1d-a2ab-6c7046fada46",
+          "volume": "8500",
+          "open_interest": 7840,
+          "open_interest_fractional": "7840"
+        }
+      }
+    }
+  }
+}

@@ -156,7 +156,7 @@ class Engine:
                 state['next_due']=time.time()+state['interval']
             if imported:state['last_attempt']=now
             self.save_source(key)
-            if key in ['polymarket','kalshi']:
+            if key in ['polymarket','kalshi','robinhood']:
                 baseline=self.db.get('market_baseline',{})
                 # First observed snapshot before election day; never overwrite it silently.
                 if datetime.now(timezone.utc).date().isoformat()<config.ELECTION_DATE:
@@ -248,7 +248,7 @@ class Engine:
                 races=enrich_candidates(compose_roster(ballot_roster,races))
                 ballot_roster['settled_races']=enrich_candidates(ballot_roster.get('settled_races',[]))
                 polls=payloads['polls'].get('polls',[])
-                markets=payloads['polymarket'].get('markets',[])+payloads['kalshi'].get('markets',[])
+                markets=payloads['polymarket'].get('markets',[])+payloads['kalshi'].get('markets',[])+payloads['robinhood'].get('markets',[])
                 chambers=chamber_summary(races)
                 events=[e for e in self.events if (age(e['at']) or 0)<1800]
             sources=self.public_sources()

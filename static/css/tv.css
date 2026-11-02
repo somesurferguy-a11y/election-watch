@@ -98,3 +98,5 @@ dialog{width:min(1600px,94vw);max-height:92dvh;overflow:auto}
 .portrait-unavailable{display:none;position:absolute;bottom:.2em;left:.1em;right:.1em;text-align:center;font-size:clamp(7px,.28em,14px);line-height:1.1;white-space:normal}.portrait:not(:has(img,svg)) .portrait-unavailable,.portrait:has(img[hidden]) .portrait-unavailable{display:block}
 
 .portrait.photo-failed .portrait-unavailable{display:block}
+
+.market-toolbar{display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap}.market-toolbar label{font-size:.65rem;color:var(--muted)}.market-toolbar select{background:var(--panel);color:var(--text);max-width:10rem;padding:.25rem;border:1px solid var(--line)}

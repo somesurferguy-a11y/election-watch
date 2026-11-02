@@ -326,3 +326,23 @@ def power_feed():
     return parse_power(house,senate)
 
 ADAPTERS={'florida':florida_feed,'indian_river':irc_feed,'national':national_feed,'polls':polls_feed,'polymarket':polymarket_feed,'kalshi':kalshi_feed,'power':power_feed}
+
+
+def fetch_robinhood_url(url):
+    allowed={'https://robinhood.com/us/en/prediction-markets/midterms/control-of-congress/','https://robinhood.com/us/en/prediction-markets/midterms/florida/'}
+    if url not in allowed:raise ValueError('Unexpected Robinhood page URL')
+    request=urllib.request.Request(url,headers={'User-Agent':'ElectionWatch/2.0 (read-only public market data)','Accept-Encoding':'gzip','Cache-Control':'no-cache'})
+    with urllib.request.urlopen(request,timeout=config.HTTP_TIMEOUT) as response:
+        raw=response.read(config.MAX_RESPONSE_BYTES+1)
+        if len(raw)>config.MAX_RESPONSE_BYTES:raise ValueError('Robinhood page exceeds size limit')
+        if response.headers.get('Content-Encoding','').lower()=='gzip':
+            with gzip.GzipFile(fileobj=io.BytesIO(raw)) as compressed:raw=compressed.read(config.MAX_RESPONSE_BYTES+1)
+        if len(raw)>config.MAX_RESPONSE_BYTES:raise ValueError('Robinhood decoded page exceeds size limit')
+    return raw.decode('utf-8-sig'),None
+
+
+def robinhood_feed():
+    from robinhood import robinhood_feed as read_robinhood
+    return read_robinhood(fetch_robinhood_url,market_record)
+
+ADAPTERS['robinhood']=robinhood_feed
