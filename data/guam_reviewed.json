@@ -1,0 +1,139 @@
+{
+  "election_date": "2026-11-03",
+  "demo": false,
+  "source_updated_at": "2026-11-04T01:30:00+10:00",
+  "source_url": "https://npr.brightspotcdn.com/ee/81/3dba243f4963980c09345e3d632d/2026-guam-general-election-unofficial-results.pdf",
+  "verification_sha256": "41a46f21b6d06e41f86c3f3b194b168c3f60195ad3d1d76fa7d04da188b8e79e",
+  "reviewed_at": "2026-11-03",
+  "races": [
+    {
+      "id": "guam:governor",
+      "name": "Guam \u2014 Governor & Lieutenant Governor",
+      "jurisdiction": "Guam",
+      "scope": "national",
+      "chamber": null,
+      "status": "unofficial",
+      "is_complete": false,
+      "territory": true,
+      "source_name": "Guam Election Commission report via Public Radio Guam",
+      "source_url": "https://npr.brightspotcdn.com/ee/81/3dba243f4963980c09345e3d632d/2026-guam-general-election-unofficial-results.pdf",
+      "source_updated_at": "2026-11-04T01:30:00+10:00",
+      "reviewed_snapshot": true,
+      "report_total": 30994,
+      "coverage_note": "Reviewed Guam Election Commission unofficial report, mirrored by Public Radio Guam. Snapshot as of Nov 4, 1:30 AM ChST (Nov 3, 10:30 AM ET). Source document hash is checked every minute; a changed report requires review. No winner called. Guam's delegate is non-voting and these contests do not count toward U.S. House/Senate control.",
+      "candidates": [
+        {
+          "id": "guam:governor:ada-calvo",
+          "name": "ADA / CALVO",
+          "party": "REP",
+          "votes": 15945
+        },
+        {
+          "id": "guam:governor:terlaje-perez",
+          "name": "TERLAJE / PEREZ",
+          "party": "DEM",
+          "votes": 14925
+        },
+        {
+          "id": "guam:governor:write-ins",
+          "name": "Write-in totals",
+          "party": "WRI",
+          "votes": 124
+        }
+      ],
+      "display_order": -10
+    },
+    {
+      "id": "guam:delegate",
+      "name": "Guam \u2014 Non-voting Delegate to Congress",
+      "jurisdiction": "Guam",
+      "scope": "national",
+      "chamber": null,
+      "status": "unofficial",
+      "is_complete": false,
+      "territory": true,
+      "source_name": "Guam Election Commission report via Public Radio Guam",
+      "source_url": "https://npr.brightspotcdn.com/ee/81/3dba243f4963980c09345e3d632d/2026-guam-general-election-unofficial-results.pdf",
+      "source_updated_at": "2026-11-04T01:30:00+10:00",
+      "reviewed_snapshot": true,
+      "report_total": 30677,
+      "coverage_note": "Reviewed Guam Election Commission unofficial report, mirrored by Public Radio Guam. Snapshot as of Nov 4, 1:30 AM ChST (Nov 3, 10:30 AM ET). Source document hash is checked every minute; a changed report requires review. No winner called. Guam's delegate is non-voting and these contests do not count toward U.S. House/Senate control.",
+      "candidates": [
+        {
+          "id": "guam:delegate:limtiaco",
+          "name": "Alicia Anne Garrido Limtiaco",
+          "party": "DEM",
+          "votes": 15645
+        },
+        {
+          "id": "guam:delegate:moylan",
+          "name": "James Craig Moylan",
+          "party": "REP",
+          "votes": 14983
+        },
+        {
+          "id": "guam:delegate:write-ins",
+          "name": "Write-in totals",
+          "party": "WRI",
+          "votes": 49
+        }
+      ],
+      "display_order": -9
+    },
+    {
+      "id": "guam:attorney-general",
+      "name": "Guam \u2014 Attorney General",
+      "jurisdiction": "Guam",
+      "scope": "national",
+      "chamber": null,
+      "status": "unofficial",
+      "is_complete": false,
+      "territory": true,
+      "source_name": "Guam Election Commission report via Public Radio Guam",
+      "source_url": "https://npr.brightspotcdn.com/ee/81/3dba243f4963980c09345e3d632d/2026-guam-general-election-unofficial-results.pdf",
+      "source_updated_at": "2026-11-04T01:30:00+10:00",
+      "reviewed_snapshot": true,
+      "report_total": 30254,
+      "coverage_note": "Reviewed Guam Election Commission unofficial report, mirrored by Public Radio Guam. Snapshot as of Nov 4, 1:30 AM ChST (Nov 3, 10:30 AM ET). Source document hash is checked every minute; a changed report requires review. No winner called. Guam's delegate is non-voting and these contests do not count toward U.S. House/Senate control.",
+      "candidates": [
+        {
+          "id": "guam:attorney-general:tydingco",
+          "name": "Phillip James Tydingco",
+          "party": "NON",
+          "votes": 11583
+        },
+        {
+          "id": "guam:attorney-general:moylan",
+          "name": "Douglas B. Moylan",
+          "party": "NON",
+          "votes": 10008
+        },
+        {
+          "id": "guam:attorney-general:fisher",
+          "name": "Thomas Joseph Fisher",
+          "party": "NON",
+          "votes": 3842
+        },
+        {
+          "id": "guam:attorney-general:santos",
+          "name": "Peter John Santos",
+          "party": "NON",
+          "votes": 3353
+        },
+        {
+          "id": "guam:attorney-general:pauluhn",
+          "name": "Jordan Lawrence Pauluhn",
+          "party": "NON",
+          "votes": 1448
+        },
+        {
+          "id": "guam:attorney-general:write-ins",
+          "name": "Write-in totals",
+          "party": "WRI",
+          "votes": 20
+        }
+      ],
+      "display_order": -8
+    }
+  ]
+}

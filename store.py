@@ -262,7 +262,7 @@ class Engine:
             else:
                 payloads={key:copy.deepcopy(s.get('payload',{})) for key,s in self.sources.items()}
                 races=[]
-                for key in ['national','florida','indian_river']:
+                for key in ['national','florida','indian_river','guam']:
                     batch=payloads[key].get('races',[])
                     races.extend(batch)
                 # Stable ID dedup: one current record per ID, no arithmetic merging across providers.

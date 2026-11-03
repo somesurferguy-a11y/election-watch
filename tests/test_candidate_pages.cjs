@@ -65,3 +65,9 @@ for(let cycle=0;cycle<4;cycle++){window().selected.forEach(c=>fastSeen.add(c.id)
 assert.equal(fastSeen.size,8);
 const pausedPage=window().page;vm.runInContext('localPause=true',context);clock+=10000;tick();assert.equal(window().page,pausedPage);
 console.log('Real 10-second view scheduler reaches all candidates and respects pause');
+
+context.sourceRace={scope:'national',source_name:'Guam Election Commission report via Public Radio Guam',reviewed_snapshot:true,source_updated_at:'2026-11-03T15:30:00Z'};
+vm.runInContext("state.demo=false;state.sources=[{id:'national',name:'National',status:'connected'},{id:'guam',name:sourceRace.source_name,status:'error'}]",context);
+assert.equal(context.sourceFor(context.sourceRace).id,'guam');
+assert.match(context.sourceSuffix(context.sourceRace),/LAST REVIEWED DATA/);
+console.log('Guam exact source attribution and changed-report warning passed');

@@ -1,5 +1,5 @@
 'use strict';
-function isPerson(c){return !/^(yes|no)\b/i.test(c.name);}
+function isPerson(c){return !/^(yes|no)\b|^write[- ]in totals?$/i.test(c.name);}
 function orderedCandidates(candidates){return [...candidates].sort((a,b)=>Number(b.service?.incumbent===true)-Number(a.service?.incumbent===true)||(b.votes||0)-(a.votes||0));}
 function validPhotoCrop(photo){
  const c=photo?.crop;if(!c)return null;
@@ -9,6 +9,7 @@ function validPhotoCrop(photo){
 }
 function photoPosition(photo){const p=photo?.position;return p&&['x','y'].every(k=>typeof p[k]==='number'&&Number.isFinite(p[k])&&p[k]>=0&&p[k]<=100)?p.x+'% '+p.y+'%':'50% 15%';}
 function portraitHtml(c){
+ if(/^write[- ]in totals?$/i.test(c.name))return '<span class="choice-symbol" aria-label="Write-in total">&#9998;</span>';
  if(!isPerson(c))return '<span class="choice-symbol" aria-hidden="true">'+(/^yes/i.test(c.name)?'✓':'−')+'</span>';
  const initials=c.name.replace(/\([^)]*\)/g,'').split(/\s+/).filter(Boolean).slice(0,2).map(n=>n[0]).join('');
  const path=c.photo?.path,crop=validPhotoCrop(c.photo),hasCrop=!!c.photo&&Object.hasOwn(c.photo,'crop');

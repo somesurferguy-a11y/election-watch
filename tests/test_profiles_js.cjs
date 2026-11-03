@@ -37,3 +37,5 @@ context.positionPhoto={position:{x:30,y:30}};assert.equal(vm.runInContext('photo
 context.cropPhoto.path='/static/portraits/abcdef123456.frame.webp';assert.match(vm.runInContext('portraitHtml(croppedCandidate)',context),/<svg/);context.cropPhoto.crop=null;assert.doesNotMatch(vm.runInContext('portraitHtml(croppedCandidate)',context),/<img|<svg/);
 
 let imageError;const errorContext={document:{addEventListener(name,handler){if(name==='error')imageError=handler;}},HTMLImageElement:class {}};vm.createContext(errorContext);vm.runInContext(fs.readFileSync('static/js/candidate-profiles.js','utf8'),errorContext);let failureMarked=false;const photoFrame={style:{}};const portrait={classList:{add(name){failureMarked=name==='photo-failed';}}};imageError({target:{tagName:'image',closest(selector){return selector==='.portrait'?portrait:photoFrame;}}});assert.equal(failureMarked,true);assert.equal(photoFrame.style.display,'none');
+
+assert.equal(vm.runInContext('isPerson({name:"Write-in totals"})',context),false);assert.match(vm.runInContext('portraitHtml({name:"Write-in totals"})',context),/Write-in total/);

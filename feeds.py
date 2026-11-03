@@ -346,3 +346,6 @@ def robinhood_feed():
     return read_robinhood(fetch_robinhood_url,market_record)
 
 ADAPTERS['robinhood']=robinhood_feed
+
+from territories import guam_feed
+ADAPTERS['guam']=guam_feed

@@ -28,3 +28,5 @@ SOURCES = {
 }
 
 SOURCES['robinhood']={'name':'Robinhood prediction markets','url':'https://robinhood.com/us/en/prediction-markets/midterms/control-of-congress/','interval':60,'kind':'markets','note':'Read-only public Robinhood page data for 2026 House/Senate control, Florida governor/Senate and FL-9. Bid/ask midpoints; underlying exchanges may overlap Kalshi. No login or trading.'}
+
+SOURCES['guam']={'name':'Guam Election Commission report via Public Radio Guam','url':'https://www.islapublic.org/2026-11-03/guam-election-results','interval':60,'kind':'results','note':'Reviewed unofficial GEC report mirrored by public radio. Document hash checked every minute; changed reports require review. Includes governor, non-voting delegate and attorney general, not all Guam races. No winner calls or U.S. chamber seats.'}
