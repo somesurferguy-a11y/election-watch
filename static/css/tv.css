@@ -109,3 +109,5 @@ dialog{width:min(1600px,94vw);max-height:92dvh;overflow:auto}
 
 .council-cutoff{font-size:.72em;line-height:1.25;padding:.35em .6em;border-left:3px solid var(--teal);background:var(--panel);margin:.25em 0}.council-cutoff strong,.change-category{color:var(--teal)}.change-category{font-size:.75em;margin:0}
 @media(min-width:601px){.race-section .multi-seat .candidate-name{font-size:clamp(.7em,4.2cqh,1.12em)}.race-section .multi-seat .portrait{min-height:0}.race-section .multi-seat .candidate{padding:.1rem 0}.race-section .multi-seat .candidate-list{gap:.15rem 1.4rem}}
+
+.candidate-pager{display:flex;align-items:center;justify-content:space-between;gap:.4em;font-size:.6em;flex-wrap:wrap}.candidate-pager button{font-size:inherit;padding:.3em .5em}.candidate-pager span{flex:1;text-align:center}

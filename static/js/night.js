@@ -4,10 +4,25 @@ let nightMode='updates',nightScope='indian_river',rotationCursor=0,nightAutoInde
 function rotationPlaylist(){return state.settings.local_spotlight?['national','indian_river','power','florida','indian_river','night','watchlist','indian_river','comparisons','history','health']:views;}
 function nextAutoView(){const list=rotationPlaylist();rotationCursor=(rotationCursor+1)%list.length;const next=list[rotationCursor];if(next==='night'){nightMode=['updates','closings','close','amendments'][nightAutoIndex++%4];pages.night=0;}return next;}
 function relativeAge(stamp){if(!stamp)return 'never';const age=Math.max(0,Math.floor((Date.now()-new Date(stamp).getTime())/1000));return age<60?`${age}s ago`:age<3600?`${Math.floor(age/60)}m ago`:`${Math.floor(age/3600)}h ago`;}
+function visibleResultSourceIds(){
+ const races=[...(state.races||[]),...(state.settled_races||[])];
+ const cards=typeof document!=='undefined'&&document.querySelectorAll?document.querySelectorAll('[data-open-race]'):[];
+ const visible=Array.from(cards,card=>races.find(r=>r.id===card.dataset.openRace)).filter(Boolean);
+ if(!visible.length)return view==='indian_river'?['indian_river','florida']:view==='florida'?['florida']:['florida','national'];
+ const ids=new Set();
+ for(const r of visible){
+  const named=state.sources.find(s=>s.name===r.source_name);
+  const id=named?.id||(r.source_name==='Florida Division of Elections'?'florida':r.source_name==='Indian River County Supervisor of Elections'?'indian_river':r.scope==='indian_river'?'indian_river':r.scope==='florida'?'florida':'national');
+  ids.add(id);
+  // State context supplements county-backed cards; it never replaces county health.
+  if(r.scope==='indian_river')ids.add('florida');
+ }
+ return [...ids];
+}
 function updateFreshness(){
  if(!state)return;const bar=$('freshness-bar');
  if(state.demo){bar.textContent='DEMO · fictional returns · real source health is shown separately';return;}
- const ids=view==='indian_river'?['indian_river','florida']:view==='florida'?['florida']:['florida','national'];
+ const ids=visibleResultSourceIds();
  bar.innerHTML=`<strong>${online?'Dashboard checked '+relativeAge(state.server_time):'Dashboard disconnected'}</strong>`+ids.map(id=>{const s=state.sources.find(s=>s.id===id);if(!s)return '';if(id==='indian_river'&&s.status==='not_published')return `<span>County: awaiting official November returns · last attempted check ${relativeAge(s.last_attempt)}</span>`;const warn=s.retrieval_overdue||s.publication_delayed||['error','delayed','source_delayed'].includes(s.status);return `<span class="${warn?'amber':''}">${esc(id==='indian_river'?'County':id==='florida'?'Florida':'National')}: checked ${relativeAge(s.last_success)} · ${s.publication_delayed?'SOURCE HAS NOT PUBLISHED RECENTLY':s.source_updated_at?'published '+time(s.source_updated_at):'publication time unavailable'}${warn?' · CHECK SOURCE HEALTH':''}</span>`;}).join('');
 }
 function amendmentFor(r){const m=r.office_code==='AMD'&&r.name.match(/^Amendment (\d+)/);return m?state.night_guide?.amendments.find(a=>a.number===Number(m[1])):null;}
