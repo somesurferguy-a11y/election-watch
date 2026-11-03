@@ -57,7 +57,7 @@ def run(minutes=345,stop_event=None):
      engine=start_engine(send)
     state=engine.state();state['settings'].update(view='indian_river',pins=[]);state['settings_revision']=0
     with engine.lock:
-     checkpoint={'sources':copy.deepcopy(engine.sources),'events':copy.deepcopy(engine.events),'baselines':{key:engine.db.get(key,{}) for key in ['market_baseline','poll_baseline']}}
+     checkpoint={'sources':copy.deepcopy(engine.sources),'events':copy.deepcopy(engine.events),'baselines':{key:engine.db.get(key,{}) for key in ['market_baseline','poll_baseline','market_forecasts']}}
     checkpoint_raw=gzip.compress(json.dumps(checkpoint,allow_nan=False).encode())
     send('/checkpoint',checkpoint_raw,{'Content-Encoding':'gzip','X-Snapshot-Time':state['server_time']})
     raw=json.dumps(state,ensure_ascii=False,allow_nan=False).encode()

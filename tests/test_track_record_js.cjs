@@ -1,0 +1,7 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const rows=['Kalshi','Polymarket','Robinhood'].map(provider=>({provider,captured:0,pending:0,scored:0,brier_score:null,calibration_bins:[{label:'0–20%',count:0,mean_probability:null,outcome_rate:null}]}));
+const context={state:{demo:false,market_track_record:{latest_observations:9,checkpoints:[{label:'Midnight ET',reference_at:'2026-11-03T05:00:00Z',status:'upcoming',captured:0,providers:rows}]}},pages:{},pageCount:0,esc:s=>String(s??'').replace(/</g,'&lt;'),time:s=>s,empty:t=>t,safeLink:s=>s?.startsWith('https://')?s:'',document:{addEventListener(){}}};vm.createContext(context);vm.runInContext(fs.readFileSync('static/js/track-record.js','utf8'),context);
+let html=vm.runInContext('renderTrackRecord()',context);assert.match(html,/Not enough results yet/);assert.match(html,/Upcoming snapshot/);assert.doesNotMatch(html,/0\.000/);
+html=vm.runInContext('trackCalibrationHtml()',context);assert.match(html,/Observed win rate/);assert.doesNotMatch(html,/>0\.0%/);
+rows[0].captured=1;rows[0].scored=1;rows[0].brier_score=0;html=vm.runInContext('renderTrackRecord()',context);assert.match(html,/0\.000/);assert.match(html,/Descriptive scores only/);
+context.state.demo=true;assert.match(vm.runInContext('renderTrackRecord()',context),/No accuracy scores for demo/);console.log('Track-record empty, demo, zero-score and calibration rendering checks passed');

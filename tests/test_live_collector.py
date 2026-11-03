@@ -29,11 +29,11 @@ class CollectorTests(unittest.TestCase):
    self.assertTrue(engine.started);self.assertIsNot(engine,FakeEngine.instances[0])
  def test_checkpoint_preserves_last_known_votes_backoff_events_and_baseline(self):
   source={'payload':{'races':[{'id':'county','votes':25}]},'status':'error','busy':True,'next_due':123456,'last_success':'2026-11-03T11:59:00Z'}
-  checkpoint={'sources':{'florida':source},'events':[{'id':'change'}],'baselines':{'market_baseline':{'x':50}}}
+  checkpoint={'sources':{'florida':source},'events':[{'id':'change'}],'baselines':{'market_baseline':{'x':50},'market_forecasts':{'version':1,'checkpoints':{'midnight':{'forecasts':[{'probability':70}]}}}}}
   with patch.object(collector,'Engine',FakeEngine):engine=collector.start_engine(lambda path:gzip.compress(json.dumps(checkpoint).encode()))
   self.assertTrue(engine.started);self.assertFalse(engine.sources['florida']['busy'])
   for key in ['payload','status','next_due','last_success']:self.assertEqual(engine.sources['florida'][key],source[key])
-  self.assertEqual(engine.events,checkpoint['events']);self.assertEqual(engine.db.get('market_baseline'),{'x':50})
+  self.assertEqual(engine.events,checkpoint['events']);self.assertEqual(engine.db.get('market_baseline'),{'x':50});self.assertEqual(engine.db.get('market_forecasts'),checkpoint['baselines']['market_forecasts'])
  def test_corrupt_checkpoint_does_not_start_or_publish_an_empty_engine(self):
   with patch.object(collector,'Engine',FakeEngine):
    with self.assertRaises(gzip.BadGzipFile):collector.start_engine(lambda path:b'corrupt')

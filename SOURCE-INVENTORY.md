@@ -105,3 +105,6 @@ November 2 portrait expansion: twelve new identified portraits, with individual 
 
 
 Robinhood (reviewed November 2): public structured page data at https://robinhood.com/us/en/prediction-markets/midterms/control-of-congress/ and https://robinhood.com/us/en/prediction-markets/midterms/florida/ . The exact ten contract/event IDs and Rothera exchange identifiers are in robinhood.py. This is a public-page adapter, not a documented stable Robinhood prediction API; layout/schema changes fail closed. Quote times come from the public quote map, not page retrieval. Source rules remain attached to each contract.
+
+
+Prospective market audit: forecast inputs are the existing reviewed public Polymarket/Kalshi/Robinhood feeds. No historical accuracy dataset was imported. data/market_outcomes.json is empty until authoritative outcome records are verified against exact frozen contracts/rules. The UI must remain unscored until those records exist.

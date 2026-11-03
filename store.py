@@ -18,8 +18,27 @@ from history import load_history
 from watch_features import night_guide,competitive_races
 from candidate_profiles import enrich_candidates,profiles
 
-VIEWS=['national','power','florida','indian_river','watchlist','comparisons','history','night','health']
+VIEWS=['national','power','florida','indian_river','watchlist','comparisons','track_record','history','night','health']
 DEFAULTS={'mode':config.DEFAULT_MODE,'view':'national','rotation':True,'rotation_seconds':25,'local_spotlight':True,'ticker':True,'ticker_paused':False,'ticker_seconds':12,'reduced_motion':False,'text_scale':1.0,'pins':[]}
+
+def market_audit_summary(db,now):
+    from forecast_audit import freeze_due,summary
+    before=db.get('market_forecasts',{})
+    try:ledger=freeze_due(before,now)
+    except (ValueError,TypeError,KeyError):
+        result=summary({},[],now);result['registry_error']='Forecast archive unavailable; no accuracy rating can be established.'
+        return result
+    if ledger!=before:db.put('market_forecasts',ledger)
+    error=None
+    try:
+        outcomes=json.loads((config.ROOT/'data'/'market_outcomes.json').read_text(encoding='utf-8'))
+        if not isinstance(outcomes,dict) or outcomes.get('version')!=1 or not isinstance(outcomes.get('outcomes'),list):raise ValueError('Unknown outcome registry')
+        rows=outcomes['outcomes']
+    except (OSError,ValueError,TypeError):
+        rows=[];error='Verified-outcome registry unavailable; no accuracy scores can be established.'
+    result=summary(ledger,rows,now)
+    if error:result['registry_error']=error
+    return result
 
 class Database:
     def __init__(self,path):
@@ -157,6 +176,9 @@ class Engine:
             if imported:state['last_attempt']=now
             self.save_source(key)
             if key in ['polymarket','kalshi','robinhood']:
+                from forecast_audit import update as update_forecasts
+                try:self.db.put('market_forecasts',update_forecasts(self.db.get('market_forecasts',{}),payload.get('markets',[]),now))
+                except (ValueError,TypeError,KeyError):logging.warning('Forecast archive update failed; retaining the archive and live market data')
                 baseline=self.db.get('market_baseline',{})
                 # First observed snapshot before election day; never overwrite it silently.
                 if datetime.now(timezone.utc).date().isoformat()<config.ELECTION_DATE:
@@ -266,6 +288,7 @@ class Engine:
             return {'election_date':config.ELECTION_DATE,'demo':demo,'server_time':iso_now(),'settings':settings,'settings_revision':self.settings_revision,
                 'races':races,'polls':polls,'markets':markets,'chambers':chambers,'ticker_events':events,'sources':sources,
                 'settled_races':ballot_roster.get('settled_races',[]),'roster_verified_at':ballot_roster.get('verified_at'),
+                'market_track_record':market_audit_summary(self.db,iso_now()) if not demo else None,
                 'history':load_history() if not demo else None,
                 'night_guide':night_guide() if not demo else None,'competitive':competitive_races(races),
                 'profile_coverage':profiles().get('coverage_note') if not demo else 'Fictional demonstration candidates have no real service records or photos.',
