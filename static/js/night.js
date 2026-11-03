@@ -1,4 +1,5 @@
 'use strict';
+let importantChangesOnly=true;
 let nightMode='updates',nightScope='indian_river',rotationCursor=0,nightAutoIndex=0;
 function rotationPlaylist(){return state.settings.local_spotlight?['national','indian_river','power','florida','indian_river','night','watchlist','indian_river','comparisons','history','health']:views;}
 function nextAutoView(){const list=rotationPlaylist();rotationCursor=(rotationCursor+1)%list.length;const next=list[rotationCursor];if(next==='night'){nightMode=['updates','closings','close','amendments'][nightAutoIndex++%4];pages.night=0;}return next;}
@@ -17,8 +18,8 @@ function renderNight(){
  const header=`<div class="rail-head"><h1>Election-night desk</h1><div class="night-tabs">${[['updates','What changed'],['closings','Poll closings'],['close','Close races'],['amendments','Amendments']].map(([id,name])=>`<button data-night-mode="${id}" aria-pressed="${nightMode===id}">${name}</button>`).join('')}</div></div>`;
  let body='';
  if(nightMode==='updates'){
-  const recent=state.ticker_events.filter(e=>e.race_id&&!e.demo).sort((a,b)=>new Date(b.at)-new Date(a.at));const shown=slicePage(recent,3);
-  body=`<p class="coverage">Source changes in the last 30 minutes · updates are not winner calls unless explicitly attributed.</p><div class="night-updates">${shown.length?shown.map(e=>`<article class="source-card"><h2>${esc(e.text)}</h2><p>${esc(time(e.at))} · ${esc(e.source)}${e.vote_delta!=null?` · ${e.vote_delta>=0?'+':''}${num(e.vote_delta)} candidate votes since that source’s previous snapshot`:''}</p>${e.total_votes!=null?`<p>${num(e.total_votes)} reported candidate votes${e.previous_total!=null?' · previously '+num(e.previous_total):' · first observed snapshot'}</p>`:''}<button data-race="${esc(e.race_id)}">Race details</button></article>`).join(''):empty('No recent race changes','The sources are still checked automatically. First totals, revised counts, lead changes and attributed calls will appear here.')}</div>`;
+  const recent=state.ticker_events.filter(e=>e.race_id&&!e.demo&&(!importantChangesOnly||changeCategory(e)!=='Vote update')).sort((a,b)=>new Date(b.at)-new Date(a.at));const shown=slicePage(recent,3);
+  body=`<p class="coverage">Last 30 minutes · lead changes, first totals, corrections and attributed calls. Updates are not winner calls. <button data-change-filter="toggle">${importantChangesOnly?'Show all vote updates':'Show key changes only'}</button></p><div class="night-updates">${shown.length?shown.map(e=>`<article class="source-card"><p class="change-category">${esc(changeCategory(e))}</p><h2>${esc(e.text)}</h2><p>${esc(time(e.at))} · ${esc(e.source)}${e.vote_delta!=null?` · ${e.vote_delta>=0?'+':''}${num(e.vote_delta)} candidate votes since that source’s previous snapshot`:''}</p>${e.total_votes!=null?`<p>${num(e.total_votes)} reported candidate votes${e.previous_total!=null?' · previously '+num(e.previous_total):' · first observed snapshot'}</p>`:''}<button data-race="${esc(e.race_id)}">Race details</button></article>`).join(''):empty(importantChangesOnly?'No recent key changes':'No recent race changes','Sources are checked automatically. Use Show all vote updates to include routine count updates.')}</div>`;
  }
  if(nightMode==='closings'){
   const now=Date.now();const future=guide.closings.filter(g=>new Date(g.closes_at)>now),past=guide.closings.filter(g=>new Date(g.closes_at)<=now);const shown=slicePage([...future,...past],2);
@@ -35,5 +36,14 @@ function renderNight(){
  return `<section class="section-layout night-layout">${header}${body}</section>`;
 }
 function updateCountdowns(){document.querySelectorAll('[data-countdown]').forEach(el=>{let seconds=Math.max(0,Math.ceil((new Date(el.dataset.countdown)-Date.now())/1000));const days=Math.floor(seconds/86400);seconds%=86400;const hours=Math.floor(seconds/3600),minutes=Math.floor(seconds%3600/60),s=seconds%60;el.textContent=days?`${days}d ${hours}h ${minutes}m`:(seconds?`${hours}h ${minutes}m ${s}s`:'Scheduled time reached');});}
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!state)return;if(b.dataset.nightMode){nightMode=b.dataset.nightMode;pages.night=0;render();}if(b.dataset.amendment){nightMode='amendments';pages.night=Math.floor((Number(b.dataset.amendment)-1)/2);localPause=true;$('details').close();setView('night');}});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!state)return;if(b.dataset.changeFilter){importantChangesOnly=!importantChangesOnly;pages.night=0;render();}if(b.dataset.nightMode){nightMode=b.dataset.nightMode;pages.night=0;render();}if(b.dataset.amendment){nightMode='amendments';pages.night=Math.floor((Number(b.dataset.amendment)-1)/2);localPause=true;$('details').close();setView('night');}});
 document.addEventListener('change',e=>{if(e.target.id==='close-scope'){nightScope=e.target.value;pages.night=0;render();}});
+
+function changeCategory(e){
+ const text=e.text||'';
+ if(/takes the lead/.test(text))return 'Lead change';
+ if(/first reported totals/.test(text))return 'First totals';
+ if(/corrected|revised/.test(text))return 'Source correction';
+ if(/— (certified|projected) by /.test(text))return 'Attributed call';
+ return 'Vote update';
+}

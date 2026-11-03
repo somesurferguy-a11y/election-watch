@@ -41,3 +41,14 @@ function seatRank(c,r){
  return `<small class="rank-badge">Rank ${rank} · ${esc(label)}</small>`;
 }
 document.addEventListener('error',e=>{const portrait=e.target.closest?.('.portrait');if(!portrait)return;if(e.target instanceof HTMLImageElement){e.target.hidden=true;portrait.classList.add('photo-failed');}else if(e.target.tagName?.toLowerCase()==='image'&&e.target.closest('.portrait-frame')){e.target.closest('.portrait-frame').style.display='none';portrait.classList.add('photo-failed');}},true);
+
+function councilCutoff(r){
+ const seats=r.seats_to_elect||1;
+ if(seats<2)return '';
+ const pending='<p class="council-cutoff">Final-seat cutoff: awaiting complete candidate vote totals.</p>';
+ if(!r.has_results||r.result_incomplete||r.candidates.some(c=>c.votes_available===false||!Number.isFinite(c.votes))||!r.candidates.some(c=>c.votes>0))return pending;
+ const ranked=[...r.candidates].sort((a,b)=>b.votes-a.votes),inside=ranked[seats-1],outside=ranked[seats];
+ if(!inside||!outside)return pending;
+ const gap=inside.votes-outside.votes;
+ return `<p class="council-cutoff"><strong>Final seat · ${gap===0?'TIED AT CUTOFF':num(gap)+' vote gap'}</strong> · ${esc(inside.name)} (${num(inside.votes)}) / ${esc(outside.name)} (${num(outside.votes)}) · unofficial, no winners called</p>`;
+}
