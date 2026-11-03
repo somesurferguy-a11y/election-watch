@@ -147,7 +147,7 @@ class Engine:
                 if isinstance(exc,urllib.error.HTTPError) and exc.code==429:
                     try:delay=max(delay,int(exc.headers.get('Retry-After',0)))
                     except (ValueError,TypeError):pass
-                if isinstance(exc,NotConfigured):delay=state['interval']
+                if isinstance(exc,(NotConfigured,NotPublished)):delay=state['interval']
                 state['next_due']=time.time()+min(delay,7200)
                 self.save_source(key)
         finally:

@@ -131,3 +131,14 @@ class CollectorTests(unittest.TestCase):
   previous=signal.getsignal(signal.SIGTERM)
   calls,_=self.simulated_run(3,stop_event=Stop())
   self.assertEqual(calls.count('publish'),1);self.assertEqual(calls[-1],'release');self.assertIs(signal.getsignal(signal.SIGTERM),previous)
+
+
+class CountyDiscoveryHandoverTests(unittest.TestCase):
+ def test_old_pending_checkpoint_uses_homepage_and_immediate_new_check(self):
+  class CountyEngine(FakeEngine):
+   def __init__(self):
+    super().__init__();self.sources['indian_river']={'name':'County','url':'https://www.voteindianriver.gov/','interval':60,'kind':'results','note':'Homepage and archive','status':'pending','busy':False,'next_due':0}
+  saved={'sources':{'indian_river':{'url':'https://old.example/archive','interval':900,'note':'Old archive only','status':'not_published','busy':True,'next_due':9999999999}},'events':[]}
+  with patch.object(collector,'Engine',CountyEngine):
+   engine=collector.start_engine(lambda _:gzip.compress(json.dumps(saved).encode()))
+   county=engine.sources['indian_river'];self.assertEqual(county['url'],'https://www.voteindianriver.gov/');self.assertEqual(county['interval'],60);self.assertEqual(county['next_due'],0);self.assertFalse(county['busy'])

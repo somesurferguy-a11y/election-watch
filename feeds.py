@@ -10,7 +10,7 @@ import urllib.error
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
-from urllib.parse import urlencode
+from urllib.parse import urlencode,urljoin,urlsplit
 import config
 from validation import validate_results, validate_polls, number
 
@@ -154,17 +154,51 @@ def florida_feed():
     content,stamp=fetch_url(config.FL_FILE_URL)
     return parse_florida(content,stamp)
 
+def irc_home_result_urls(content):
+    """Only follow Indian River ENR embeds/links actually published on the homepage."""
+    class Links(HTMLParser):
+        def __init__(self):super().__init__();self.urls=[]
+        def handle_starttag(self,tag,attrs):
+            attrs=dict(attrs)
+            values=[attrs.get('src'),attrs.get('data-src')] if tag=='iframe' else [attrs.get('href')] if tag=='a' else []
+            for value in values:
+                if not value:continue
+                try:
+                    u=urlsplit(urljoin(config.IRC_HOME_URL,value))
+                    match=re.fullmatch(r'/IND/(\d+)/(?:Summary/?)?',u.path,re.I)
+                    if u.scheme=='https' and u.hostname=='enr.electionsfl.org' and not u.username and not u.password and u.port in [None,443] and match:
+                        url='https://enr.electionsfl.org/IND/'+match[1]+'/Summary/'
+                        if url not in self.urls:self.urls.append(url)
+                except ValueError:continue
+    parser=Links();parser.feed(content);return parser.urls
+
 def irc_feed():
     eid=config.IRC_GENERAL_ID
     if eid and not eid.isdigit():raise ValueError('County election ID must be numeric')
-    if not eid:
+    if eid:
+        url=f'https://enr.electionsfl.org/IND/{eid}/Summary/'
+        content,stamp=fetch_url(url);return parse_irc(content,url,stamp)
+    errors=[]
+    try:
+        home,_=fetch_url(config.IRC_HOME_URL)
+        for url in irc_home_result_urls(home):
+            try:
+                content,stamp=fetch_url(url)
+                return parse_irc(content,url,stamp)
+            except ValueError as exc:
+                # A still-linked earlier election never becomes November returns.
+                if 'not the November 3, 2026 general election' not in str(exc):errors.append(exc)
+            except Exception as exc:errors.append(exc)
+    except Exception as exc:errors.append(exc)
+    try:
         html,_=fetch_url(config.IRC_ARCHIVE_URL)
-        for value,label in re.findall(r'<option[^>]*value=[\"\']([^\"\']+)[\"\'][^>]*>(.*?)</option>',html,re.S|re.I):
-            if re.search(r'11/0?3/2026',label) and 'general' in label.lower() and re.fullmatch(r'IND\|\d+',value):eid=value.split('|')[1];break
-    if not eid:raise NotPublished('November county results feed is not linked yet. The verified ballot roster is already populated; vote returns remain pending.')
-    url=f'https://enr.electionsfl.org/IND/{eid}/Summary/'
-    content,stamp=fetch_url(url)
-    return parse_irc(content,url,stamp)
+        for value,label in re.findall(r'<option[^>]*value=["\']([^"\']+)["\'][^>]*>(.*?)</option>',html,re.S|re.I):
+            if re.search(r'11/0?3/2026',label) and 'general' in label.lower() and re.fullmatch(r'IND\|\d+',value):
+                url=f'https://enr.electionsfl.org/IND/{value.split("|")[1]}/Summary/'
+                content,stamp=fetch_url(url);return parse_irc(content,url,stamp)
+    except Exception as exc:errors.append(exc)
+    if errors:raise errors[0]
+    raise NotPublished('Checking the county homepage embeds and results archive every minute. A verified November 3 candidate-results panel is not linked yet; turnout is kept separate from candidate votes.')
 
 def national_feed():
     if config.NATIONAL_JSON_URL:return validate_results(fetch_json(config.NATIONAL_JSON_URL))

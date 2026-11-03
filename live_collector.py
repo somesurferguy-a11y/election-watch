@@ -10,7 +10,12 @@ def start_engine(send):
   try:
    checkpoint=json.loads(gzip.decompress(send('/checkpoint')))
    for key,source in checkpoint['sources'].items():
-    if key in engine.sources:engine.sources[key].update(source);engine.sources[key]['busy']=False
+    if key in engine.sources:
+     metadata={k:engine.sources[key][k] for k in ['name','url','interval','kind','note'] if k in engine.sources[key]}
+     engine.sources[key].update(source);engine.sources[key]['busy']=False
+     if key=='indian_river':
+      engine.sources[key].update(metadata)
+      if engine.sources[key].get('status')=='not_published':engine.sources[key]['next_due']=0
    engine.events=checkpoint.get('events',[])
    for key,value in checkpoint.get('baselines',{}).items():engine.db.put(key,value)
   except urllib.error.HTTPError as exc:
