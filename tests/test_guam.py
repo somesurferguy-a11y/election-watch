@@ -5,6 +5,8 @@ from territories import reviewed_payload,guam_feed
 from store import Engine,chamber_summary
 BASE=json.loads((Path(__file__).resolve().parents[1]/'data'/'guam_reviewed.json').read_text(encoding='utf-8'))
 class GuamTests(unittest.TestCase):
+ def test_saved_primary_report_fingerprint(self):
+  raw=(Path(__file__).resolve().parents[1]/'data'/'evidence'/'guam-gec-unofficial-2026-11-04-0130.pdf').read_bytes();self.assertEqual(hashlib.sha256(raw).hexdigest(),BASE['verification_sha256'])
  def test_report_totals_and_no_winner_calls(self):
   data=reviewed_payload(copy.deepcopy(BASE));self.assertEqual([r['report_total'] for r in data['races']],[30994,30677,30254]);self.assertTrue(all(r['status']=='unofficial' and not r.get('winner_id') for r in data['races']))
   self.assertEqual(data['races'][0]['candidates'][0]['votes'],15945);self.assertEqual(data['races'][1]['candidates'][0]['votes'],15645)
