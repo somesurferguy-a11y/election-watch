@@ -41,17 +41,17 @@ def merge_race(base,result):
         matches=[(i,c) for i,c in enumerate(available) if c['id']==original['id'] or normalized(c['name']) in names_for(original)]
         c=copy.deepcopy(original)
         if len(matches)==1 and matches[0][0] not in used:
-            i,row=matches[0];used.add(i);c.update(votes=row['votes'],votes_available=True)
+            i,row=matches[0];used.add(i);c.update(votes=row['votes'],votes_available=row.get('votes_available',True))
             if row.get('caucus'):c['caucus']=row['caucus']
         else:c.update(votes=0,percentage=None,votes_available=False)
         candidates.append(c)
     extras=[copy.deepcopy(c) for i,c in enumerate(available) if i not in used]
-    for c in extras:c['votes_available']=True
+    for c in extras:c.setdefault('votes_available',True)
     candidates.extend(extras)
     complete=all(c['votes_available'] for c in candidates)
     total=sum(c['votes'] for c in candidates)
     for c in candidates:c['percentage']=round(c['votes']/total*100,3) if complete and total else 0 if complete else None
-    for field in ['source_name','source_url','source_updated_at','precincts_reporting','precincts_total','precinct_percent','timestamp_scope','call_source','call_at','is_complete']:
+    for field in ['source_name','source_url','source_updated_at','precincts_reporting','precincts_total','precinct_percent','timestamp_scope','call_source','call_at','is_complete','partial_coverage','counties_included','county_reports','counties_missing','coverage_note']:
         if field in result:out[field]=result[field]
     out.update(candidates=candidates,has_results=total>0,results_pending=total==0,status=result['status'],result_incomplete=not complete)
     if extras:out['roster_warning']='Results source includes a candidate not matched to the reviewed roster; source spelling is shown.'

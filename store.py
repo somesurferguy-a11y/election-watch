@@ -135,7 +135,7 @@ class Engine:
                 return
             state['last_attempt']=iso_now()
         try:
-            payload=ADAPTERS[key]()
+            payload=ADAPTERS[key](previous=copy.deepcopy(state.get('payload',{}))) if key=='florida_counties' else ADAPTERS[key]()
             self.accept(key,payload)
         except Exception as exc:
             logging.warning('%s: %s',key,exc)
@@ -147,7 +147,7 @@ class Engine:
                 if isinstance(exc,urllib.error.HTTPError) and exc.code==429:
                     try:delay=max(delay,int(exc.headers.get('Retry-After',0)))
                     except (ValueError,TypeError):pass
-                if isinstance(exc,(NotConfigured,NotPublished)):delay=state['interval']
+                if isinstance(exc,(NotConfigured,NotPublished)) or key=='florida_counties' and not (isinstance(exc,urllib.error.HTTPError) and exc.code==429):delay=state['interval']
                 state['next_due']=time.time()+min(delay,7200)
                 self.save_source(key)
         finally:
@@ -265,6 +265,8 @@ class Engine:
                 for key in ['national','florida','indian_river','guam']:
                     batch=payloads[key].get('races',[])
                     races.extend(batch)
+                primary_ids={r['id'] for r in payloads['florida'].get('races',[]) if any(c['votes'] for c in r['candidates'])}
+                races.extend(r for r in payloads.get('florida_counties',{}).get('races',[]) if r['id'] not in primary_ids)
                 # Stable ID dedup: one current record per ID, no arithmetic merging across providers.
                 races=list({r['id']:r for r in races}.values())
                 races=enrich_candidates(compose_roster(ballot_roster,races))

@@ -151,7 +151,7 @@ def parse_irc(content,url,source_time=None):
     return validate_results({'election_date':config.ELECTION_DATE,'demo':False,'races':races,'source_updated_at':source_time})
 
 def florida_feed():
-    content,stamp=fetch_url(config.FL_FILE_URL)
+    content,stamp=fetch_url(config.FL_FILE_URL+'?_ew_check='+str(int(datetime.now(timezone.utc).timestamp())))
     return parse_florida(content,stamp)
 
 def irc_home_result_urls(content):
@@ -383,3 +383,8 @@ ADAPTERS['robinhood']=robinhood_feed
 
 from territories import guam_feed
 ADAPTERS['guam']=guam_feed
+
+def florida_counties_feed(previous=None):
+    from florida_counties import florida_county_feed
+    return florida_county_feed(previous=previous)
+ADAPTERS['florida_counties']=florida_counties_feed

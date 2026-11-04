@@ -71,3 +71,10 @@ vm.runInContext("state.demo=false;state.sources=[{id:'national',name:'National',
 assert.equal(context.sourceFor(context.sourceRace).id,'guam');
 assert.match(context.sourceSuffix(context.sourceRace),/LAST REVIEWED DATA/);
 console.log('Guam exact source attribution and changed-report warning passed');
+
+context.partial={partial_coverage:true,counties_included:[{code:'IND',name:'Indian <River>',report_url:'https://enr.electionsfl.org/IND/4096/Summary/',published_at:null},{code:'X',name:'Bad',report_url:'javascript:alert(1)'}]};
+const provenance=context.countyCoverageHtml(context.partial);assert.match(provenance,/Partial official county totals/);assert.match(provenance,/Indian &lt;River&gt;/);assert.doesNotMatch(provenance,/javascript:/);
+
+vm.runInContext('state.settings.pins=[]',context);context.amendmentHint=()=>'';context.councilCutoff=()=>'';
+context.incompleteRace={id:'incomplete',name:'Incomplete',scope:'florida',source_name:'Partial',status:'unofficial',has_results:true,result_incomplete:true,candidates:[{id:'a',name:'A',votes:10},{id:'b',name:'B',votes:9,votes_available:false}]};
+assert.match(context.raceCard(context.incompleteRace),/margin unavailable/);assert.doesNotMatch(context.raceCard(context.incompleteRace),/1 vote margin/);
