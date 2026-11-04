@@ -178,3 +178,6 @@ Per-reference Brier scores use mean(p−y)^2 with p in 0–1. Calibration detail
 
 
 Guam: National coverage includes three reviewed unofficial GEC contests (governor, non-voting congressional delegate, attorney general) from the report mirrored by Public Radio Guam. As of Nov3,10:30 AM Eastern. The report hash is checked each minute; changed or replacement reports require review. This is not a live parsed Guam feed or complete territorial coverage. The non-voting delegate is excluded from U.S. House/Senate control totals.
+
+
+Florida recovery: while a central-state contest still has zero returns, its card can use a separately labeled partial sum of exact-matched official county ENR reports. The card shows included county count; Details lists the reports and publication times. Unsupported or unmatched counties are unknown. Full state totals replace the fallback per contest when available, with no arithmetic mixing. Source checks run every minute; a lost previously included county preserves the last verified aggregate with a visible warning.
