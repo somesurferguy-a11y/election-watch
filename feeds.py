@@ -150,13 +150,13 @@ def parse_irc(content,url,source_time=None):
             if not count.isdigit():raise ValueError('Invalid county vote count')
             candidates.append({'id':stable_id(rid,cname,party),'name':cname,'party':party,'votes':int(count)})
         if not candidates:raise ValueError('County layout changed: candidate rows missing')
-        precincts={}
+        precincts={'precincts_reporting':None,'precincts_total':None}
         reported={x.text().replace(',','') for x in node.find('numPrecinctsReported')}
         participating={x.text().replace(',','') for x in node.find('numPrecinctsParticipating')}
         if reported or participating:
             if len(reported)==len(participating)==1 and next(iter(reported)).isdigit() and next(iter(participating)).isdigit() and 0<=int(next(iter(reported)))<=int(next(iter(participating)))<=1000000:
                 precincts={'precincts_reporting':int(next(iter(reported))),'precincts_total':int(next(iter(participating))),'precinct_reporting_scope':'Participating precincts for this contest'}
-            else:precincts={'precinct_reporting_warning':'Precinct reporting fields are unavailable or inconsistent in the source.'}
+            else:precincts['precinct_reporting_warning']='Precinct reporting fields are unavailable or inconsistent in the source.'
         races.append({'id':rid,'name':name,'scope':'indian_river','jurisdiction':'Indian River County',
             'status':'unofficial' if sum(c['votes'] for c in candidates) else 'awaiting','is_complete':False,
             'source_name':'Indian River County Supervisor of Elections','source_url':url,'source_updated_at':source_time,

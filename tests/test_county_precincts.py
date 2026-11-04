@@ -14,10 +14,12 @@ class CountyPrecinctTests(unittest.TestCase):
   html=race('r',1,3)
   import re
   html=re.sub(r'<span class="numPrecincts(?:Reported|Participating)">.*?</span>','',html)
-  r=self.parse(html)['races'][0];self.assertNotIn('precincts_total',r)
+  r=self.parse(html)['races'][0];self.assertIsNone(r['precincts_total'])
+  base={'id':r['id'],'name':r['name'],'precincts_reporting':0,'precincts_total':35,'candidates':[{'id':r['candidates'][0]['id'],'name':'A','votes':0}]}
+  merged=merge_race(base,r);self.assertIsNone(merged['precincts_reporting']);self.assertIsNone(merged['precincts_total'])
  def test_conflicting_or_invalid_reporting_keeps_votes_but_suppresses_stats(self):
   for html in [race('r',4,3),race('r','?',3),race('r',1,3).replace('>1</span>','>2</span>',1)]:
-   r=self.parse(html)['races'][0];self.assertNotIn('precincts_total',r);self.assertIn('precinct_reporting_warning',r);self.assertEqual(r['candidates'][0]['votes'],10)
+   r=self.parse(html)['races'][0];self.assertIsNone(r['precincts_total']);self.assertIn('precinct_reporting_warning',r);self.assertEqual(r['candidates'][0]['votes'],10)
  def test_all_precincts_can_still_have_partial_ballot_types(self):
   stats='<div class="row"><div class="PrecinctsLabel">Election Day:</div><div class="PrecinctsValue">Partially Reported</div></div><div class="row"><div class="PrecinctsLabel">Early Votes:</div><div class="PrecinctsValue">Completely Reported</div></div>'
   r=self.parse(stats+race('r',3,3))['races'][0];self.assertEqual(r['county_vote_status']['election_day'],'Partially Reported');self.assertFalse(r['is_complete']);self.assertEqual(r['status'],'unofficial')
