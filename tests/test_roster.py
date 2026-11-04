@@ -113,6 +113,19 @@ class BallotRosterTests(unittest.TestCase):
         base=self.find('commission-4');a=copy.deepcopy(base);a['candidates'][0]['votes']=100
         b=copy.deepcopy(a);b.update(id='irc:enr:456',name='Board of County Commissioners, District 4',source_name='County ENR');b['candidates'][0]['votes']=200
         races=compose_roster({'races':[base]},[a,b]);self.assertEqual(len(races),1);self.assertEqual(races[0]['candidates'][0]['votes'],200)
+    def test_statewide_nonzero_supersedes_partial_alias_with_different_id(self):
+        base=next(r for r in self.roster['races'] if r.get('office_code')=='GOV' and r['scope']=='florida')
+        primary=copy.deepcopy(base);primary.update(id='fl:changed-official-id',source_name='Florida Division of Elections',status='unofficial')
+        primary['candidates'][0]['votes']=400
+        partial=copy.deepcopy(base);partial.update(source_name='Official Florida county reports (partial)',partial_coverage=True,status='unofficial')
+        partial['candidates'][0]['votes']=200
+        for results in ([primary,partial],[partial,primary]):
+            merged=compose_roster({'races':[base]},results)
+            self.assertEqual(len(merged),1)
+            self.assertEqual(merged[0]['source_name'],'Florida Division of Elections')
+            self.assertEqual(merged[0]['candidates'][0]['votes'],400)
+        primary['candidates'][0]['votes']=0
+        self.assertEqual(compose_roster({'races':[base]},[primary,partial])[0]['candidates'][0]['votes'],200)
     def test_missing_candidate_counts_are_unknown_not_zero_share(self):
         base=self.find('commission-4');result=copy.deepcopy(base);result['candidates']=result['candidates'][:1];result['candidates'][0]['votes']=10
         merged=merge_race(base,result)

@@ -78,7 +78,9 @@ def compose_roster(roster,results):
         matches=[(i,r) for i,r in enumerate(results) if r.get('scope')==base['scope'] and (r['id']==base['id'] or normalized(r['name']) in aliases)]
         for i,_ in matches:used.add(i)
         # A county-specific return is preferred over a county portion in the state file.
-        matches.sort(key=lambda pair:(pair[1]['id'].startswith('irc:enr:'),pair[1].get('source_name')!='Florida Division of Elections',pair[1]['id']==base['id']),reverse=True)
+        matches.sort(key=lambda pair:(pair[1]['id'].startswith('irc:enr:'),
+            pair[1].get('source_name')=='Florida Division of Elections' and any(c.get('votes',0)>0 for c in pair[1]['candidates']),
+            pair[1].get('source_name')!='Florida Division of Elections',pair[1]['id']==base['id']),reverse=True)
         out.append(merge_race(base,matches[0][1] if matches else None))
     for i,r in enumerate(results):
         if i not in used:
