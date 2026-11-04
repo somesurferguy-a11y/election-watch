@@ -58,7 +58,8 @@ function advanceCandidatePages(paused=false){
 function candidatePager(r){
  const current=candidateWindow(r);
  if(current.pageCount===1)return '';
- return `<div class="candidate-pager" role="group" aria-label="${esc(r.name)} candidates"><button data-candidate-race="${esc(r.id)}" data-candidate-step="-1" ${current.page===0?'disabled':''}>Previous candidates</button> <span aria-live="polite">Candidate page ${current.page+1} of ${current.pageCount} · ${current.list.length} candidates total</span> <button data-candidate-race="${esc(r.id)}" data-candidate-step="1" ${current.page===current.pageCount-1?'disabled':''}>Next candidates</button></div>`;
+ const countLabel=current.list.some(c=>/^write[- ]in totals?$/i.test(c.name))?`${current.list.length} rows including write-in totals`:`${current.list.length} candidates total`;
+ return `<div class="candidate-pager" role="group" aria-label="${esc(r.name)} candidates"><button data-candidate-race="${esc(r.id)}" data-candidate-step="-1" ${current.page===0?'disabled':''}>Previous candidates</button> <span aria-live="polite">Candidate page ${current.page+1} of ${current.pageCount} · ${countLabel}</span> <button data-candidate-race="${esc(r.id)}" data-candidate-step="1" ${current.page===current.pageCount-1?'disabled':''}>Next candidates</button></div>`;
 }
 function candidatesHtml(r,all=false){
  const {selected}=candidateWindow(r,all);
