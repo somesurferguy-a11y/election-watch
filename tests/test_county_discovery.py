@@ -43,3 +43,14 @@ class CountyDiscoveryTests(unittest.TestCase):
     with patch.dict('store.ADAPTERS',{'indian_river':lambda:(_ for _ in ()).throw(NotPublished('pending'))}):engine.refresh_one('indian_river')
     self.assertLessEqual(engine.sources['indian_river']['next_due']-time.time(),61)
    finally:engine.close();engine.db.conn.close()
+class PublishedCountyResultsTests(unittest.TestCase):
+ def test_all_26_official_contests_merge_without_duplicate_cards(self):
+  import json
+  from pathlib import Path
+  from roster import load_roster,compose_roster
+  p=json.loads((Path(__file__).parent/'fixtures'/'irc_general_4096.json').read_text(encoding='utf-8'))
+  rows=compose_roster(load_roster(),p['races']);local=[r for r in rows if r['scope']=='indian_river'];self.assertEqual(len(local),26)
+  for rid,count in [('irc:ballot:vero-council',8),('irc:ballot:sebastian-council',5),('irc:ballot:fellsmere-council',4)]:
+   r=next(r for r in local if r['id']==rid);self.assertTrue(r['has_results']);self.assertFalse(r['result_incomplete']);self.assertEqual(len(r['candidates']),count)
+  vero=next(r for r in local if r['id']=='irc:ballot:vero-council');self.assertEqual(next(c['votes'] for c in vero['candidates'] if c['name']=='Aaron Vos'),2022)
+  self.assertEqual(next(c['votes'] for c in vero['candidates'] if 'Zudans' in c['name']),1477)

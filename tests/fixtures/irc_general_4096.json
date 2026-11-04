@@ -1,0 +1,882 @@
+{
+  "election_date": "2026-11-03",
+  "demo": false,
+  "races": [
+    {
+      "id": "irc:enr:61134",
+      "name": "United States Senator",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "16c0b1a257ffea3c762d",
+          "name": "Ashley Moody",
+          "party": "REP",
+          "votes": 31401,
+          "percentage": 57.599
+        },
+        {
+          "id": "a2acbe6b2925dd8a5542",
+          "name": "Angie Nixon",
+          "party": "DEM",
+          "votes": 22629,
+          "percentage": 41.508
+        },
+        {
+          "id": "92b9a3b08e23bb3fb818",
+          "name": "Neil J. Gillespie",
+          "party": "NPA",
+          "votes": 487,
+          "percentage": 0.893
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61135",
+      "name": "Representative in Congress District 9",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "83c2533a6e5990be7b0b",
+          "name": "Dan Green",
+          "party": "REP",
+          "votes": 30594,
+          "percentage": 56.371
+        },
+        {
+          "id": "85ab5f9f0f061f52ab1b",
+          "name": "Darren Soto",
+          "party": "DEM",
+          "votes": 23679,
+          "percentage": 43.629
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61136",
+      "name": "Governor and Lieutenant Governor",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "c95dcdb5409bcae2a378",
+          "name": "Byron Donalds",
+          "party": "REP",
+          "votes": 30704,
+          "percentage": 56.286
+        },
+        {
+          "id": "f51e4384eb6dc9d24fb1",
+          "name": "David Jolly",
+          "party": "DEM",
+          "votes": 23292,
+          "percentage": 42.698
+        },
+        {
+          "id": "2343422068b36292e5e8",
+          "name": "Scott Eckhard Jewett",
+          "party": "LPF",
+          "votes": 164,
+          "percentage": 0.301
+        },
+        {
+          "id": "231936ea14f9995c1544",
+          "name": "Charles Burkett",
+          "party": "NPA",
+          "votes": 86,
+          "percentage": 0.158
+        },
+        {
+          "id": "1b958f1d52f7b92ff47b",
+          "name": "Frank J. Russo",
+          "party": "NPA",
+          "votes": 104,
+          "percentage": 0.191
+        },
+        {
+          "id": "7a0092793d093a441df4",
+          "name": "Moliere \"Moe\" Dimanche",
+          "party": "NPA",
+          "votes": 26,
+          "percentage": 0.048
+        },
+        {
+          "id": "917bca4834052676921c",
+          "name": "Dean Ocean Abrams",
+          "party": "NPA",
+          "votes": 63,
+          "percentage": 0.115
+        },
+        {
+          "id": "454bf673517c533960a0",
+          "name": "Jeffrey Peter \"Dr. Jeff\" Datto",
+          "party": "NPA",
+          "votes": 35,
+          "percentage": 0.064
+        },
+        {
+          "id": "85403f5b74ae310b78ca",
+          "name": "Write-in",
+          "party": "NON",
+          "votes": 76,
+          "percentage": 0.139
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61137",
+      "name": "Attorney General",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "b438c524b67bd12f59e9",
+          "name": "James Uthmeier",
+          "party": "REP",
+          "votes": 31639,
+          "percentage": 58.284
+        },
+        {
+          "id": "6bfe364714375a419203",
+          "name": "Jose Javier Rodriguez",
+          "party": "DEM",
+          "votes": 22645,
+          "percentage": 41.716
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61138",
+      "name": "Chief Financial Officer",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "e5e93a2ca9d15ad8bc18",
+          "name": "Blaise Ingoglia",
+          "party": "REP",
+          "votes": 30633,
+          "percentage": 56.968
+        },
+        {
+          "id": "7e8e3e84efe06ae69eb1",
+          "name": "Annette Taddeo",
+          "party": "DEM",
+          "votes": 23139,
+          "percentage": 43.032
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61139",
+      "name": "Commissioner of Agriculture",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "45d9a733d80b8dbc3daa",
+          "name": "Wilton Simpson",
+          "party": "REP",
+          "votes": 31205,
+          "percentage": 57.934
+        },
+        {
+          "id": "90c08b150c80bc31b230",
+          "name": "Joey Mendoza Atkins",
+          "party": "DEM",
+          "votes": 22590,
+          "percentage": 41.94
+        },
+        {
+          "id": "f2c377a64c13f75699d8",
+          "name": "Write-in",
+          "party": "NON",
+          "votes": 68,
+          "percentage": 0.126
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61140",
+      "name": "State Representative District 34",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "a08b8110431f5b24e2e9",
+          "name": "Robert Brackett",
+          "party": "REP",
+          "votes": 31934,
+          "percentage": 59.256
+        },
+        {
+          "id": "980547439f557054218b",
+          "name": "Jordyn Guadalupe Balderas",
+          "party": "DEM",
+          "votes": 21958,
+          "percentage": 40.744
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61141",
+      "name": "Board of County Commissioners District 2",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "0bf788c5cb6fdb29898f",
+          "name": "Jennifer Pippin",
+          "party": "REP",
+          "votes": 30039,
+          "percentage": 55.994
+        },
+        {
+          "id": "4849e4ba401f5d06e5f3",
+          "name": "Robbie Hardingham III",
+          "party": "DEM",
+          "votes": 23457,
+          "percentage": 43.725
+        },
+        {
+          "id": "28ac467ad8c574db7746",
+          "name": "Write-in",
+          "party": "NON",
+          "votes": 151,
+          "percentage": 0.281
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61142",
+      "name": "Board of County Commissioners District 4",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "91cfce2e4011b0ae486e",
+          "name": "Deryl Loar",
+          "party": "REP",
+          "votes": 31891,
+          "percentage": 59.504
+        },
+        {
+          "id": "b9f3825fd50ee5a85d00",
+          "name": "Marc Jaffe",
+          "party": "DEM",
+          "votes": 21704,
+          "percentage": 40.496
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61143",
+      "name": "Justice of the Supreme Court Carlos G. Muñiz",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "2891f7c00e8dd2653aee",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 30319,
+          "percentage": 63.339
+        },
+        {
+          "id": "5fea5b26373c7c2b2dc0",
+          "name": "No",
+          "party": "NON",
+          "votes": 17549,
+          "percentage": 36.661
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61144",
+      "name": "Fourth District Court of Appeal Alan O. Forst",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "c624eaf459fbb9ae7bb3",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 30698,
+          "percentage": 65.186
+        },
+        {
+          "id": "2d465e1776e042f097b2",
+          "name": "No",
+          "party": "NON",
+          "votes": 16395,
+          "percentage": 34.814
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61145",
+      "name": "Fourth District Court of Appeal Mark W. Klingensmith",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "4016a1754b80537a6930",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 29889,
+          "percentage": 64.301
+        },
+        {
+          "id": "cc8cc1a54d1254965a86",
+          "name": "No",
+          "party": "NON",
+          "votes": 16594,
+          "percentage": 35.699
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61146",
+      "name": "Fourth District Court of Appeal Johnathan D. Lott",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "da5e224342ffc61823b5",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 30521,
+          "percentage": 65.307
+        },
+        {
+          "id": "cd2d1167771ab713b170",
+          "name": "No",
+          "party": "NON",
+          "votes": 16214,
+          "percentage": 34.693
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61147",
+      "name": "Fourth District Court of Appeal Shannon K. Shaw",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "b8492f308e81b42e7f2b",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 30877,
+          "percentage": 66.227
+        },
+        {
+          "id": "2fd20da225995b17adbf",
+          "name": "No",
+          "party": "NON",
+          "votes": 15746,
+          "percentage": 33.773
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61148",
+      "name": "Fourth District Court of Appeal Caroline Cahill Shepherd",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "55370e6571a77c1aaaa9",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 30911,
+          "percentage": 66.244
+        },
+        {
+          "id": "05570bb70e58d4bb2b77",
+          "name": "No",
+          "party": "NON",
+          "votes": 15751,
+          "percentage": 33.756
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61149",
+      "name": "City of Fellsmere City Council Member",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "2e35e6d3fd0eea0155fe",
+          "name": "Fernando R. Herrera",
+          "party": "NON",
+          "votes": 108,
+          "percentage": 22.453
+        },
+        {
+          "id": "12804f4e90c46700417d",
+          "name": "Shayla Macias",
+          "party": "NON",
+          "votes": 168,
+          "percentage": 34.927
+        },
+        {
+          "id": "045950a55cbc4154372a",
+          "name": "Javi Murillo",
+          "party": "NON",
+          "votes": 109,
+          "percentage": 22.661
+        },
+        {
+          "id": "81c1002c75848db23bde",
+          "name": "Jose M. Zamarripa",
+          "party": "NON",
+          "votes": 96,
+          "percentage": 19.958
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61150",
+      "name": "City of Sebastian City Council Member",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "428c53727ff5912f899c",
+          "name": "Rob Gable",
+          "party": "NON",
+          "votes": 2798,
+          "percentage": 19.729
+        },
+        {
+          "id": "454ea9f5be097137333e",
+          "name": "Damien H. Gilliams",
+          "party": "NON",
+          "votes": 830,
+          "percentage": 5.852
+        },
+        {
+          "id": "f22e050459b52cb5d4c3",
+          "name": "Richard H. Gillmor",
+          "party": "NON",
+          "votes": 2795,
+          "percentage": 19.708
+        },
+        {
+          "id": "724be77c4535877e8228",
+          "name": "Sherrie Matthews",
+          "party": "NON",
+          "votes": 4609,
+          "percentage": 32.499
+        },
+        {
+          "id": "cd3ef91a9d9c14f48e94",
+          "name": "Deborah \"Deb\" Shellenberger",
+          "party": "NON",
+          "votes": 3150,
+          "percentage": 22.211
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61151",
+      "name": "City of Vero Beach City Council Member",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "ed4906e8a731ac6bc86d",
+          "name": "Aaron Vos",
+          "party": "NON",
+          "votes": 2022,
+          "percentage": 18.479
+        },
+        {
+          "id": "659f90aa20c69d15b4cf",
+          "name": "Brian Heady",
+          "party": "NON",
+          "votes": 658,
+          "percentage": 6.014
+        },
+        {
+          "id": "ad82542066be6f9b3a86",
+          "name": "Davis Benedict",
+          "party": "NON",
+          "votes": 1487,
+          "percentage": 13.59
+        },
+        {
+          "id": "7beee8a27c8ba02f5870",
+          "name": "Robert MacCallum",
+          "party": "NON",
+          "votes": 1050,
+          "percentage": 9.596
+        },
+        {
+          "id": "c4a0705abe38a4033d1e",
+          "name": "Linda Moore",
+          "party": "NON",
+          "votes": 1672,
+          "percentage": 15.281
+        },
+        {
+          "id": "a3a46924de71162e2645",
+          "name": "Jay Kramer",
+          "party": "NON",
+          "votes": 1129,
+          "percentage": 10.318
+        },
+        {
+          "id": "d253cf6c0c0ea765c988",
+          "name": "Tracey Zudans",
+          "party": "NON",
+          "votes": 1477,
+          "percentage": 13.498
+        },
+        {
+          "id": "c53bfcacc04100721bf4",
+          "name": "John O'Connor",
+          "party": "NON",
+          "votes": 1447,
+          "percentage": 13.224
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61152",
+      "name": "Sebastian Inlet Tax District District 5",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "bf98a8488e3dfba590e4",
+          "name": "Calvin Holton",
+          "party": "NON",
+          "votes": 5777,
+          "percentage": 44.418
+        },
+        {
+          "id": "fc91f21794cb918ff0cf",
+          "name": "Lisa Leger Frazier",
+          "party": "NON",
+          "votes": 7229,
+          "percentage": 55.582
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61153",
+      "name": "Indian River Mosquito Control District Seat 2",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "73e7af66080595f59488",
+          "name": "Anna Kirkland",
+          "party": "NON",
+          "votes": 31647,
+          "percentage": 68.019
+        },
+        {
+          "id": "3ee490a9d8af6849448c",
+          "name": "Craig MacCoy",
+          "party": "NON",
+          "votes": 14880,
+          "percentage": 31.981
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61154",
+      "name": "No. 1 Constitutional Amendment Article III, Section 19",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "7d6a0e6dd18772b1d4de",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 21028,
+          "percentage": 41.103
+        },
+        {
+          "id": "320f2169f173fbd4b858",
+          "name": "No",
+          "party": "NON",
+          "votes": 30131,
+          "percentage": 58.897
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61155",
+      "name": "No. 2 Constitutional Amendment Article VII, Section 3 Article XII",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "e661bd38d9058fca41f3",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 30980,
+          "percentage": 60.211
+        },
+        {
+          "id": "b2b62f65830a5617a747",
+          "name": "No",
+          "party": "NON",
+          "votes": 20472,
+          "percentage": 39.789
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61156",
+      "name": "No. 3 Constitutional Amendment Article VII, Sections 4, 6 and 9 Article XII",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "91df9fa085161265b567",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 32686,
+          "percentage": 62.507
+        },
+        {
+          "id": "32e3a51709f8734642bd",
+          "name": "No",
+          "party": "NON",
+          "votes": 19606,
+          "percentage": 37.493
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61157",
+      "name": "City of Sebastian Referendum Question 1",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "2cf1d2b588404773c09f",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 8180,
+          "percentage": 90.537
+        },
+        {
+          "id": "a9ea173c909ae9274dbf",
+          "name": "No",
+          "party": "NON",
+          "votes": 855,
+          "percentage": 9.463
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61158",
+      "name": "City of Sebastian Referendum Question 2",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "1df0fb77ad6f6c0ff6db",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 3867,
+          "percentage": 43.086
+        },
+        {
+          "id": "fc49ac4e1f108f03d72f",
+          "name": "No",
+          "party": "NON",
+          "votes": 5108,
+          "percentage": 56.914
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    },
+    {
+      "id": "irc:enr:61159",
+      "name": "City of Sebastian Referendum Question 3",
+      "scope": "indian_river",
+      "jurisdiction": "Indian River County",
+      "status": "unofficial",
+      "is_complete": false,
+      "source_name": "Indian River County Supervisor of Elections",
+      "source_url": "https://enr.electionsfl.org/IND/4096/Summary/",
+      "source_updated_at": null,
+      "candidates": [
+        {
+          "id": "caf3867b83763fb20904",
+          "name": "Yes",
+          "party": "NON",
+          "votes": 7619,
+          "percentage": 84.967
+        },
+        {
+          "id": "df2ebd5af0deeb93baac",
+          "name": "No",
+          "party": "NON",
+          "votes": 1348,
+          "percentage": 15.033
+        }
+      ],
+      "coverage_note": "Eligibility varies by district and municipality. No winner is inferred."
+    }
+  ],
+  "source_updated_at": null
+}

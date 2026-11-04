@@ -8614,7 +8614,8 @@
       "results_pending": true,
       "has_results": false,
       "result_names": [
-        "Shall Justice Carlos G. Muñiz be retained in Office?"
+        "Shall Justice Carlos G. Muñiz be retained in Office?",
+        "Justice of the Supreme Court Carlos G. Muñiz"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -9447,7 +9448,8 @@
       "results_pending": true,
       "has_results": false,
       "result_names": [
-        "Shall Judge Alan O. Forst be retained in Office?"
+        "Shall Judge Alan O. Forst be retained in Office?",
+        "Fourth District Court of Appeal Alan O. Forst"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -9552,7 +9554,8 @@
       "results_pending": true,
       "has_results": false,
       "result_names": [
-        "Shall Judge Mark W. Klingensmith be retained in Office?"
+        "Shall Judge Mark W. Klingensmith be retained in Office?",
+        "Fourth District Court of Appeal Mark W. Klingensmith"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -9657,7 +9660,8 @@
       "results_pending": true,
       "has_results": false,
       "result_names": [
-        "Shall Judge Johnathan D. Lott be retained in Office?"
+        "Shall Judge Johnathan D. Lott be retained in Office?",
+        "Fourth District Court of Appeal Johnathan D. Lott"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -9762,7 +9766,8 @@
       "results_pending": true,
       "has_results": false,
       "result_names": [
-        "Shall Judge Shannon K. Shaw be retained in Office?"
+        "Shall Judge Shannon K. Shaw be retained in Office?",
+        "Fourth District Court of Appeal Shannon K. Shaw"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -9867,7 +9872,8 @@
       "results_pending": true,
       "has_results": false,
       "result_names": [
-        "Shall Judge Caroline Cahill Shepherd be retained in Office?"
+        "Shall Judge Caroline Cahill Shepherd be retained in Office?",
+        "Fourth District Court of Appeal Caroline Cahill Shepherd"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -10599,7 +10605,8 @@
       "has_results": false,
       "result_names": [
         "Budget Stabilization Fund",
-        "Amendment 1 — Budget Stabilization Fund"
+        "Amendment 1 — Budget Stabilization Fund",
+        "No. 1 Constitutional Amendment Article III, Section 19"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -10706,7 +10713,8 @@
       "has_results": false,
       "result_names": [
         "Exemption of Tangible Personal Property on Agricultural Land From Taxation",
-        "Amendment 2 — Exemption of Tangible Personal Property on Agricultural Land From Taxation"
+        "Amendment 2 — Exemption of Tangible Personal Property on Agricultural Land From Taxation",
+        "No. 2 Constitutional Amendment Article VII, Section 3 Article XII"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -10813,7 +10821,8 @@
       "has_results": false,
       "result_names": [
         "Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments",
-        "Amendment 3 — Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments"
+        "Amendment 3 — Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments",
+        "No. 3 Constitutional Amendment Article VII, Sections 4, 6 and 9 Article XII"
       ],
       "display_order": 100,
       "eligibility": "Indian River County voters; this record is the county portion of the contest. District/special-district eligibility varies."
@@ -11038,7 +11047,8 @@
         "Vero Beach City Council",
         "City of Vero Beach City Council",
         "City of Vero Beach Council Member",
-        "City Council - Vero Beach"
+        "City Council - Vero Beach",
+        "City of Vero Beach City Council Member"
       ],
       "source_name": "City of Vero Beach",
       "source_url": "https://www.covb.org/659/Candidates-For-City-Council-2026",
@@ -11100,6 +11110,7 @@
           "votes_available": false,
           "result_names": [
             "Tracey Lockwood Zudans",
+            "Tracey Zudans",
             "Tracey Zudans"
           ]
         },
@@ -11167,7 +11178,8 @@
         "Sebastian City Council",
         "City of Sebastian City Council",
         "City of Sebastian Council Member",
-        "City Council - Sebastian"
+        "City Council - Sebastian",
+        "City of Sebastian City Council Member"
       ],
       "source_name": "Indian River County official sample ballot",
       "source_url": "https://www.voterfocus.com/SampleBallots/WHSampleBallot.php?county=indianriver&precinct=%20%208.0&party=GEN&election=103&city=3&ward=3",
