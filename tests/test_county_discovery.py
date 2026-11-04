@@ -7,6 +7,8 @@ HOME=config.IRC_HOME_URL
 ARCHIVE=config.IRC_ARCHIVE_URL
 URL='https://enr.electionsfl.org/IND/4444/Summary/'
 class CountyDiscoveryTests(unittest.TestCase):
+ def test_real_scrolling_banner_link_normalizes_to_summary(self):
+  self.assertEqual(irc_home_result_urls('<a href="https://enr.electionsfl.org/IND/4096/Summary/Scrolling/Banner/">Election Results</a>'),['https://enr.electionsfl.org/IND/4096/Summary/'])
  def test_exact_published_links_only(self):
   html='''<iframe src="//enr.electionsfl.org/IND/4444/Summary/"></iframe><a href="https://enr.electionsfl.org/IND/4444/Summary/">Results</a><iframe data-src="https://enr.electionsfl.org/IND/5555/Summary/"></iframe>'''
   self.assertEqual(irc_home_result_urls(html),[URL,'https://enr.electionsfl.org/IND/5555/Summary/'])

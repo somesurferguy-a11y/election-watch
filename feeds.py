@@ -165,7 +165,7 @@ def irc_home_result_urls(content):
                 if not value:continue
                 try:
                     u=urlsplit(urljoin(config.IRC_HOME_URL,value))
-                    match=re.fullmatch(r'/IND/(\d+)/(?:Summary/?)?',u.path,re.I)
+                    match=re.fullmatch(r'/IND/(\d+)/(?:Summary(?:/Scrolling/Banner)?/?)?',u.path,re.I)
                     if u.scheme=='https' and u.hostname=='enr.electionsfl.org' and not u.username and not u.password and u.port in [None,443] and match:
                         url='https://enr.electionsfl.org/IND/'+match[1]+'/Summary/'
                         if url not in self.urls:self.urls.append(url)
