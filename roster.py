@@ -51,7 +51,7 @@ def merge_race(base,result):
     complete=all(c['votes_available'] for c in candidates)
     total=sum(c['votes'] for c in candidates)
     for c in candidates:c['percentage']=round(c['votes']/total*100,3) if complete and total else 0 if complete else None
-    for field in ['source_name','source_url','source_updated_at','precincts_reporting','precincts_total','precinct_percent','timestamp_scope','call_source','call_at','is_complete','partial_coverage','counties_included','county_reports','counties_missing','coverage_note']:
+    for field in ['source_name','source_url','source_updated_at','precincts_reporting','precincts_total','precinct_percent','timestamp_scope','call_source','call_at','is_complete','partial_coverage','counties_included','county_reports','counties_missing','coverage_note','county_vote_status','precinct_reporting_scope','precinct_reporting_warning']:
         if field in result:out[field]=result[field]
     out.update(candidates=candidates,has_results=total>0,results_pending=total==0,status=result['status'],result_incomplete=not complete)
     if extras:out['roster_warning']='Results source includes a candidate not matched to the reviewed roster; source spelling is shown.'

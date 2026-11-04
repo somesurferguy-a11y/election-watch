@@ -78,3 +78,7 @@ const provenance=context.countyCoverageHtml(context.partial);assert.match(proven
 vm.runInContext('state.settings.pins=[]',context);context.amendmentHint=()=>'';context.councilCutoff=()=>'';
 context.incompleteRace={id:'incomplete',name:'Incomplete',scope:'florida',source_name:'Partial',status:'unofficial',has_results:true,result_incomplete:true,candidates:[{id:'a',name:'A',votes:10},{id:'b',name:'B',votes:9,votes_available:false}]};
 assert.match(context.raceCard(context.incompleteRace),/margin unavailable/);assert.doesNotMatch(context.raceCard(context.incompleteRace),/1 vote margin/);
+
+context.countyRace={scope:'indian_river',precincts_reporting:3,precincts_total:3,county_vote_status:{election_day:'Partially Reported',early_voting:'Completely Reported',vote_by_mail:'Partially Reported'}};
+assert.match(context.countyCountingHtml(context.countyRace),/Election Day partial/);assert.match(context.countyCountingHtml(context.countyRace),/Mail partial/);
+assert.match(context.countyCountingHtml(context.countyRace,true),/3 \/ 3 participating precincts reporting/);assert.match(context.countyCountingHtml(context.countyRace,true),/Early voting Completely Reported/);assert.match(context.countyCountingHtml(context.countyRace,true),/does not mean all ballots/);

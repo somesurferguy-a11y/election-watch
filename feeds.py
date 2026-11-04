@@ -124,6 +124,13 @@ def parse_irc(content,url,source_time=None):
     # Require date and general-election title, even for a manually configured ID.
     if not re.search(r'Election Date:\s*11/3/2026',tree.text()) or not re.search(r'General Election',tree.text(),re.I):
         raise ValueError('County feed is not the November 3, 2026 general election')
+    vote_status={}
+    status_keys={'Election Day:':'election_day','Early Votes:':'early_voting','Vote By Mail:':'vote_by_mail'}
+    for row in tree.find('row'):
+        labels=[c.text() for c in row.children if 'PrecinctsLabel' in c.attrs.get('class','').split()]
+        values=[c.text() for c in row.children if 'PrecinctsValue' in c.attrs.get('class','').split()]
+        if len(labels)==1 and len(values)==1 and labels[0] in status_keys and 0<len(values[0])<=80:
+            vote_status[status_keys[labels[0]]]=values[0]
     races=[]
     for node in tree.find('Race'):
         names=node.find('RaceName')
@@ -143,10 +150,17 @@ def parse_irc(content,url,source_time=None):
             if not count.isdigit():raise ValueError('Invalid county vote count')
             candidates.append({'id':stable_id(rid,cname,party),'name':cname,'party':party,'votes':int(count)})
         if not candidates:raise ValueError('County layout changed: candidate rows missing')
+        precincts={}
+        reported={x.text().replace(',','') for x in node.find('numPrecinctsReported')}
+        participating={x.text().replace(',','') for x in node.find('numPrecinctsParticipating')}
+        if reported or participating:
+            if len(reported)==len(participating)==1 and next(iter(reported)).isdigit() and next(iter(participating)).isdigit() and 0<=int(next(iter(reported)))<=int(next(iter(participating)))<=1000000:
+                precincts={'precincts_reporting':int(next(iter(reported))),'precincts_total':int(next(iter(participating))),'precinct_reporting_scope':'Participating precincts for this contest'}
+            else:precincts={'precinct_reporting_warning':'Precinct reporting fields are unavailable or inconsistent in the source.'}
         races.append({'id':rid,'name':name,'scope':'indian_river','jurisdiction':'Indian River County',
             'status':'unofficial' if sum(c['votes'] for c in candidates) else 'awaiting','is_complete':False,
             'source_name':'Indian River County Supervisor of Elections','source_url':url,'source_updated_at':source_time,
-            'candidates':candidates,'coverage_note':'Eligibility varies by district and municipality. No winner is inferred.'})
+            'candidates':candidates,**precincts,'county_vote_status':dict(vote_status),'coverage_note':'Eligibility varies by district and municipality. Precinct reporting does not mean all ballots are counted. No winner is inferred.'})
     if not races:raise ValueError('County feed returned no parsable races')
     return validate_results({'election_date':config.ELECTION_DATE,'demo':False,'races':races,'source_updated_at':source_time})
 
